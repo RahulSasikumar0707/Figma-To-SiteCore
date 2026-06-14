@@ -67,10 +67,15 @@ HARD RULES — follow every one of them:
 2. EDS FIRST — THIS IS THE MOST IMPORTANT RULE: every section MUST be built from the mapped EDS component's canonical markup, copying its EXACT class names and nesting (e.g. a hero section's root is <div class="component eds-hero-banner ...">, cards use <div class="eds-card card"> with card-img/card-body/card-body-footer/card-footer, accordions use <div class="eds-accordion accordion">, the ISI tray uses <div class="eds-isi ...">, the footer is <footer class="eds-footer">, buttons are <a class="eds-btn ...">, links are <a class="eds-link ...">). Apply the documented modifier classes matching the design variant. NEVER invent a parallel class system (no custom prefixes like lv-*, page-*, my-*) — custom classes are allowed ONLY as additive free-text classes alongside the EDS classes, exactly like the [free-text-class] slot in the component docs. A section that does not carry its EDS component's signature class is WRONG even if it looks correct. When a component has LAYOUT VARIANTS, pick the variant whose rendered layout matches the design screenshot — e.g. eds-header header-variant-one renders logo and nav links inline on ONE row, while header-variant-three stacks a centered logo ABOVE the nav (flex-direction: column on desktop); a one-row header design therefore requires header-variant-one. Check the variant's CSS behavior described in the docs, not just its name.
 3. DESIGN TOKENS: when a color/typography value exists as a CSS custom property in the token list, ALWAYS use var(--token) instead of the raw value. Raw hex values are allowed only for colors with no token. NEVER invent token names.
 4. BOOTSTRAP: use the grid (container/container-fluid, row, col-*) and utilities (d-flex, gap, mb-*, text-*, align-items-*) for layout and spacing wherever they match the spec values; use Bootstrap JS components (accordion/collapse, carousel, modal, dropdown) for interactive sections.
-5. EXACTNESS: text content must match the design spec EXACTLY (every heading, paragraph, button label, superscript, footnote — character for character). Sizes, paddings, gaps, colors, border-radius and shadows must match the spec numbers. The "box" values are px at a 1366px-wide desktop artboard.
+5. PIXEL-PERFECT EXACTNESS (THE LAYOUT CONTRACT): This is a zero-tolerance requirement. Text content must match the design spec EXACTLY (character for character). All numeric values (sizes, paddings, gaps, border-radius, shadows, offsets) must match the spec numbers precisely. If the spec says 23px, do not use 20px or 24px. The "box" values are px at a 1366px-wide desktop artboard.
 6. ASSETS: reference images/icons/vectors ONLY from the provided asset manifest, using their relative paths exactly (e.g. assets/images/xxx.png). Every <img> needs a meaningful alt and explicit width/height or CSS sizing matching the spec. Never hotlink, never use placeholders. Align images precisely as shown in the design (object-fit, positioning).
-7. RESPONSIVE: desktop spec is 1366px. Make the page fully responsive: stack columns on <768px, use Bootstrap breakpoints, fluid images (img-fluid where appropriate), and the EDS mobile token values. Nothing may overflow horizontally on 375px wide screens.
-8. CSS overrides go in assets/css/styles.css scoped under a page class (e.g. .figma-page) or section classes — do NOT restyle global EDS classes destructively. Keep specificity low.
+7. RESPONSIVE (NON-NEGOTIABLE): The desktop spec is 1366px, but the output MUST be fully responsive across all devices.
+    - BREAKPOINTS: Use Bootstrap 5.1.3 breakpoints (\`col-sm-\`, \`col-md-\`, \`col-lg-\`, \`col-xl-\`) to adapt layout.
+    - MOBILE (375px): This is the critical test. Ensure absolutely NO horizontal overflow (no \`overflow-x: scroll\` on body). Use fluid images (\`img-fluid\`), flexible containers, and the EDS mobile token values for typography and spacing.
+    - TABLET (<768px): Stack columns vertically where the layout becomes too cramped.
+    - VERIFICATION: The layout must transition smoothly from desktop to mobile without breaking. If the design specifies different values for mobile, use them exactly.
+8. CSS overrides go in assets/css/styles.css scoped under a page class (e.g. .figma-page) or section classes — do NOT restyle global EDS classes destructively. Keep specificity low unless fighting a base rule.
+	9. OVERLAY INTEGRITY: If the design shows text overlaid on an image, it MUST remain an overlay across all breakpoints. Never switch an absolute overlay to \`position: static\` or \`relative\` on mobile unless the design spec explicitly shows the text moving outside the image. Use \`position: relative\` containers with absolute overlays to ensure the spatial relationship between text and image is preserved exactly as in Figma.
 `;
 
 const PAGE_OUTPUT_FORMAT = `
@@ -363,7 +368,7 @@ export async function applyReviewFixes(claude, { files, review, spec, tokensBloc
     .map(([p, c]) => `===FILE: ${p}===\n${c}`)
     .join('\n');
   const measuredBlock = layoutFailures && layoutFailures.length
-    ? `\nMEASURED LAYOUT FAILURES (deterministic, from computed styles in a real browser — fix each one precisely; if a measurement seems to contradict the design screenshots, the screenshots win):\n${JSON.stringify(layoutFailures, null, 1)}\n`
+    ? `\nMEASURED LAYOUT FAILURES (deterministic, from computed styles in a real browser — these are absolute facts. Fix each one precisely to match the spec; if a measurement seems to contradict the design screenshots, the screenshots win):\n${JSON.stringify(layoutFailures, null, 1)}\n`
     : '';
   const pixelBlock = pixelScore != null
     ? `\nCurrent objective pixel-match score vs the design: ${pixelScore}% — your fixes must raise this.\n`
@@ -372,8 +377,8 @@ export async function applyReviewFixes(claude, { files, review, spec, tokensBloc
     { type: 'text', text: `A design reviewer compared your generated page against the original Figma design and found these issues (JSON):
 ${JSON.stringify(review.issues, null, 1)}
 ${measuredBlock}${pixelBlock}
-Fix EVERY issue. Keep everything that was not flagged byte-identical where possible.
-SPECIFICITY WARNING: if a measured failure persists although styles.css already sets the right value, your selector is LOSING to an eds-native.css rule (e.g. ".eds-card.card .card-img img { width: 100% }" is 0-3-1). Match or exceed that specificity (prefix the EDS classes, e.g. ".figma-page .eds-card.card .card-img img.my-class"), or use "width: revert" to fall back to the HTML width/height attributes — do NOT just repeat the same losing rule.
+Fix EVERY issue. Treat MEASURED LAYOUT FAILURES as deterministic ground truth: the browser reported these specific values, and you must update the CSS until the computed value matches the Figma spec. IMPORTANT: Fix issues in top-to-bottom order to prevent layout cascading (where fixing a top element shifts everything below). Keep everything that was not flagged byte-identical where possible.
+SPECIFICITY WARNING: if a measured failure persists although styles.css already sets the right value, your selector is LOSING to an eds-native.css rule (e.g. ".eds-card.card .card-img img { width: 100% }" is 0-3-1). Match or exceed that specificity (prefix the EDS classes, e.g. ".figma-page .eds-card.card .card-img img.my-class") or use attribute selectors. Note: "width: revert" is NOT a reliable fallback to HTML width attributes in Chrome. Do NOT just repeat the same losing rule.
 ${COMMON_RULES}
 ${PAGE_OUTPUT_FORMAT}
 DESIGN TOKENS:
