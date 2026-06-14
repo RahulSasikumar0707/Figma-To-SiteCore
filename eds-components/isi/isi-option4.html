@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDS ISI option 4</title>
+    <link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet">
+<link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&amp;display=swap" rel="stylesheet">
+   
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+        <!--main-->
+        <main id="eds-main">
+            <div style="padding-top:100px; padding-bottom: 30rem;">Main body</div>
+            <!-- <div class="component eds-[component-name] [modifier-name] [sitecore--predefined-classes-multi-list] [free-text-class]"></div> -->
+            <!--
+                Modifier Class:  Class list defined for the component as a rendering varinats
+                    isi-option-4, isi-col-sp39, isi-bottom-tray, isi-custom-collapse-height
+
+                    isi-option-4 – Defines the layout and styling for the fourth variation of the ISI component, if applicable.
+                        Session Notes:  When the user collapses the ISI tray, we set sessionStorage.setItem("isTrayExpanded", "true").
+                                        When the user expands the ISI tray, we set sessionStorage.setItem("isTrayExpanded", "false").
+                                        On page reload, the script checks sessionStorage.getItem("isTrayExpanded"):
+                                        If "true" - All columns remain collapsed.
+                                        If "false" - The tray can expand the first column (or follow default logic).
+
+                    isi-col-sp39 – Provides a column layout that can be customized/created through project-specific CSS as per requirements.
+                    isi-bottom-tray – Represents the bottom tray section, which supports cloning of HTML elements and dynamic class toggling when Expand or Collapse buttons (eds-btn) are clicked.
+                    isi-custom-collapse-height – Allows customization of the collapsed height via project-specific CSS. The height is controlled using the CSS variable --header-height. To adjust the expansion height, modify or create a new value for --header-height.
+                    isi-mob-first-tray-open - Indicates that on mobile view, the first tray (or first column) should be expanded by default when the page loads.
+                    isi-des-first-tray-open - Indicates that on desktop view, the first tray (or first column) should be expanded by default when the page loads.
+                    ignore-mob-scroll-lock - Indicates the body mobile view should not have scroll lock applied when the tray is expanded.
+
+                data-isi-id – Represents the value used to set the cloned ISI tray’s id. This value can be customized at the project level. If the attribute is missing or the value is not provided, the default id will be "isi".
+                Custom classes - free text
+                padding/margin utility classes
+            -->
+            <!-- SC should have feasibility to add or remove classes beside eds-isi-->
+            <div class="eds-isi isi-bottom-tray isi-option-4 isi-mob-first-tray-open isi-des-first-tray-open" data-isi-id="important-safety-information">
+                <!-- SC should have feasibility to add or remove classes beside isi-main-heading -->
+                <div class="isi-main-heading gs-bg-primary">
+                    <div class="container-fluid">
+                        <!-- SC should have feasibility to add or remove classes beside row -->
+                        <div class="row align-items-center">
+                            <!-- Number of columns can be dependent on the requirements and width of the columns can be customized from isi-main-heading and has to check responsive views rendering -->
+                            <!-- Note: If a col has to be added then it might be the new variant from Sitecore end as the structure is predefined. -->
+                            <div class="col">
+                                <div class="section-heading">
+                                    <p class="isi-title">What is DESCOVY?</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="section-heading">
+                                    <!-- RTF -->
+                                    <p class="isi-title">Important Safety Information & Use</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!-- RTF -->
+                                <!-- isi-mob-btn-icon is given to hide the link-text in mobile and display the icon -->
+                                <div class="cta-wrapper isi-mob-btn-icon text-end">
+                                    <a href="#" class="eds-btn gs-btn-sm gs-btn-secondary btn-expand" data-gtm=""><span class="link-text">Expand</span><i class="gs-btn-icon icon-chevron-up"></i></a>
+                                    <a href="#" class="eds-btn gs-btn-sm gs-btn-secondary btn-collapse" data-gtm=""><span class="link-text">Collapse</span><i class="gs-btn-icon icon-chevron-down"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SC should have feasibility to add or remove classes beside isi-main-content -->
+                <div class="isi-main-content isi-col-sp39">
+                    <div class="container-fluid">
+                        <!-- SC should have feasibility to add or remove number of rows and classes beside row -->
+                        <div class="row">
+                            <!-- Number of columns can be dependent on the requirements and width of the columns can be customized from isi-main-content and has to check responsive views rendering -->
+                            <!-- Note: If a col has to be added then it might be the new variant from Sitecore end as the structure is predefined. -->
+                            <div class="col">
+                                <div class="section-heading">
+                                    <!-- RTF -->
+                                    <p class="isi-title">What is DESCOVY?</p>
+                                    <div class="cta-wrapper isi-mob-btn-icon text-end">
+                                        <a href="#" class="eds-btn gs-btn-sm gs-btn-secondary isi-expand-icon" data-gtm=""><span class="link-text">Expand</span><i class="gs-btn-icon icon-plus"></i></a>
+                                        <a href="#" class="eds-btn gs-btn-sm gs-btn-secondary isi-collapsed-icon" data-gtm=""><span class="link-text">Collapse</span><i class="gs-btn-icon icon-minus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="section-content">
+                                    <!-- RTF -->
+                                    <p>DESCOVY for PrEP (pre-exposure prophylaxis) is a once-daily prescription</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="section-heading">
+                                    <!-- RTF -->
+                                    <p class="isi-title">Important Safety Information</p>
+                                    <div class="cta-wrapper isi-mob-btn-icon text-end">
+                                        <a href="#" class="eds-btn gs-btn-sm gs-btn-secondary isi-expand-icon" data-gtm=""><span class="link-text d-none">Expand</span><i class="gs-btn-icon icon-plus"></i></a>
+                                        <a href="#" class="eds-btn gs-btn-sm gs-btn-secondary isi-collapsed-icon" data-gtm=""><span class="link-text d-none">Collapse</span><i class="gs-btn-icon icon-minus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="section-content">
+                                    <!-- RTF -->
+                                    <p>DESCOVY may cause serious side effects:</p>
+                                    <p><span class="fw-semibold">Worsening of hepatitis B (HBV) infection.</span> Your healthcare provider will test</p>
+                                    <ul class="gs-unordered-list">
+                                        <li><span class="fw-semibold">You must be HIV negative before you start and while receiving DESCOVY.</span> Get an HIV test before starting, before each injection, and when your healthcare provider tells you. If you think you were exposed to HIV while receiving DESCOVY, talk to your healthcare provider as you may need an HIV test.</li>
+                                        <li><span class="fw-semibold">Some HIV tests may not detect HIV in a person who recently acquired HIV.</span> Tell your healthcare provider if you had a flu-like illness within the last month before starting or while receiving DESCOVY. Symptoms of new HIV infection include tiredness, fever, joint or muscle aches, headache, sore throat, vomiting or diarrhea, rash, night sweats, and/or enlarged lymph nodes in the neck or groin.</li>
+                                        <li><span class="fw-semibold">DESCOVY does not prevent other sexually transmitted infections (STIs).</span> Get tested for other STIs and practice safer sex by using condoms to reduce the risk of getting STIs.</li>
+                                        <li><span class="fw-semibold">DESCOVY is not approved to treat HIV.</span> You must immediately take other medicines if you get HIV. If you have HIV and only receive DESCOVY, your HIV may become harder to treat.</li>
+                                        <li><span class="fw-semibold">Follow the DESCOVY dosing schedule,</span> which includes returning to a healthcare provider for your scheduled injections every 6 months. Missing scheduled injections or tablets can increase your chances of getting HIV. </li>
+                                    </ul>
+                                    <ul class="gs-unordered-list">
+                                        <li><span class="fw-semibold">To further help reduce your risk of getting HIV:</span>
+                                            <ul>
+                                                <li>Know your HIV status and the HIV status of your partner(s). If they are living with HIV, your risk of getting HIV is lower if they are taking effective HIV treatment.</li>
+                                                <li>Talk to your healthcare provider about all the ways to help reduce the risk of getting HIV.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <p class="fw-semibold">Who should not receive or take DESCOVY?</p>
+                                    <ul class="gs-unordered-list">
+                                        <li><span class="fw-semibold">Do not receive DESCOVY if you already have HIV or do not know your HIV status.</span> If you have HIV, you will need to take other medicines to treat it. DESCOVY is not approved to treat HIV and is only for reducing the risk of getting HIV before you get it.</li>
+                                    </ul>
+                                    <p class="fw-semibold">What are the possible side effects of DESCOVY?</p>
+                                    <ul class="gs-unordered-list">
+                                        <li><span class="fw-semibold">The most common side effects of DESCOVY</span> are injection site reactions, headache, and nausea. These are not the only possible side effects.</li>
+                                        <li>Reactions at the injection site may include a lump or bump, pain, skin hardening, swelling, itching, redness, bruising, or warmth.</li>
+                                        <li>Rarely, if DESCOVY is injected incorrectly by your healthcare provider, serious injection site reactions, like severe damage of the skin or open sores, can occur.</li>
+                                        <li>Tell your healthcare provider if you have any injection site reactions or other side effects that bother you or don’t go away.</li>
+                                    </ul>
+                                    <p>What should I tell my healthcare provider before receiving DESCOVY?</p>
+                                    <ul class="gs-unordered-list">
+                                        <li><span class="fw-semibold">All your medical conditions.</span></li>
+                                        <li><span class="fw-semibold">If you are pregnant</span> or plan to become pregnant. Tell your healthcare provider if you become pregnant while or after receiving DESCOVY.</li>
+                                        <li><span class="fw-semibold">If you are breastfeeding</span> or plan to breastfeed. Talk to your healthcare provider about the best way to feed your baby while you are receiving DESCOVY.</li>
+                                        <li><span class="fw-semibold">All the medicines you take,</span> including prescription and over-the-counter medicines, vitamins, and herbal supplements. DESCOVY can remain in your body for up to 9 months after your last injection and can affect other medicines. Keep a list of all your medicines and show it to your healthcare provider and pharmacist. Do not start a new medicine without telling your healthcare provider.</li>
+                                    </ul>
+                                    <p class="fw-semibold">You are encouraged to report negative side effects of prescription drugs to the FDA. Visit <a href="https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program" target="_blank" class="eds-link leave-site" data-gtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;isi tray&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;www.fda.gov/medwatch&quot;,&quot;eventPosition&quot;:&quot;1&quot;,&quot;eventDestination&quot;:&quot;https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;ISI link&quot;}"><span class="link-text">www.fda.gov/medwatch</span></a>, or call 1-800-FDA-1088.</p>
+                                    <p><a class="eds-link" href="https://www.DESCOVY.com/pdf/important-facts.pdf" target="_blank" data-gtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;resource&quot;,&quot;eventAction&quot;:&quot;download&quot;,&quot;eventLabel&quot;:&quot;Please see Important Facts about DESCOVY, including important warnings.&quot;,&quot;eventPosition&quot;:&quot;2&quot;,&quot;eventDestination&quot;:&quot;https://www.DESCOVY.com/pdf/important-facts.pdf&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;resource link&quot;}"><span class="link-text"><span class="font-regular">Please see Important Facts about DESCOVY, including</span> important warnings</span></a></p>
+                                </div>
+                            </div>
+                            <!-- <div class="col">
+                                <div class="section-content">
+                                    <div class="cta-wrapper isi-mob-btn-icon text-end">
+                                        <a href="#" class="eds-btn gs-btn-sm gs-btn-secondary btn-expand" data-gtm=""><span class="link-text">Expand</span><i class="gs-btn-icon icon-chevron-up"></i></a>
+                                        <a href="#" class="eds-btn gs-btn-sm gs-btn-secondary btn-collapse" data-gtm=""><span class="link-text">Collapse</span><i class="gs-btn-icon icon-chevron-down"></i></a>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+<!--footer-->
+        <footer class="eds-footer"></footer>
+    </div>
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-header.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-isi-option2-4.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-isi-option4-extd.js"></script>
+</body>
+</html>

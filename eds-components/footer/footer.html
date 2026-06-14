@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDS Footer</title>
+    <link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+<link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Adobe Type Kit fonts -->
+    <!-- Proxima Nova -->
+<!-- <link rel="stylesheet" href="https://use.typekit.net/frz4xvu.css" integrity="sha384-3fSEe12OW0Wc6cCt6T4cSkmDUPQ6fvfSaYI9ub+jQEv06Y7dX4UJNmmdt7sduBYR" crossorigin="anonymous"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --font-family-primary: Inter, serif;
+        }
+        .cmp-details {
+            padding: 32px 0;
+            font-size: 24px;
+            color: #C8102E;
+        }
+        .color-777777 {
+            color: #777777;
+        }
+        .name-seperator {
+            color: #F2F;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+        <main id="eds-main">
+           
+        </main>
+        <!--footer-->
+        <!--
+            Modifier Class:  Class list defined for the component as a rendering varinats
+                Beside container-wrapper:
+                    gs-bg-neutral_20
+                Beside eds-footer:
+                    footer-with-all-elements-link-bottom
+                Beside immediate row of col-12:
+                    footer-3-col
+                    footer-2-col
+
+            Custom classes - free text
+                mob-sep-neutral-30
+                Beside footer-col
+                    align-items-md-end
+                    align-items-md-center
+        -->
+        <!-- Note to SC: Authours should be able add custom classes next to "eds-footer" to control the spacing, variant etc. -->
+        <!-- Variant-1 -->
+        <div class="cmp-rich-text">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="cmp-details">
+                            Component: <span class="color-777777">Footer</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Links</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Note to SC: Below 4 lines are constant except the adding custom class values next to "eds-footer". -->
+        <footer class="eds-footer">
+            <!-- Note to SC: authours should be able to create multiple containers and classes feasibilty to be provided beside container-fluid. -->
+            <div class="container-wrapper gs-bg-neutral_20">
+                <div class="component container-fluid">
+                    <!-- Note to SC: authours should be able to create multiple rows and mutiple columns. -->
+                    <!-- Note to SC: Provide provision to include a custom class at row level -->
+                    <div class="row-splitter row">
+                        <!-- Note to SC: provide provision to include a custom class at COL level -->
+                        <div class="column-splitter col col-md-3 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <div class="footer-logo">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.gilead.com/">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/footer-logo-mobile.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/footer-logo-mobile.svg" alt="" class="img-fluid footer-brand-logo">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column-splitter col col-md-9 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <ul class="footer-links-horizontal">
+                                <!-- Note to SC: Author should be able to provide a class next to default class "footer-link", like external-link etc. -->
+                                <!-- Note to SC: Author should be able to control, target="", href="", rel="" attribute values -->
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 1</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 2</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 3</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="https://www.gilead.com">Gilead Corporate Website <i class="icon-external-link"></i></a></li>
+                            </ul>
+                            <div class="footer-copyright-text">
+                                <p class="mb-0">© 2024 Gilead Sciences, Inc. All rights reserved. This site is intended for U.S. residents only   |   US-BVYP-0411 09/23</p>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Variant-2 -->
+        <div class="cmp-rich-text">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="cmp-details">
+                            Component: <span class="color-777777">Footer</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Links, desktop footer links align right</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Note to SC: Below 4 lines are constant except the adding custom class values next to "eds-footer". -->
+        <footer class="eds-footer">
+            <!-- Note to SC: authours should be able to create multiple containers and classes feasibilty to be provided beside container-fluid. -->
+            <div class="container-wrapper gs-bg-neutral_20">
+                <div class="component container-fluid">
+                    <!-- Note to SC: authours should be able to create multiple rows and mutiple columns. -->
+                    <!-- Note to SC: Provide provision to include a custom class at row level -->
+                    <div class="row-splitter row">
+                        <!-- Note to SC: provide provision to include a custom class at COL level -->
+                        <div class="column-splitter col col-md-3 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <div class="footer-logo">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.gilead.com/">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/footer-logo-mobile.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/footer-logo-mobile.svg" alt="" class="img-fluid footer-brand-logo">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column-splitter col col-md-9 footer-col align-items-md-end justify-content-md-center">
+                            <!-- RTF or micro component inclusion -->
+                            <ul class="footer-links-horizontal">
+                                <!-- Note to SC: Author should be able to provide a class next to default class "footer-link", like external-link etc. -->
+                                <!-- Note to SC: Author should be able to control, target="", href="", rel="" attribute values -->
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 1</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 2</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 3</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="https://www.gilead.com">Gilead Corporate Website <i class="icon-external-link"></i></a></li>
+                            </ul>
+                            <div class="footer-copyright-text">
+                                <p class="mb-0">© 2024 Gilead Sciences, Inc. All rights reserved. This site is intended for U.S. residents only   |   US-BVYP-0411 09/23</p>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Variant-3 -->
+        <div class="cmp-rich-text">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="cmp-details">
+                            Component: <span class="color-777777">Footer</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">without BG Links, desktop footer links align right and mobile separator</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Note to SC: Below 4 lines are constant except the adding custom class values next to "eds-footer". -->
+        <footer class="eds-footer" style="box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.08);">
+            <!-- Note to SC: authours should be able to create multiple containers. -->
+            <div class="container-wrapper">
+                <div class="component container-fluid">
+                    <!-- Note to SC: authours should be able to create multiple rows and mutiple columns. -->
+                    <!-- Note to SC: Provide provision to include a custom class at row level -->
+                    <div class="row-splitter row">
+                        <!-- Note to SC: provide provision to include a custom class at COL level -->
+                        <div class="column-splitter col col-md-3 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <div class="footer-logo">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.gilead.com/">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/footer-logo-mobile.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/footer-logo-mobile.svg" alt="" class="img-fluid footer-brand-logo">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column-splitter col col-md-9 footer-col align-items-md-end justify-content-md-center">
+                            <!-- RTF or micro component inclusion -->
+                            <ul class="footer-links-horizontal">
+                                <!-- Note to SC: Author should be able to provide a class next to default class "footer-link", like external-link etc. -->
+                                <!-- Note to SC: Author should be able to control, target="", href="", rel="" attribute values -->
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 1</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 2</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 3</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="https://www.gilead.com">Gilead Corporate Website <i class="icon-external-link"></i></a></li>
+                            </ul>
+                            <div class="footer-copyright-text">
+                                <p class="mb-0">© 2024 Gilead Sciences, Inc. All rights reserved. This site is intended for U.S. residents only   |   US-BVYP-0411 09/23</p>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Variant-4 -->
+        <div class="cmp-rich-text">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="cmp-details">
+                            Component: <span class="color-777777">Footer</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Footer with all elements link bottom, three column footer content, desktop footer links & quick links align right</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Note to SC: Below 4 lines are constant except the adding custom class values next to "eds-footer". -->
+        <footer class="eds-footer footer-with-all-elements-link-bottom">
+            <!-- Note to SC: authours should be able to create multiple containers and classes feasibilty to be provided beside container-fluid. -->
+            <div class="container-wrapper gs-bg-neutral_20">
+                <div class="component container-fluid">
+                    <!-- Note to SC: authours should be able to create multiple rows and mutiple columns. -->
+                    <!-- Note to SC: Provide provision to include a custom class at row level -->
+                    <div class="row-splitter row">
+                        <!-- Note to SC: provide provision to include a custom class at COL level -->
+                        <div class="column-splitter col col-md-3 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <div class="footer-logo">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.gilead.com/">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/footer-logo-mobile.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/footer-logo-mobile.svg" alt="" class="img-fluid footer-brand-logo">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column-splitter col col-md-9 footer-col align-items-md-end justify-content-md-center">
+                            <!-- RTF or micro component inclusion -->
+                            <!-- RTF or micro component inclusion -->                            
+                            <ul class="footer-links-horizontal mb-0">
+                                <!-- Note to SC: Author should be able to provide a class next to default class "footer-link", like external-link etc. -->
+                                <!-- Note to SC: Author should be able to control, target="", href="", rel="" attribute values -->
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 1</a></li>
+                                <!-- RTF: shoudl accept simple HTML markup -->
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 2</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 3</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="https://www.gilead.com">Gilead Corporate Website <i class="icon-external-link"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Note to SC: authours should be able to create multiple containers. -->
+            <div class="container-wrapper">
+                <div class="component container-fluid">
+                    <!-- Note to SC: authours should be able to create multiple rows and mutiple columns. -->
+                    <!-- Note to SC: Provide provision to include a custom class at row level -->
+                    <div class="row-splitter row footer-3-col">
+                        <!-- Note to SC: provide provision to include a custom class at COL level -->
+                        <div class="column-splitter col footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <div class="footer-copyright-text">
+                                <p class="gs-mb-20">The information on this site is intended for audiences in the United States only. The content on this site may not apply to non-US audiences as regulatory control, legal requirements, and/or medical practices may vary in other countries.</p>
+                                <p class="gs-mb-20">TRODELVY, the TRODELVY logo, the TRODELVY ACCESS SUPPORT logo, GILEAD, and the GILEAD logo are trademarks of Gilead Sciences, Inc., or its related companies. All other marks are the property of their respective owners.</p>
+                                <p class="mb-0">© 2025 Gilead Sciences, Inc. All rights reserved.US-TROC-0668 08/25</p>
+                                <ul class="footer-social-icons-container">
+                                    <li><a href="#" class=""><img src="../../../assets/common/icons/Insta_32.svg" alt=""></a></li>
+                                    <li><a href="#" class=""><img src="../../../assets/common/icons/FB_32.svg" alt=""></a></li>
+                                    <li><a href="#" class=""><img src="../../../assets/common/icons/Ytube_32.svg" alt=""></a></li>
+                                </ul>
+                            </div>                            
+                        </div>
+                        <div class="column-splitter col footer-col align-items-md-end">
+                            <ul class="footer-copyright-links">
+                                <li><a href="#" class="footer-link">Quick Link 1</a></li>
+                                <li><a href="#" class="footer-link">Quick Link 2</a></li>
+                                <li><a href="#" class="footer-link">Quick Link 3</a></li>
+                                <li><a href="#" class="footer-link">Quick Link 4</a></li>
+                            </ul>
+                        </div>
+                        <div class="column-splitter col footer-col align-items-md-end">
+                            <ul class="footer-copyright-links">
+                                <li><a href="#" class="footer-link">Quick Link 5</a></li>
+                                <li><a href="#" class="footer-link">Quick Link 6</a></li>
+                                <li><a href="#" class="footer-link">Quick Link 7</a></li>
+                                <li><a href="#" class="footer-link">Quick Link 8</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Variant-5 -->
+        <div class="cmp-rich-text">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="cmp-details">
+                            Component: <span class="color-777777">Footer</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Footer with all elements link bottom, two column footer content, desktop footer links & quick links align right</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Note to SC: Below 4 lines are constant except the adding custom class values next to "eds-footer". -->
+        <footer class="eds-footer footer-with-all-elements-link-bottom">
+            <!-- Note to SC: authours should be able to create multiple containers and classes feasibilty to be provided beside container-fluid. -->
+            <div class="container-wrapper gs-bg-neutral_20">
+                <div class="component container-fluid">
+                    <!-- Note to SC: authours should be able to create multiple rows and mutiple columns. -->
+                    <!-- Note to SC: Provide provision to include a custom class at row level -->
+                    <div class="row-splitter row">
+                        <!-- Note to SC: provide provision to include a custom class at COL level -->
+                        <div class="column-splitter col col-md-3 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <div class="footer-logo">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.gilead.com/">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/footer-logo-mobile.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/footer-logo-mobile.svg" alt="" class="img-fluid footer-brand-logo">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column-splitter col col-md-9 footer-col align-items-md-end justify-content-md-center">
+                            <!-- RTF or micro component inclusion -->
+                            <!-- RTF or micro component inclusion -->                            
+                            <ul class="footer-links-horizontal mb-0">
+                                <!-- Note to SC: Author should be able to provide a class next to default class "footer-link", like external-link etc. -->
+                                <!-- Note to SC: Author should be able to control, target="", href="", rel="" attribute values -->
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 1</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 2</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 3</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="https://www.gilead.com">Gilead Corporate Website <i class="icon-external-link"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Note to SC: authours should be able to create multiple containers. -->
+            <div class="container-wrapper">
+                <div class="component container-fluid">
+                    <!-- Note to SC: authours should be able to create multiple rows and mutiple columns. -->
+                    <!-- Note to SC: Provide provision to include a custom class at row level -->
+                    <div class="row-splitter row footer-2-col">
+                        <!-- Note to SC: provide provision to include a custom class at COL level -->
+                        <div class="column-splitter col footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <div class="footer-copyright-text">
+                                <p class="gs-mb-20">The information on this site is intended for audiences in the United States only. The content on this site may not apply to non-US audiences as regulatory control, legal requirements, and/or medical practices may vary in other countries.</p>
+                                <p class="gs-mb-20">TRODELVY, the TRODELVY logo, the TRODELVY ACCESS SUPPORT logo, GILEAD, and the GILEAD logo are trademarks of Gilead Sciences, Inc., or its related companies. All other marks are the property of their respective owners.</p>
+                                <p class="mb-0">© 2025 Gilead Sciences, Inc. All rights reserved.US-TROC-0668 08/25</p>
+                                <ul class="footer-social-icons-container">
+                                    <li><a href="#" class=""><img src="../../../assets/common/icons/Insta_32.svg" alt=""></a></li>
+                                    <li><a href="#" class=""><img src="../../../assets/common/icons/FB_32.svg" alt=""></a></li>
+                                    <li><a href="#" class=""><img src="../../../assets/common/icons/Ytube_32.svg" alt=""></a></li>
+                                </ul>
+                            </div>                            
+                        </div>
+                        <div class="column-splitter col footer-col align-items-md-center">
+                            <ul class="footer-copyright-links">
+                                <li><a href="#" class="footer-link">Quick Link 1</a></li>
+                                <li><a href="#" class="footer-link">Quick Link 2</a></li>
+                                <li><a href="#" class="footer-link">Quick Link 3</a></li>
+                                <li><a href="#" class="footer-link">Quick Link 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Variant-6 -->
+        <div class="cmp-rich-text">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="cmp-details">
+                            Component: <span class="color-777777">Footer</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Footer with Trademark Information</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Note to SC: Below 4 lines are constant except the adding custom class values next to "eds-footer". -->
+        <footer class="eds-footer">
+            <!-- Note to SC: authours should be able to create multiple containers and classes feasibilty to be provided beside container-fluid. -->
+            <div class="container-wrapper gs-bg-neutral_20">
+                <div class="component container-fluid">
+                    <!-- Note to SC: authours should be able to create multiple rows and mutiple columns. -->
+                    <!-- Note to SC: Provide provision to include a custom class at row level -->
+                    <div class="row-splitter row">
+                        <!-- Note to SC: provide provision to include a custom class at COL level -->
+                        <div class="column-splitter col col-md-3 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <div class="footer-logo">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.gilead.com/">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/footer-logo-mobile.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/footer-logo-mobile.svg" alt="" class="img-fluid footer-brand-logo">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column-splitter col col-md-9 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <div class="footer-copyright-text">
+                                <p class="gs-mb-20">The information on this site is intended for audiences in the United States only. The content on this site may not apply to non-US audiences as regulatory control, legal requirements, and/or medical practices may vary in other countries.</p>
+                                <p class="gs-mb-20">TRODELVY, the TRODELVY logo, the TRODELVY ACCESS SUPPORT logo, GILEAD, and the GILEAD logo are trademarks of Gilead Sciences, Inc., or its related companies. All other marks are the property of their respective owners.</p>
+                                <p class="mb-0">© 2025 Gilead Sciences, Inc. All rights reserved.US-TROC-0668 08/25</p>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Note to SC: authours should be able to create multiple containers. -->
+            <div class="container-wrapper">
+                <div class="component container-fluid">
+                    <!-- Note to SC: authours should be able to create multiple rows and mutiple columns. -->
+                    <!-- Note to SC: provide provision to include a custom class at row level -->
+                    <div class="row-splitter row">
+                        <!-- Note to SC: provide provision to include a custom class at COL level -->
+                        <div class="column-splitter col footer-col">
+                            <!-- RTF or micro component inclusion -->                            
+                            <ul class="footer-links-horizontal">
+                                <!-- Note to SC: Author should be able to provide a class next to default class "footer-link", like external-link etc. -->
+                                <!-- Note to SC: Author should be able to control, target="", href="", rel="" attribute values -->
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 1</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 2</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 3</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="https://www.gilead.com">Gilead Corporate Website <i class="icon-external-link"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Variant-7 -->
+        <div class="cmp-rich-text">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="cmp-details">
+                            Component: <span class="color-777777">Footer</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Footer with Trademark Information</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="eds-footer footer-with-all-elements-link-bottom">
+            <!-- Note to SC: authours should be able to create multiple containers and classes feasibilty to be provided beside container-fluid. -->
+            <div class="container-wrapper gs-bg-neutral_20">
+                <div class="component container-fluid">
+                    <!-- Note to SC: provide provision to include a custom class at row level -->
+                    <div class="row-splitter row">
+                        <!-- Note to SC: provide provision to include a custom class at COL level -->
+                        <div class="column-splitter col col-md-3 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <div class="footer-logo">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.gilead.com/">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/footer-logo-mobile.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/footer-logo-mobile.svg" alt="" class="img-fluid footer-brand-logo">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column-splitter col col-md-9 footer-col align-items-md-end justify-content-md-center">
+                            <!-- RTF or micro component inclusion -->                            
+                            <ul class="footer-links-horizontal mb-0">
+                                <!-- Note to SC: Author should be able to provide a class next to default class "footer-link", like external-link etc. -->
+                                <!-- Note to SC: Author should be able to control, target="", href="", rel="" attribute values -->
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 1</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 2</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Footer Link 3</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="https://www.gilead.com">Gilead Corporate Website <i class="icon-external-link"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Note to SC: authours should be able to create multiple containers. -->
+            <div class="container-wrapper">
+                <div class="component container-fluid">
+                    <!-- Note to SC: authours should be able to create multiple rows and mutiple columns. -->
+                    <!-- Note to SC: Provide provision to include a custom class at row level -->
+                    <div class="row-splitter row footer-2-col">
+                        <!-- Note to SC: provide provision to include a custom class at COL level -->
+                        <div class="column-splitter col col-md-3 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <div class="footer-copyright-text">
+                                <p class="gs-mb-20">The information on this site is intended for audiences in the United States only. The content on this site may not apply to non-US audiences as regulatory control, legal requirements, and/or medical practices may vary in other countries.</p>
+                                <p class="gs-mb-20">TRODELVY, the TRODELVY logo, the TRODELVY ACCESS SUPPORT logo, GILEAD, and the GILEAD logo are trademarks of Gilead Sciences, Inc., or its related companies. All other marks are the property of their respective owners.</p>
+                                <p class="mb-0">© 2025 Gilead Sciences, Inc. All rights reserved.US-TROC-0668 08/25</p>
+                            </div>                            
+                        </div>
+                        <div class="column-splitter col col-md-9 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <div class="row">
+                                <div class="col-md-4 order-1">
+                                    <h6 class="fw-bold">Gilead Medical Information</h6>
+                                    <p>1-866-MEDI-GSI (1-866-633-4474) Monday – Friday, 5am – 6pm PT</p>
+                                </div>
+                                <div class="col-md-4 order-3 order-md-2">
+                                    <h6 class="fw-bold">Product Complaints</h6>
+                                    <p>1-800-445-3235 (option #2) Monday – Friday, 8am – 5pm PT <a href="#" class="eds-link">QualityComplaints@gilead.com</a></p>
+                                </div>
+                                <div class="col-md-4 order-5 order-md-3">
+                                    <h6 class="fw-bold">KITE Medical Information, Clinical Trial Inquiries, Adverse Events, & Product Complaints</h6>
+                                    <p>1-844-454-KITE (1-844-454-5483) <a href="#" class="eds-link">kitemedinfo.com</a></p>
+                                </div>
+                                <div class="col-md-4 order-2 order-md-4">
+                                    <h6 class="fw-bold">Gilead Clinical Study Information Center</h6>
+                                    <p>1-833-GILEAD-0 (1-833-445-3230) Monday – Friday, 5am – 6pm PT <a href="#" class="eds-link">GileadClinicalTrials@gilead.com</a></p>
+                                </div>
+                                <div class="col-md-4 order-4 order-md-5">
+                                    <h6 class="fw-bold">Adverse Events</h6>
+                                    <p>1-800-445-3235 (option #3) 24 hours/day, 7 days/week</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Variant-8 -->
+        <div class="cmp-rich-text">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="cmp-details">
+                            Component: <span class="color-777777">Footer</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Footer with Trademark Information</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Note to SC: Below 4 lines are constant except the adding custom class values next to "eds-footer". -->
+        <footer class="eds-footer">
+            <!-- Note to SC: authours should be able to create multiple containers and classes feasibilty to be provided beside container-fluid. -->
+            <div class="container-wrapper gs-bg-neutral_20">
+                <div class="component container-fluid">
+                    <!-- Note to SC: authours should be able to create multiple rows and mutiple columns. -->
+                    <!-- Note to SC: Provide provision to include a custom class at row level -->
+                    <div class="row-splitter row">
+                        <!-- Note to SC: provide provision to include a custom class at COL level -->
+                        <div class="column-splitter col col-md-6 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <div class="footer-logo">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.gilead.com/">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/all-breakpoints-icons-logos-gilead-logo.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/footer-logo-mobile.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/footer-logo-mobile.svg" alt="" class="img-fluid footer-brand-logo">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="footer-copyright-text">
+                                <p class="mt-md-4 gs-mb-20">The information on this site is intended for audiences in the United States only. The content on this site may not apply to non-US audiences as regulatory control, legal requirements, and/or medical practices may vary in other countries.</p>
+                                <p class="gs-mb-20">TRODELVY, the TRODELVY logo, the TRODELVY ACCESS SUPPORT logo, GILEAD, and the GILEAD logo are trademarks of Gilead Sciences, Inc., or its related companies. All other marks are the property of their respective owners.</p>
+                                <p class="mb-md-0">© 2025 Gilead Sciences, Inc. All rights reserved.US-TROC-0668 08/25</p>
+                            </div>                            
+                        </div>
+                        <div class="column-splitter col col-md-2 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <h6 class="fw-bold">head</h6>                            
+                            <ul class="footer-copyright-links">
+                                <!-- Note to SC: Author should be able to provide a class next to default class "footer-link", like external-link etc. -->
+                                <!-- Note to SC: Author should be able to control, target="", href="", rel="" attribute values -->
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Link 1</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Link 2</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Link 3</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Link 4</a></li>
+                            </ul>
+                        </div>
+                        <div class="column-splitter col col-md-2 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <h6 class="fw-bold">head</h6>                            
+                            <ul class="footer-copyright-links">
+                                <!-- Note to SC: Author should be able to provide a class next to default class "footer-link", like external-link etc. -->
+                                <!-- Note to SC: Author should be able to control, target="", href="", rel="" attribute values -->
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Link 1</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Link 2</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Link 3</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Link 4</a></li>
+                            </ul>
+                        </div>
+                        <div class="column-splitter col col-md-2 footer-col">
+                            <!-- RTF or micro component inclusion -->
+                            <h6 class="fw-bold">head</h6>                            
+                            <ul class="footer-copyright-links">
+                                <!-- Note to SC: Author should be able to provide a class next to default class "footer-link", like external-link etc. -->
+                                <!-- Note to SC: Author should be able to control, target="", href="", rel="" attribute values -->
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Link 1</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Link 2</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Link 3</a></li>
+                                <li><a class="footer-link" target="_blank" rel="noopener noreferrer" href="#">Link 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+  </body>

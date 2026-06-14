@@ -1,0 +1,10 @@
+{
+  "name": "figma-to-eds",
+  "version": "1.0.0",
+  "description": "Figma design -> EDS component HTML/CSS/JS (Bootstrap 5.1.3) conversion pipeline with dual-Claude generate/review loop",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "convert": "node src/run.mjs"
+  }
+}

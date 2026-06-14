@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipcards</title>
+    <link rel="stylesheet" href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" />
+    <link href="../../../assets/common/styles/jquery.mCustomScrollbar-v3.1.5.min.css" rel="stylesheet">
+    <link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --font-family-primary: Inter, serif;
+        }
+        .cmp-details {
+            padding: 32px 0;
+            font-size: 24px;
+            color: #C8102E;
+        }
+        .color-777777 {
+            color: #777777;
+        }
+        .name-seperator {
+            color: #F2F;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="eds-wrapper">
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+        <main id="eds-main">
+            <!--
+                Component name: flip-card
+                Classes part of the base component in scriban: eds-card card
+                Component modifier classes: classes are rendering classes which are already available on the sitecore. Modifier classes that change the flip card behavior
+                    - flip-card
+                    - flipcard-m-cus-scroll : the class is used to apply m custorm scroll bar.
+                    - pause-video-out-of-view : the class is used to pause a video when it's out of the viewport.
+                class-multi-list: Utility classes.
+                    - Card Classes: [card-img-center, bg-card-pm, bg-card-se, bg-card-pm-front, bg-card-se-front, bg-card-pm-back, bg-card-se-back]
+                    - Image Classes: [card-img-center, card-img-v-center, bg-card-se, bg-card-pm-front, bg-card-se-front, bg-card-pm-back, bg-card-se-back]
+
+                free-text-class: provide a provision where user can add pre text classes
+            -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Flip cards</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Flip card can be achieved using cards structure.</span><span class="name-seperator"> | </span><span class="color-777777">Flip card is a typical interactive element that allows users to view more information by flipping the card. It has card content on the front and back. Each can comprise of card image, video, body and footer</span><span class="separator"> | </span>
+                                Modifier classes: [flip-card, flipcard-m-cus-scroll, pause-video-out-of-view]
+                                Utility classes: [card-img-center, card-img-v-center, bg-card-se, bg-card-pm-front, bg-card-se-front, bg-card-pm-back, bg-card-se-back]
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="gs-mb-20">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card flip-card bg-img-pm-front bg-img-se-back card-img-padding [modifier-name] [class-multi-list] [free-text-class]">
+                                <div class="card-front">
+                                    <!-- Do not generate this in case image is not set -->
+                                    <div class="card-img">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                                        </picture>
+                                    </div>
+                                    <!--need an option to hold video component, if not configured or empty don't generate this block-->
+                                    <div class="card-video">
+                                        <!--rtf-->
+                                    </div>
+                                    <div class="card-body-footer">
+                                        <!-- Do not generate this if the card-body doesnt exist -->
+                                        <div class="card-body">
+                                            <!--RTF-->
+                                            <p>Card text will appear here.</p>
+                                            <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, obcaecati voluptates earum officiis repudiandae praesentium soluta tenetur aperiam, illo corporis consectetur omnis voluptate iure voluptatum blanditiis neque! Possimus, eaque eveniet!</p>
+                                            <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, obcaecati voluptates earum officiis repudiandae praesentium soluta tenetur aperiam, illo corporis consectetur omnis voluptate iure voluptatum blanditiis neque! Possimus, eaque eveniet!</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <!-- Do not generate this RTF if no content is provided -->
+                                            <!--RTF-->
+                                            <p>Card footer add. text will apper here</p>
+                                            <!-- CTA wrapper: Do not generate this if the CTA is not authoured -->
+                                            <div class="cta-wrapper">
+                                                <!-- Possible to have more than one CTA -->
+                                                <a href="#" class="eds-link flip-card-btn link-sm">
+                                                    <span class="link-text">Card Front CTA</span>
+                                                    <i class="gs-btn-icon icon-right_arrow icon-sm"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <!-- Do not generate this in case media is not set -->
+                                    <div class="card-img">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                                        </picture>
+                                    </div>
+                                    <!--need an option to hold video component, if not configured or empty don't generate this block-->
+                                    <div class="card-video">
+                                        <!--rtf-->
+                                    </div>
+                                    <div class="card-body-footer">
+                                        <!-- Do not generate this if the card-body doesnt exist -->
+                                        <div class="card-body">
+                                            <!--RTF-->
+                                            <div class="card-body-content">
+                                                <p>Card text will appear here.</p>
+                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum fugiat nemo rerum ipsa, quod eveniet maiores maxime iste minima, odio laudantium recusandae dolor eius assumenda dignissimos? Maxime dolorem a quo.</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <!-- Do not generate this RTF if no content is provided -->
+                                            <!--RTF-->
+                                            <p>Card footer add. text will apper here</p>
+                                            <!-- CTA wrapper: Do not generate this if the CTA is not authoured -->
+                                            <div class="cta-wrapper">
+                                                <!-- Possible to have more than one CTA -->
+                                                <a href="#" class="eds-link flip-card-btn link-sm">
+                                                    <span class="link-text">Card Back CTA</span>
+                                                    <i class="gs-btn-icon icon-right_arrow icon-sm"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mt-4 mt-md-0">
+                            <div class="eds-card card flip-card flipcard-m-cus-scroll bg-img-se-front bg-img-pm-back card-img-padding [modifier-name] [class-multi-list] [free-text-class]">
+                                <div class="card-front">
+                                    <!-- Do not generate this in case image is not set -->
+                                    <div class="card-img">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                                        </picture>
+                                    </div>
+                                    <!--need an option to hold video component, if not configured or empty don't generate this block-->
+                                    <div class="card-video">
+                                        <!--rtf-->
+                                    </div>
+                                    <div class="card-body-footer">
+                                        <!-- Do not generate this if the card-body doesnt exist -->
+                                        <div class="card-body">
+                                            <!--RTF-->
+                                            <p>Card text will appear here.</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <!-- Do not generate this RTF if no content is provided -->
+                                            <!--RTF-->
+                                            <p>Card footer add. text will apper here</p>
+                                            <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, obcaecati voluptates earum officiis repudiandae praesentium soluta tenetur aperiam, illo corporis consectetur omnis voluptate iure voluptatum blanditiis neque! Possimus, eaque eveniet!</p>
+                                            <!-- CTA wrapper: Do not generate this if the CTA is not authoured -->
+                                            <div class="cta-wrapper">
+                                                <!-- Possible to have more than one CTA -->
+                                                <a href="#" class="eds-link flip-card-btn link-sm">
+                                                    <span class="link-text">Card Front CTA</span>
+                                                    <i class="gs-btn-icon icon-right_arrow icon-sm"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <!-- Do not generate this in case media is not set -->
+                                    <div class="card-img">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                                        </picture>
+                                    </div>
+                                    <!--need an option to hold video component, if not configured or empty don't generate this block-->
+                                    <div class="card-video">
+                                        <!--rtf-->
+                                    </div>
+                                    <div class="card-body-footer">
+                                        <!-- Do not generate this if the card-body doesnt exist -->
+                                        <div class="card-body">
+                                            <!--RTF-->
+                                            <div class="card-body-content">
+                                                <p class="mb-2">Card text will appear here.</p>
+                                                <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, obcaecati voluptates earum officiis repudiandae praesentium soluta tenetur aperiam, illo corporis consectetur omnis voluptate iure voluptatum blanditiis neque! Possimus, eaque eveniet!</p>
+                                                <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, obcaecati voluptates earum officiis repudiandae praesentium soluta tenetur aperiam, illo corporis consectetur omnis voluptate iure voluptatum blanditiis neque! Possimus, eaque eveniet!</p>
+                                                <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, obcaecati voluptates earum officiis repudiandae praesentium soluta tenetur aperiam, illo corporis consectetur omnis voluptate iure voluptatum blanditiis neque! Possimus, eaque eveniet!</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <!-- Do not generate this RTF if no content is provided -->
+                                            <!--RTF-->
+                                            <p>Card footer add. text will apper here</p>
+                                            <!-- CTA wrapper: Do not generate this if the CTA is not authoured -->
+                                            <div class="cta-wrapper">
+                                                <!-- Possible to have more than one CTA -->
+                                                <a href="#" class="eds-link flip-card-btn link-sm">
+                                                    <span class="link-text">Card Back CTA</span>
+                                                    <i class="gs-btn-icon icon-right_arrow icon-sm"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mt-4 mt-md-0">
+                            <div class="eds-card card flip-card bg-img-pm-front bg-img-se-back card-img-padding [modifier-name] [class-multi-list] [free-text-class]">
+                                <div class="card-front">
+                                    <!-- Do not generate this in case image is not set -->
+                                    <div class="card-img">
+                                    </div>
+                                    <!--need an option to hold video component, if not configured or empty don't generate this block-->
+                                    <div class="card-video">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe src="https://player.vimeo.com/video/1076086221?h=03f44dc01c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="card-body-footer">
+                                        <!-- Do not generate this if the card-body doesnt exist -->
+                                        <div class="card-body">
+                                            <!--RTF-->
+                                            <p>Card text will appear here.</p>
+                                            <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, obcaecati voluptates earum officiis repudiandae praesentium soluta tenetur aperiam, illo corporis consectetur omnis voluptate iure voluptatum blanditiis neque! Possimus, eaque eveniet!</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <!-- Do not generate this RTF if no content is provided -->
+                                            <!--RTF-->
+                                            <p>Card footer add. text will apper here</p>
+                                            <!-- CTA wrapper: Do not generate this if the CTA is not authoured -->
+                                            <div class="cta-wrapper">
+                                                <!-- Possible to have more than one CTA -->
+                                                <a href="#" class="eds-link flip-card-btn link-sm">
+                                                    <span class="link-text">Card Front CTA</span>
+                                                    <i class="gs-btn-icon icon-right_arrow icon-sm"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <!-- Do not generate this in case media is not set -->
+                                    <div class="card-img">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                                        </picture>
+                                    </div>
+                                    <!--need an option to hold video component, if not configured or empty don't generate this block-->
+                                    <div class="card-video">
+                                        <!--rtf-->
+                                    </div>
+                                    <div class="card-body-footer">
+                                        <!-- Do not generate this if the card-body doesnt exist -->
+                                        <div class="card-body">
+                                            <!--RTF-->
+                                            <div class="card-body-content">
+                                                <p>Card text will appear here.</p>
+                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum fugiat nemo rerum ipsa, quod eveniet maiores maxime iste minima, odio laudantium recusandae dolor eius assumenda dignissimos? Maxime dolorem a quo.</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <!-- Do not generate this RTF if no content is provided -->
+                                            <!--RTF-->
+                                            <p>Card footer add. text will apper here</p>
+                                            <!-- CTA wrapper: Do not generate this if the CTA is not authoured -->
+                                            <div class="cta-wrapper">
+                                                <!-- Possible to have more than one CTA -->
+                                                <a href="#" class="eds-link flip-card-btn link-sm">
+                                                    <span class="link-text">Card Back CTA</span>
+                                                    <i class="gs-btn-icon icon-right_arrow icon-sm"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        <footer class="eds-footer"></footer>
+    </div>
+
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/player.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/jquery.mCustomScrollbar.min-v3.1.3.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-flip-card.js"></script>
+</body>
+
+</html>

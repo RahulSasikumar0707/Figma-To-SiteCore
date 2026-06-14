@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Profile Component</title>
+    <link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+    <link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+    <style>
+        .cmp-details {
+            font-family: "Inter", sans-serif;
+            padding: 32px 0;
+            font-size: 24px;
+            color: #c8102e;
+        }
+       
+        .color-777777 {
+            color: #777777;
+        }
+       
+        .name-seperator {
+            color: #f2f;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+        <!--main-->
+        <main id="eds-main">
+            <!-- <div class="component eds-[component-name] [modifier-name] [sitecore--predefined-classes-multi-list] [free-text-class]"></div> -->
+            <!--
+                Modifier Class:  Class list defined for the component as a rendering varinats
+                    professional-profile-detailed
+                    professional-profile-minimal
+
+                Custom classes - free text
+                padding/margin utility classes
+            -->
+            <!-- Variant 1 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Professional Profile card detailed (Single column)</span><span class="name-seperator"> |
+                                </span> This is implemented using cards structure <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Cards title, Icon + img text, no border, box-shadow, card content, footer rtf, clickable links and additional links</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Modifier and Free text classes can be added to achieve the feasibility -->
+                            <div class="eds-card card horizontal-card border-0 card-shadow professional-profile professional-profile-single-column-detailed">
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/Rectangle.png">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/Rectangle.png">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/Rectangle.png">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/Rectangle.png" class="img-fluid" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <!-- Free text classes can be added or removed by sitecore to achieve the feasibility -->
+                                        <h3 class="h5-heading fw-bold gs-des-mb-32 gs-mob-mb-16">Jacqueline K.Barton</h3>
+                                        <h5 class="mb-4">Professor,California Institute of Technology</h5>
+                                        <p class="m-body pt-md-2 gs-mb-28">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <!-- cta-wrapper consists of CTA -->
+                                            <a class="eds-link link-lg" href="#">
+                                                <span class="link-text">Learn more</span>
+                                                <i class="icon-right_arrow gs-btn-icon"></i>
+                                            </a>
+                                        </div>
+                                        <ul class="social-links">
+                                            <!-- Sitecore can add or remove links here to achieve the feasibility -->
+                                            <li><a href="#" class="eds-link"><img src="../../../assets/common/media/linkedin_icon.svg" alt=""></a></li>
+                                            <li><a href="#" class="eds-link"><img src="../../../assets/common/media/twitter_icon.svg" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 2 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Professional Profile card detailed</span> <span class="name-seperator"> |
+                                </span> This is implemented using cards structure <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Cards title, Icon + img text, no border, box-shadow, card content, footer rtf, clickable links and additional links</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="eds-card card border-0 card-shadow professional-profile professional-profile-detailed">
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/carousel_D_M_var3-image1.svg" class="img-fluid w-100" alt="carousel image">
+                                    </picture>
+                                    <div class="card-img-text">
+                                        <p class="h6-heading fw-bold mb-1">Jacqueline K. Barton</p>
+                                        <p class="m-body mb-0">Professor, California Institute of Technology</p>
+                                    </div>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <p class="m-body gs-mb-28">Dr. Barton is the John G. Kirkwood and Arthur A. Noyes Professor of Chemistry in the Division of Chemistry and Chemical Engineering at Caltech.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link link-lg" href="#"><span class="link-text">Learn more</span><i class="icon-right_arrow gs-btn-icon"></i></a>
+                                        </div>
+                                        <ul class="social-links">
+                                            <li><a href="#" class="eds-link"><img src="../../../assets/common/media/linkedin_icon.svg" alt=""></a></li>
+                                            <li><a href="#" class="eds-link"><img src="../../../assets/common/media/twitter_icon.svg" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 3 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Professional Profile card minimal</span> <span class="name-seperator"> |
+                                </span> This is implemented using cards structure <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Cards title, Icon + img text, no border, box-shadow and additional links</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="eds-card card border-0 card-shadow professional-profile professional-profile-minimal">
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="carousel image">
+                                    </picture>
+                                    <div class="card-img-text">
+                                        <p class="h6-heading fw-bold mb-1">Jacqueline K. Barton</p>
+                                        <p class="m-body gs-mb-28">Professor, California Institute of Technology</p>
+                                        <ul class="social-links">
+                                            <li><a href="#" class="eds-link"><img src="../../../assets/common/media/linkedin_icon.svg" alt=""></a></li>
+                                            <li><a href="#" class="eds-link"><img src="../../../assets/common/media/twitter_icon.svg" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Here don't generate card-body-footer -->
+                                <div class="card-body-footer d-none">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <p class="m-body gs-mb-28">Dr. Barton is the John G. Kirkwood and Arthur A. Noyes Professor of Chemistry in the Division of Chemistry and Chemical Engineering at Caltech.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link link-lg" href="#"><span class="link-text">Learn more</span><i class="icon-right_arrow gs-btn-icon"></i></a>
+                                        </div>
+                                        <ul class="social-links">
+                                            <li>
+                                                <a href="#" class="eds-link"><img src="../../../assets/common/media/linkedin_icon.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="eds-link"><img src="../../../assets/common/media/twitter_icon.svg" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--footer-->
+        <footer class="eds-footer"></footer>
+    </div>
+
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+</body>
+
+</html>

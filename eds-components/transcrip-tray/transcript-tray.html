@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transcript Tray</title>
+    <link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+    <link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+   
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google icons -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded" rel="stylesheet"> -->
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="eds-wrapper">
+        <header id="eds-header">
+            <div class="component eds-header"></div>
+        </header>
+        <main id="eds-main">
+            <section class="gs-mb-20">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <!--multiple language-->
+                            <!--component interaction: adding "trans-collapse" will keep the transcript in collapse state. In case we need transcript in expanded by default remove trans-collase class-->
+                            <!--provide a provision wher user can add pre text classes-->
+                            <!--predeifine classes are rendering classes which are already available on the sitecore class-list-->
+                            <div class="eds-transcript trans-collapse [pre-defined-class-list] [custom-classes]" data-trans-gtm='{"event":"gild.event","eventCategory":"Transcript","eventAction":"","eventLabel":"Supporting Family Members","intendedAudience":"Family/Caregiver","subject":"Patient Support","language":"English"}'>
+                                <div class="trans-header">
+                                    <a href="#" class="trans-btn">Transcript with multi language toggle</a>
+                                </div>
+                                <div class="trans-body">
+                                    <!--If more than one language is available for transcript then we should have lang-toggle container with toggle controls-->
+                                    <div class="lang-toggle">
+                                        <!--first control should always have btn-active class-->
+                                        <!--data-lang value should refer to the data-langcont value under trans-content container-->
+                                        <button class="lang btn-active" data-lang="en">English</button>
+                                        <button class="lang" data-lang="es">Español</button>
+                                    </div>
+                                    <div class="trans-content">
+                                        <!--data-langcont value should refer to the coressponding lang control data-lang values-->
+                                        <!--the first data-lang-content should not be hidden, so don't include "d-none" class-->
+                                        <div data-langcont="en" class="">
+                                            <!--RTF content-->
+                                            <p>English Content</p>
+                                        </div>
+                                        <div data-langcont="es" class="d-none">
+                                            <p>Spanish Content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="gs-mb-20">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <!--single language-->
+                            <!--component interaction: adding "trans-collapse" will keep the transcript in collapse state. In case we need transcript in expanded by default remove trans-collase class-->
+                            <!--provide a provision wher user can add pre text classes-->
+                            <!--predeifine classes are rendering classes which are already available on the sitecore class-list-->
+                            <div class="eds-transcript trans-collapse [pre-defined-class-list] [custom-classes]" data-trans-gtm='{"event":"gild.event","eventCategory":"Transcript","eventAction":"","eventLabel":"Supporting Family Members","intendedAudience":"Family/Caregiver","subject":"Patient Support","language":"English"}'>
+                                <div class="trans-header">
+                                    <a href="#" class="trans-btn">Transcript with single language</a>
+                                </div>
+                                <div class="trans-body">
+                                    <!--with single language, lang-toggle div will not be available -->
+                                    <div class="trans-content">
+                                        <!--in single language data-lang value will not be present, hence data-langcont value should be empty-->
+                                        <!--don't include "d-none" class with single language-->
+                                        <div data-langcont="" class="">
+                                            <!--RTF content-->
+                                            <p>English Content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- footer -->
+        <footer class="eds-footer"> </footer>
+    </div>
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-transcript-tray.js"></script>
+    <script src="../../../assets/eds/Scripts/eds-common-gtm-tracking.js"></script>
+</body>
+</html>

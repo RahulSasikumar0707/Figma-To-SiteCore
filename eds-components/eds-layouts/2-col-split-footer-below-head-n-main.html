@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Layout: 2 Column split layout, footer below the header and main content blocks</title>
+    <link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+    <link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <link href="../../../../Project/assets/storybook/styles/storybook.css" rel="stylesheet" />
+   
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded" rel="stylesheet">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+    <style>
+        .page-layout-row .col {
+            flex: 0 0 auto;
+        }
+        .header-col {
+            background-color: red;
+            width: calc((100% / 12) * 3);
+            max-width: calc((100% / 12) * 3);
+        }
+        .main-content-col {
+            background-color: green;
+            width: calc((100% / 12) * 9);
+            max-width: calc((100% / 12) * 9);
+        }
+        .footer-col {
+            height: 200px;
+            background-color: blue;
+            width: calc((100% / 12) * 12);
+            max-width: calc((100% / 12) * 12);
+        }
+        .page-layout-row {
+            --bs-gutter-x: 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!-- 2 Column split layout, footer below the header and main content blocks -->
+        <!-- Fixed classes: "container-fluid page-2-column-layout-v1" are fixed classes and should have provision for authors to add extra classes if required -->
+        <div class="container-fluid page-2-column-layout-v1 [free-text-classes]">
+            <!-- "row page-layout-row" are fixed class should be present with the structure  -->
+            <div class="row page-layout-row">
+                <!-- "col header-col" are fixed classes -->
+                <div class="col header-col">
+                    <!-- header block placeholder will come under this section -->
+                    <header id="header"></header>
+                </div>
+                <!-- "col main-content-col" are fixed classes -->
+                <div class="col main-content-col">
+                    <!-- main block placeholder will come under this section -->
+                    <main id="eds-main" class="">
+                       
+                        <div class="main-herobanner" style="_margin: 0 -15px; height: 200px; background-color: wheat;">
+
+                        </div>
+                       
+                        <div class="main-content" style="padding: 0 40px; height: 200px; background-color: gray;">
+
+                        </div>
+                    </main>
+                </div>
+                <!-- "col footer-col" are fixed classes -->
+                <div class="col footer-col">
+                    <!-- footer block placeholder will come under this section -->
+                    <footer class="eds-footer"></footer>
+                    <!-- footer -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS files -->
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-header.js"></script>
+</body>
+</html>

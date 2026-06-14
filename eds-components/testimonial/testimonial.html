@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonial Components</title>
+    <link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+    <link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+    <style>
+        .cmp-details {
+            font-family: "Inter", sans-serif;
+            padding: 32px 0;
+            font-size: 24px;
+            color: #c8102e;
+        }
+
+        .color-777777 {
+            color: #777777;
+        }
+
+        .name-seperator {
+            color: #f2f;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+        <!--main-->
+        <main id="eds-main">
+            <!--
+                Modifier Class:  Class list defined for the component as a rendering varinats
+                eds-testimonial(Default)
+                testimonial-small-img-centered : This class is used to center align the smaller image variant of the testimonial component.
+                testimonial-md-contained: This class prevents the testimonial background color from covering the full width on screen width below 992px.
+                quote-icon-overlap: quote-icon-overlap class positions the quote icon to overlap the top border for No img variant of testimonial component.
+                testimonial-cutout-img : If you want the 1366px variant for testimonial-cutout-img, add one class class along with testimonial-cutout-img.
+                                           This targets the parent container-fluid/container using :has() selector to set max-width to 1366px.
+                                           Example: .container-fluid,
+                                                        .container {
+                                                        &:has(.eds-testimonial.testimonial-cutout-img-condensed) {
+                                                            @include media-breakpoint-up(lg) {
+                                                                max-width: var(--site-max-width);
+                                                            }
+                                                        }
+                Note:The class that have a feasibility to add beside Col is(eg: Col-lg-5,col-lg-6,col-lg-7,align-items-lg-end,align-items-lg-center,align-items-lg-start) to align the image as needed.
+                    The classes that have a feasibility to add beside Row are(eg: flex-lg-row-reverse, flex-column-reverse, align-items-center, align-items-start,align-items-lg-center) to change the alignment as needed.
+                    testimonial-quote-icon can have a feasibility to add display utility classes (eg: d-none, d-lg-none,d-lg-block ) to hide quote icons as needed.
+
+            -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                <span class="color-777777">These classes should be given beside eds-testimonial for customization </span>
+                                <span class="name-seperator"> | </span>
+                                Modifier Class:<span class="color-777777"> Class list defined for the component as a rendering variants:</span>
+                                eds-Testimonial (Default)
+                                testimonial-small-img-centered : This class is used to center align the smaller image variant of the testimonial component.
+                                testimonial-md-contained : This class prevents the testimonial background color from covering the full width on screen width below 992px.
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Testimonial</span>
+                                <span class="name-seperator"> | </span>
+                                Variant: <span class="color-777777">Testimonial with Larger Image</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- SC  should have a feasibility to add a classes besides 'eds-testimonial' for more customization -->
+                        <div class="eds-testimonial testimonial-large-img gs-bg-neutral_20">
+                            <!-- sc should have a feasibility to add a classes beside row -->
+                            <div class="row align-items-center">
+                                <!-- sc should have a feasibility to add a classes beside col -->
+                                <div class="col-12 col-lg-5">
+                                    <!-- This div should have the feasibility to include image or video  -->
+                                    <!-- Sc should have the feasibility to include text(RTF) below testimonial-media -->
+                                    <div class="testimonial-media">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/testimonial_larger_image.svg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/testimonial_larger_image.svg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/testimonial_large_mobile.svg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/testimonial_large_mobile.svg" class="img-fluid" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <!-- sc should have a feasibility to add a classes beside col -->
+                                <div class="col-12 col-lg-7">
+                                    <div class="testimonial-content-wrapper">
+                                        <!-- testimonial-content-wrapper can hold micro components (images, videos, CTA's) and RTF's -->
+                                        <!-- "The testimonial-content uses default EDS font sizes,font styles . To customize, remove this class and apply your own classes (eg,h5-heading,h6-heading). -->
+                                        <h5 class="testimonial-content gs-des-mb-60 gs-mob-mb-28  mt-3 mt-lg-0">Hear open and honest conversations from real people sharing their experiences and thoughts about living with HIV.</h5>
+                                        <div class="testimonial-author-info">
+                                            <!-- RTF -->
+                                            <!-- The author-title,author-desc uses default EDS font sizes,font styles . To customize, remove those classes and apply your own classes (eg:,h5-heading,h6-heading,l-body). -->
+                                            <h6 class="author-title mb-1">Rosie Diaz</h6>
+                                            <p class="author-desc gs-des-mb-48 gs-mob-mb-24">Patient</p>
+                                        </div>
+                                        <!-- Optional: Sitecore content authors can add or remove this CTA section as needed -->
+                                        <div class="cta-wrapper">
+                                            <a href="#" class="eds-btn gs-btn-lg gs-btn-primary">
+                                                <span class="link-text">Learn More</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Testimonial</span>
+                                <span class="name-seperator"> | </span>
+                                Variant: <span class="color-777777">Testimonial larger image variant with video</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- SC  should have a feasibility to add a classes besides 'eds-testimonial' for more customization -->
+                        <div class="eds-testimonial testimonial-large-img gs-bg-neutral_20">
+                            <!-- sc should have a feasibility to add a bootstrap utility classes (eg: flex-lg-row-reverse, align-items-center, align-items-start) beside row -->
+                            <div class="row align-items-center">
+                                <!-- sc should have a feasibility to add a classes beside col -->
+                                <div class="col-12 col-lg-5">
+                                    <!-- This div should have the feasibility to include image or video  -->
+                                    <!-- Sc should have the feasibility to include text below testimonial-media -->
+                                    <div class="testimonial-media">
+                                        <!-- ratio-16x9 can be varied based on the video's aspect ratio -->
+                                        <div class="eds-video video-container ratio ratio-16x9">
+                                            <!-- RTF -->
+                                            <iframe id="video-iframe" class="gs-video-player" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" src="https://player.vimeo.com/video/1062871369?h=afca1742fe&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" data-videogtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;video&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;Home video1&quot;,&quot;intendedAudience&quot;:&quot;Patient&quot;,&quot;language&quot;:&quot;English&quot;,&quot;subject&quot;:&quot;video&quot;}" data-ready="true"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- sc should have a feasibility to add a classes beside col -->
+                                <div class="col-12 col-lg-7">
+                                    <div class="testimonial-content-wrapper">
+                                        <!-- testimonial-content-wrapper can hold micro components (images, videos, CTA's) and RTF's -->
+                                        <!-- The testimonial-content uses default EDS font sizes,font styles . To customize, remove this class and apply your own classes (eg,h5-heading,h6-heading). -->
+                                        <h5 class="testimonial-content gs-des-mb-60 gs-mob-mb-28  mt-3 mt-lg-0">Hear open and honest conversations from real people sharing their experiences and thoughts about living with HIV.</h5>
+                                        <div class="testimonial-author-info">
+                                            <!-- RTF -->
+                                            <!-- The author-title,author-desc uses default EDS font sizes,font styles . To customize, remove this class and apply your own classes (eg:,h5-heading,h6-heading,l-body). -->
+                                            <h6 class="author-title mb-1">Rosie Diaz</h6>
+                                            <p class="author-desc gs-des-mb-48 gs-mob-mb-24">Patient</p>
+                                        </div>
+                                        <!-- Optional: Sitecore content authors can add or remove this CTA section as needed -->
+                                        <div class="cta-wrapper">
+                                            <a href="#" class="eds-btn gs-btn-lg gs-btn-primary">
+                                                <span class="link-text">Learn More</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Testimonial</span>
+                                <span class="name-seperator"> | </span>
+                                Variant: <span class="color-777777">Testimonial with Cutout Image</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- SC  should have a feasibility to add a classes besides 'eds-testimonial' for more customization -->
+                        <div class="eds-testimonial testimonial-cutout-img gs-bg-neutral_20">
+                            <!-- sc should have a feasibility to add a bootstrap utility classes (eg:flex-lg-row-reverse, flex-column-reverse, align-items-center, align-items-start) beside row -->
+                            <div class="row flex-lg-row-reverse flex-column-reverse">
+                                <!-- sc should have a feasibility to add a classes beside col -->
+                                <!--sc should have a feasibility to add a free text  classes beside col to align the image (eg:align-items-lg-end,align-items-lg-center,align-items-lg-start)  -->
+                                <div class="col-12 col-lg-5 align-items-lg-end">
+                                    <!-- This div should have the feasibility to include image or video  -->
+                                    <!-- Sc should have the feasibility to include text below testimonial-media -->
+                                    <div class="testimonial-media">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/Testimonial_D_cutoutImage_520_500.svg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/Testimonial_D_cutoutImage_520_500.svg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/Testimonial_M_CutoutImage.svg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/Testimonial_M_CutoutImage.svg" class="img-fluid" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-7">
+                                    <div class="testimonial-content-wrapper">
+                                        <!-- testimonial-content-wrapper can hold micro components (images, videos, CTA's) and RTF's -->
+                                        <!-- Sc shold have a fesibilty to add  display utility classes (eg: d-none, d-lg-none,d-lg-block ) to 'testimonial-quote-icon' to hide quote icons as needed -->
+                                        <div class="testimonial-quote-icon">
+                                            <!-- sc sholud have fesability to use picture tag in case if needed -->
+                                            <img src="../../../assets/common/media/testimonial_small_quotes.svg" class="img-fluid" alt="">
+                                        </div>
+                                        <!-- RTF -->
+                                        <!-- "The testimonial-content uses default EDS font sizes,font styles . To customize, remove this class and apply your own classes (eg,h5-heading,h6-heading). -->
+                                        <h6 class="testimonial-content gs-des-mb-60 gs-mob-mb-28  gs-des-mt-32 gs-mob-mt-16">I tried to have confidence in the treatment team, and just be there with my daughter as she went through treatment. Whenever I had the opportunity, I would take time for myself and do some activities I enjoy: walking, reading, and listening to music.</h6>
+                                        <div class="testimonial-author-info">
+                                            <!-- RTF -->
+                                            <!-- The author-title,author-desc uses default EDS font sizes,font styles . To customize, remove those classes and apply your own classes (eg:,h5-heading,h6-heading,l-body). -->
+                                            <h6 class="author-title mb-1">Rosie Diaz</h6>
+                                            <p class="author-desc mb-5 mb-lg-0">Patient</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Testimonial</span>
+                                <span class="name-seperator"> | </span>
+                                Variant: <span class="color-777777">Testimonial with Smaller Image - Option A</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- SC  should have a feasibility to add a classes besides 'eds-testimonial' for more customization -->
+                        <div class="eds-testimonial testimonial-small-img gs-bg-neutral_20">
+                            <div class="testimonial-content-wrapper">
+                                <!-- testimonial-content-wrapper can hold micro components (images, videos, CTA's) and RTF's -->
+                                <!-- Sc should have a feasibility to add  display utility classes (eg:d-none, d-lg-none,d-lg-block) to 'testimonial-quote-icon' to hide quote icons as needed -->
+                                <!-- SC can use alignment classes to position the quote icon: use 'text-center' to center it, 'text-start' to align left, or 'text-end' to align right  in mobile -->
+                                <div class="testimonial-quote-icon d-lg-none text-center">
+                                    <img src="../../../assets/common/media/testimonial_grey_quotes_mobile.svg" class="img-fluid" alt="">
+                                </div>
+                                <!-- RTF -->
+                                <!-- The testimonial-content uses default EDS font sizes,font styles .To customize, remove this class and apply your own classes (eg,h5-heading,h6-heading). -->
+                                <h5 class="testimonial-content mt-5 mt-lg-0 gs-des-mb-60 gs-mob-mb-28  text-center text-lg-start">I tried to have confidence in the treatment team, and just be there with my daughter as she went through treatment. Whenever I had the opportunity, I would take time for myself and do some activities I enjoy: walking, reading, and listening to music.</h5>
+                            </div>
+                            <div class="testimonial-content-wrapper">
+                                <!-- testimonial-content-wrapper can hold micro components (images, videos, CTA's) and RTF's -->
+                                <div class="testimonial-profile">
+                                    <!-- sc should have a fesability can add or remove this img section as needed  based on requirement -->
+                                    <div class="testimonial-img">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/testimonial_smaller_image_desktop.svg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/testimonial_smaller_image_desktop.svg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/testimonial_smaller_image_mobile.svg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/testimonial_smaller_image_mobile.svg" class="img-fluid" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="testimonial-author-info">
+                                        <!-- RTF -->
+                                        <!-- The author-title,author-desc uses default EDS font sizes,font styles.To customize, remove those classes and apply your own classes (eg:,h5-heading,h6-heading,l-body). -->
+                                        <h6 class="author-title mb-1">Rosie Diaz</h6>
+                                        <p class="author-desc mb-0 text-center text-lg-start">Patient</p>
+                                    </div>
+                                </div>
+                                <!-- Sc should have a feasibility to add  display utility classes (eg:d-none, d-lg-none,d-lg-block) to 'testimonial-quote-icon' to hide quote icons as needed -->
+                                <div class="testimonial-quote-icon d-none d-lg-block">
+                                    <!-- sc sholud have fesability to use picture tag in case if needed -->
+                                    <img src="../../../assets/common/media/testimonial_grey_quotes.svg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Testimonial</span>
+                                <span class="name-seperator"> | </span>
+                                Variant: <span class="color-777777">Testimonial with Smaller Image - Option B</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- SC  should have a feasibility to add a classes besides 'eds-testimonial' for more customization -->
+                        <div class="eds-testimonial testimonial-small-img testimonial-small-img-centered gs-bg-neutral_20">
+                            <div class="testimonial-content-wrapper">
+                                <!-- testimonial-content-wrapper can hold micro components (images, videos, CTA's) and RTF's -->
+                                <!-- RTF -->
+                                <!-- The testimonial-content uses default EDS font sizes,font styles . To customize, remove this class and apply your own classes (eg,h5-heading,h6-heading). -->
+                                <!-- The fixed-mw-948 class sets a max-width and mx-auto centers the content horizontally -->
+                                <h4 class="testimonial-content gs-des-mb-60 gs-mob-mb-28  fixed-mw-948 mx-auto text-center text-lg-start">"Hear open and honest conversations from real people sharing their experiences and thoughts about living with HIV."</h4>
+                            </div>
+                            <div class="testimonial-content-wrapper">
+                                <!-- testimonial-content-wrapper can hold micro components (images, videos, CTA's) and RTF's -->
+                                <div class="testimonial-profile">
+                                    <!-- sc should have a feasibility can add or remove this img section as needed  based on requirement -->
+                                    <div class="testimonial-img">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/testimonial_smaller_image_desktop.svg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/testimonial_smaller_image_desktop.svg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/testimonial_smaller_image_mobile.svg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/testimonial_smaller_image_mobile.svg" class="img-fluid" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="testimonial-author-info">
+                                        <!-- RTF -->
+                                        <!-- The author-title,author-desc uses default EDS font sizes,font styles . To customize, remove those classes and apply your own classes (eg:,h5-heading,h6-heading,l-body). -->
+                                        <h6 class="author-title mb-1">Rosie Diaz</h6>
+                                        <p class="author-desc mb-0 text-center text-lg-start">Patient</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Testimonial</span>
+                                <span class="name-seperator"> | </span>
+                                Variant: <span class="color-777777">Testimonial with No Image</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- SC  should have a feasibility to add a classes besides 'eds-testimonial' for more customization -->
+                        <!-- quote-icon-overlap class positions the quote icon to overlap the top border -->
+                        <div class="eds-testimonial testimonial-no-img quote-icon-overlap">
+                            <div class="testimonial-content-wrapper">
+                                <!-- testimonial-content-wrapper can hold micro components (images, videos, CTA's) and RTF's -->
+                                <div class="testimonial-quote-icon">
+                                    <!-- sc sholud have fesability to use picture tag in case if needed -->
+                                     <!-- The padding px-3 and px-lg-4 is used to  create a space around the quote icon -->
+                                    <img src="../../../assets/common/media/testimonial_grey_quotes.svg" class="img-fluid px-3 px-lg-4" alt="">
+                                </div>
+                                <!-- RTF -->
+                                <!-- The testimonial-content uses default EDS font sizes,font styles . To customize, remove this class and apply your own classes (eg,h5-heading,h6-heading). -->
+                                 <!-- The fixed-mw-810 class sets a max-width and mx-auto centers the content horizontally -->
+                                <h4 class="testimonial-content mb-5 fixed-mw-810 mx-auto">Our community is so resilient, so strong, and we are here for each other.</h4>
+                                <div class="testimonial-author-info">
+                                    <!-- RTF -->
+                                    <!-- The author-title,author-desc uses default EDS font sizes,font styles.To customize, remove those classes and apply your own classes (eg:,h5-heading,h6-heading,l-body). -->
+                                    <h6 class="author-title mb-1 text-center">Rosie Diaz</h6>
+                                    <p class="author-desc mb-0 text-center">Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--footer-->
+        <footer class="eds-footer"></footer>
+    </div>
+
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/player.min.js"></script>
+</body>
+
+</html>

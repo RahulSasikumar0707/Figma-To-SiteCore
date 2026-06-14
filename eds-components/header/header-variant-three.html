@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masthead Side Navigation</title>
+    <link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+    <link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Adobe Type Kit fonts -->
+    <!-- Proxima Nova -->
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/frz4xvu.css" integrity="sha384-3fSEe12OW0Wc6cCt6T4cSkmDUPQ6fvfSaYI9ub+jQEv06Y7dX4UJNmmdt7sduBYR" crossorigin="anonymous"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+</head>
+
+<body class="default-device bodyclass">
+    <div id="eds-wrapper">
+        <!--Header-->
+        <!-- header tag should be part of layout -->
+        <header id="header">
+            <!-- Note: class left-sticky-header is added for sticky left navigation -->
+            <div class="component eds-header header-variant-three left-sticky-header">
+                <div class="component secondary-navigation">
+                    <div class="component container-fluid">
+                        <!-- If there is no content or links within the secondary navigation container, the container should not be generated. -->
+                        <div class="row row-splitter secondary-navigation-links">
+                            <!--
+                                There should be two columns under secondary navigation - a left and a right column.
+                                These columns can hold either free text (RTF) or a linked list components.
+                                If there is no content within these containers, the div should not be generated.
+                            -->
+                            <div class="column-splitter col sn-left-column">
+                                <!-- RTF component: <p>For US audiences only</p> -->
+                                <!-- Linked list Component: -->
+                                <ul>
+                                    <li>For US audiences only</li>
+                                </ul>
+                            </div>
+                            <div class="column-splitter col sn-right-column">
+                                <!-- Linked list Component: should have placeholder for authors to add class at UL and LI level-->
+                                <ul>
+                                    <li><a href="#">Important Safety Information</a></li>
+                                    <li><a href="#">For Healthcare Professionals <span><img src="../../../assets/common/media/MasterHead/External%20Link.svg" alt="external link"> </span></a></li>
+                                </ul>
+                                <!-- Please note: The visibility of the CTA wrapper below will depend on the site requirements. -->
+                                <!-- Authors have to enable it, if no link, the DIV should not be generated. -->
+                                <!-- <div class="cta-wrapper"><a class="" href="#">Link</a></div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="component primary-navigation">
+                    <div class="component container-fluid">
+                        <div class="row-splitter row">
+                            <div class="column-splitter col-12">
+                                <!-- <nav class="navbar"> --> <!-- This was removed since SC couldn't integarte this div -->
+                                <!-- <div class="d-flex logo-outer-container"> -->
+                                    <div class="logo-container">
+                                        <div class="logo-wrapper">
+                                            <a href="https://trodelvy.com/"><img src="../../../assets/common/media/MasterHead/Affinity_Logo.png" alt="Trodelvy Patient logo" /></a>
+                                        </div>
+                                    </div>
+                                    <!-- Note: The indication text below is a static text div will be shown or hidden depending on the project requirements.-->
+                                    <!-- Note: This should be handled only for the sites where dropdown-item has active class in multi-header-indicator and has to be displayed beside logo in mobile dynamically eg: TDLY patient site. Prefered JS solution. -->
+                                    <!-- Indicator list from dropdown should have active class for JS to pick and append dynamically. -->
+                                    <!-- <div class="indication-text">Metastatic Triple-Negative Breast Cancer (mTNBC)</div> -->
+                                    <div class="hamburger-menu">
+                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavigation" aria-controls="primaryNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                                            <div class="hamburger-lines">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                            </div>
+                                            <div class="hamburger-text">
+                                                <span class="menu-text">Menu</span>
+                                                <span class="close-text">Close</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                <!-- </div> -->
+                                <div class="primary-navigation-container collapse" id="primaryNavigation">
+                                    <div class="nav-menu-overlay">
+                                        <!-- Navigation Menu overlay for Mobile -->
+                                    </div>
+                                    <!-- Note: The multi head indicator div below will be shown or hidden depending on the project requirements.-->
+                                    <div class="primary-navigation-items">
+                                        <div class="mobile-menu-back-btn">
+                                            <a class="back-button" role="button" href="#"><i class="material-symbols-outlined d-lg-none">keyboard_arrow_left</i><span>Back to main menu</span></a>
+                                        </div>
+                                        <ul class="navbar-nav">
+                                            <!-- <li class="nav-item"><a class="nav-link" href="#"><span>PAGE LABEL 1</span><i class="material-symbols-outlined d-lg-none">keyboard_arrow_right</i></a></li> -->
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#"><span>Overview</span></a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span>Design</span>
+                                                    <i class="menu-drop-icon material-symbols-outlined">keyboard_arrow_right</i>                                                
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#"><span>Getting Started</span></a></li>
+                                                    <li class="nav-item dropdown sub-item">
+                                                        <a class="dropdown-item" href="#"><span>Design Kit</span><i class="menu-drop-icon material-symbols-outlined">keyboard_arrow_right</i></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#"><span>EDS - Global</span></a></li>
+                                                            <li><a class="dropdown-item" href="#"><span>ADS</span></a></li>
+                                                            <li><a class="dropdown-item" href="#"><span>KITE</span></a></li>
+                                                            <li><a class="dropdown-item" href="#"><span>Medical Affiars</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#"><span>Resources</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span>Develop</span>
+                                                    <i class="menu-drop-icon material-symbols-outlined">keyboard_arrow_right</i>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#"><span>Getting Started</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Design Kit</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Resources</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link" href="#" role="button" aria-expanded="false" aria-haspopup="true"><span>Elements</span></a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span>Components</span><i class="menu-drop-icon material-symbols-outlined">keyboard_arrow_right</i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#"><span>Getting Started</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Accordions</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Banner</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Breadcrumb</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Button & Link</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Cards</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Carousel</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Content Block</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Date Picker</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Drawer</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Cards</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Carousel</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Content Block</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Date Picker</span></a></li>
+                                                    <li><a class="dropdown-item" href="#"><span>Drawer</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link" href="#" role="button" aria-expanded="false" aria-haspopup="true"><span>Help & Resources</span></a>
+                                            </li>
+                                        </ul>
+                                        <!-- Note: The mobile other links div below should be authored depending on the project requirements. -->
+                                        <ul class="mobile-hm-links">
+                                            <li class="nav-item"><a href="#" class="nav-link leave-site">Patient Site <span><img src="../../../assets/common/media/MasterHead/Black_External Link Icon.svg" alt="external link"> </span></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Important Safety Information<span><img src="../../../assets/common/media/MasterHead/Black_External Link Icon.svg" alt="external link"> </span></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Stay informed <span><img src="../../../assets/common/media/MasterHead/Black_External Link Icon.svg" alt="external link"> </span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- </nav> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="eds-main">
+        </main>
+        <!--footer-->
+        <footer class="eds-footer"></footer>
+    </div>
+   
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-header.js"></script>
+    <script src="../../../assets/eds/Scripts/eds-common-gtm-tracking.js"></script>
+</body>

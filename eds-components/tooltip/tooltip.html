@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tool-tip Component</title>
+<link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+<link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+<!--main-->
+        <main id="eds-main">
+<div class="cmp-rich-text">
+<div class="container-fluid">
+<div class="row justify-content-center">
+<div class="col-12">
+<p>Patients may pay as little as $0 out of pocket for TRODELVY, which includes <a href="#" class="tool-tip" data-bs-toggle="popover" data-bs-content="A fee that is paid to cover a healthcare service before a deductible is met.">co-pay</a>and  <a href="#" class="tool-tip" data-bs-toggle="popover" data-bs-content="After a deductible is met, the coinsurance is the amount you pay for covered healthcare costs—usually noted as a percentage. (Example: A plan has a 20% coinsurance. If you’ve hit your deductible and a healthcare service costs $100, you pay 20% of $100 which is $20.).">coinsurance</a>, up to $25,000 annually</p>
+<p>The program only assists with the cost of TRODELVY; patient is responsible for <a href="#" class="tool-tip" data-bs-toggle="popover" data-bs-content="The amount you share with insurance and pay for out of pocket, including deductibles, coinsurance, co-pays, and other similar charges.">cost-share</a> of treatments and office visits</p>
+<p>This option may be available if you are enrolled in government healthcare programs, such as Medicare, Medicaid, TRICARE, or VA, or are otherwise not eligible for Gilead’s <a href="#" class="tool-tip" data-bs-toggle="popover" data-bs-content="A fee that is paid to cover a healthcare service before a deductible is met.">co-pay</a> program.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!--footer-->
+        <footer class="eds-footer"></footer>
+</div>
+
+<script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+<script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+<!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+<script src="../../../assets/eds/Scripts/feature-tooltip.js"></script>
+</body>
+</html>

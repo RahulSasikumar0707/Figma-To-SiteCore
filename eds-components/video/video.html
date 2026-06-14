@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Video Component</title>
+<link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+<link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+    <style>
+        .cmp-details {
+            padding: 30px 0;
+            font-size: 24px;
+            color: #C8102E;
+        }
+        .color-777777 {
+            color: #777777;
+        }
+        .name-seperator {
+            color: #F2F;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+        @media screen and (max-width: 768px) {
+            .cmp-details {
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eds-wrapper">
+<!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+<!-- main -->
+<main id="eds-main">
+<div class="mt-5"></div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Notes</span> <span class="name-seperator"> | </span> Features <span class="color-777777">[modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes] feasibilty should be given for container-fluid, row-splitter and column-splitter. Column-splitter can be more than one. Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 1 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">1-Column Video Component using video tag</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                <div class="row row-splitter [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                    <!-- Column-splitter can be more than one -->
+                    <div class="column-splitter text-center [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                        <!-- ratio-16x9 can be varied based on the video's aspect ratio -->
+                        <div class="eds-video video-container ratio ratio-16x9">
+                            <!-- RTF -->
+                            <video autoplay controls>
+                                <source src="../../../assets/common/videos/sample.mp4" type="video/mp4">
+                            </video>
+                            <!-- <iframe class="gs-video-player" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" src="https://player.vimeo.com/video/1062871369?h=afca1742fe&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" data-videogtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;video&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;Home video1&quot;,&quot;intendedAudience&quot;:&quot;Patient&quot;,&quot;language&quot;:&quot;English&quot;,&quot;subject&quot;:&quot;video&quot;}" data-ready="true"></iframe> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 2 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">1-Column vimeo Video Component using iframe tag</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                <div class="row row-splitter [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                    <!-- Column-splitter can be more than one -->
+                    <div class="column-splitter text-center [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                        <!-- ratio-16x9 can be varied based on the video's aspect ratio -->
+                        <div class="eds-video video-container ratio ratio-16x9">
+                            <!-- RTF -->
+                            <iframe data-gtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;video&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;HR+/HER2 - How TRODELVY works&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;video&quot;}" class="gs-video-player gtm-videotrack" src="https://player.vimeo.com/video/1034011623?h=8d693add02&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allowfullscreen="" data-ready="true"></iframe>
+
+                            <!-- <iframe class="gtm-videotrack" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" src="https://player.vimeo.com/video/1062871369?h=afca1742fe&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" data-videogtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;video&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;Home video1&quot;,&quot;intendedAudience&quot;:&quot;Patient&quot;,&quot;language&quot;:&quot;English&quot;,&quot;subject&quot;:&quot;video&quot;}" data-ready="true"></iframe> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 3 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">1-Column youtube vimeo Video Component using iframe</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                <div class="row row-splitter [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                    <!-- Column-splitter can be more than one -->
+                    <div class="column-splitter text-center [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                        <!-- ratio-16x9 can be varied based on the video's aspect ratio -->
+                        <div class="eds-video video-container ratio ratio-16x9">
+                            <!-- RTF -->
+                            <iframe src="https://www.youtube.com/embed/wL_Yt6dTJEw" title="Gilead Oncology Research Scholars Program" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video link as a player link (opens video in a new tab or a modal, depending on the design) -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="my-5 py-5" id="video-links-gtm">
+                                <h5 class="cmp-details">
+                                    Component: <span class="color-777777">Video links triggering video to open in a modal</span>
+                                </h5>
+                                <a class="gs-link-standalone player-link" data-videogtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;video&quot;,&quot;eventAction&quot;:&quot;play&quot;,&quot;eventLabel&quot;:&quot;HR+/HER2-mBC - Meet Jacquie&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;video&quot;}" data-link="https://player.vimeo.com/video/1024529477?h=02bb66ed37&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" data-gtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;content block&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;HR+/HER2-mBC - Meet Jacquie&quot;,&quot;eventPosition&quot;:&quot;2&quot;,&quot;eventDestination&quot;:&quot;https://player.vimeo.com/video/1024529477?h=02bb66ed37&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;link&quot;}" href="https://player.vimeo.com/video/1024529477?h=02bb66ed37&amp;amp;title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479" tabindex="0">
+                                    <span class="link-text">Video link with data-gtm "Meet Jacquie"</span>
+                                </a>
+                            </div>
+                            <!-- video modal -->
+                            <div class="eds-modal modal fade modal-video-content video-modal" id="videoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header clearfix">
+                                            <a class="gs-video-close-btn btn-close" href="" data-bs-dismiss="modal" aria-label="Close"></a>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="vimeo-video">
+                                                <iframe id="video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+</main>
+<!-- footer -->
+<footer class="eds-footer"> </footer>
+</div>
+
+<script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+<script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/player.min.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+    <script src="../../../assets/eds/Scripts/eds-common-gtm-tracking.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-video-modal.js"></script>
+
+</body>
+
+</html>
+# ---- Anthropic ----
+ANTHROPIC_API_KEY_1="Your first API key here"
+ANTHROPIC_API_KEY_2="Your second API key here"
+ANTHROPIC_MODEL=claude-sonnet-4-6
+FIGMA_FILE_ID="Your Figma file ID here"

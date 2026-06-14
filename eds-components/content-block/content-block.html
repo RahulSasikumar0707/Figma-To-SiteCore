@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Content Block Variations</title>
+<link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+<link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+   
+    <style>
+        .cmp-details {
+            padding: 30px 0;
+            font-size: 24px;
+            color: #C8102E;
+        }
+        .color-777777 {
+            color: #777777;
+        }
+        .name-seperator {
+            color: #F2F;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+        @media screen and (max-width: 768px) {
+            .cmp-details {
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+        <!--main-->
+        <main id="eds-main">
+            <div class="mt-5">
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Notes</span> <span class="name-seperator"> | </span> Features <span class="color-777777">[modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes] feasibilty should be given for container-fluid, row-splitter and column-splitter. Column-splitter can be more than one. Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's</span>
+                                <div class="mt-2"></div>
+                                Spacings <span class="color-777777">
+                                    <ul class="mt-2">
+                                        <li>Space between the headings and the paragraph below it should be 16px.</li>
+                                        <li>Space between the paragraph and the video should be 32px.</li>
+                                        <li>Top and bottom spacings of the content blocks should be 60px in desktop and 40px in mobile.</li>
+                                        <li>Left and right spacings should be 20px in mobile.</li>
+                                        <li>The space between the columns should be 32px in desktop.</li>
+                                    </ul>
+                                </span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 1 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">1-Column Content Block</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Variant with Media and Text</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                <div class="row row-splitter [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                    <!-- Column-splitter can be more than one -->
+                    <div class="column-splitter text-center [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                        <h4 class="h4-heading gs-mb-16">Who should not take DESCOVY for PrEP?</h4>
+                        <p class=" m-body gs-mb-32">If you think you might have been exposed to HIV before starting or while taking DESCOVY for PrEP, let a healthcare provider know right away. DESCOVY by itself is not a complete treatment for HIV—in fact, taking DESCOVY alone to treat HIV can make HIV harder to treat now and in the future. Do not take DESCOVY for PrEP if you weigh less than 77 pounds.</p>
+                        <!-- ratio-16x9 can be varied based on the video's aspect ratio -->
+                        <div class="eds-video video-container ratio ratio-16x9">
+                            <!-- RTF -->
+                            <iframe id="video-iframe" class="gs-video-player" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" src="https://player.vimeo.com/video/1062871369?h=afca1742fe&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" data-videogtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;video&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;Home video1&quot;,&quot;intendedAudience&quot;:&quot;Patient&quot;,&quot;language&quot;:&quot;English&quot;,&quot;subject&quot;:&quot;video&quot;}" data-ready="true"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 2 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">1-Column Content Block</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Variant with Text</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <!-- Column-splitter can be more than one -->
+                    <div class="column-splitter">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <h4 class="h4-heading gs-mb-16">Creating a healthier world for all people</h4>
+                        <p class="m-body gs-mb-28">HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.</p>
+                        <h6 class="h6-heading">How is HIV transmitted?</h6>
+                        <p class="m-body gs-mb-28">HIV is transmitted through contact with certain body fluids, such as semen, vaginal or anal fluids, breast milk, and blood. Contact with these body fluids can occur during unprotected sex or when sharing needles or other items with body fluids on them. Mothers can pass the HIV virus to their babies during pregnancy, birth, and breastfeeding. HIV CANNOT be transmitted through contact with sweat, tears, saliva, bath or pool water, or by insect bite, coughing, sneezing, drinking from a water fountain, sharing dishes or drinking glasses, hugging, kissing, shaking hands, or eating foods prepared by someone living with HIV</p>
+                        <h6 class="h6-heading">How can HIV affect your body?</h6>
+                        <p class="m-body">HIV attacks and destroys CD4 T-cells — important immune system cells that help the body fight infections. The more CD4 T-cells that are destroyed, the weaker the immune system can become. With fewer CD4 T-cells due to HIV, it can be harder for the body to fight illnesses and infections.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 3 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">2-Column Content Block</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Variant with Text</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <!-- Column-splitter can be more than one -->
+                    <div class="column-splitter col-12 col-md-6">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <h4 class="h4-heading gs-mb-16">What you should know about HIV</h4>
+                        <p class="m-body">HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.</p>
+                    </div>
+                    <div class="column-splitter col-12 col-md-6">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <h6 class="h6-heading gs-mb-16">How is HIV transmitted?</h6>
+                        <p class="m-body">HIV is transmitted through contact with certain body fluids, such as semen, vaginal or anal fluids, breast milk, and blood. Contact with these body fluids can occur during unprotected sex or when sharing needles or other items with body fluids on them. Mothers can pass the HIV virus to their babies during pregnancy, birth, and breastfeeding. HIV CANNOT be transmitted through contact with sweat, tears, saliva, bath or pool water, or by insect bite, coughing, sneezing, drinking from a water fountain, sharing dishes or drinking glasses, hugging, kissing, shaking hands, or eating foods prepared by someone living with HIV.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 4 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">2-Column Content Block</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Variant with Media, Text and CTA</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter flex-column-reverse flex-md-row">
+                    <!-- Column-splitter can be more than one -->
+                    <div class="column-splitter col-12 col-md-6 mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <h4 class="h4-heading gs-mb-16">Understanding DESCOVY for PrEP®</h4>
+                        <p class="m-body">DESCOVY for PrEP (pre-exposure prophylaxis) is a once-daily prescription medicine for adults and adolescents at risk of HIV. It helps lower the chances of getting HIV through sex.</p>
+                        <div class="cta-wrapper">
+                            <a href="#" class="eds-btn gs-btn-lg gs-btn-primary">Large Button</a>
+                        </div>
+                    </div>
+                    <div class="column-splitter col-12 col-md-6">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <picture>
+                            <!-- desktop -->
+                            <source media="(min-width:992px)" srcset="../../../assets/common/media/four-individuals-discontinuations.png">
+                            <!-- tablet -->
+                            <source media="(min-width:768px)" srcset="../../../assets/common/media/four-individuals-discontinuations.png">
+                            <!-- mobile -->
+                            <source media="(min-width:0px)" srcset="../../../assets/common/media/four-individuals-discontinuations.png">
+                            <!-- default is mobile -->
+                            <img src="../../../assets/common/media/four-individuals-discontinuations.png" class="img-fluid" alt="image">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 5 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">2-Column Content Block</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Variant with Media, Text and CTA</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <!-- Column-splitter can be more than one -->
+                    <div class="column-splitter col-12 col-md-4">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <picture>
+                            <!-- desktop -->
+                            <source media="(min-width:992px)" srcset="../../../assets/common/media/four-individuals-discontinuations.png">
+                            <!-- tablet -->
+                            <source media="(min-width:768px)" srcset="../../../assets/common/media/four-individuals-discontinuations.png">
+                            <!-- mobile -->
+                            <source media="(min-width:0px)" srcset="../../../assets/common/media/four-individuals-discontinuations.png">
+                            <!-- default is mobile -->
+                            <img src="../../../assets/common/media/four-individuals-discontinuations.png" class="img-fluid" alt="">
+                        </picture>
+                    </div>
+                    <div class="column-splitter col-12 col-md-8 mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <h4 class="h4-heading gs-mb-16">Understanding DESCOVY for PrEP®</h4>
+                        <p class="m-body">DESCOVY for PrEP (pre-exposure prophylaxis) is a once-daily prescription medicine for adults and adolescents at risk of HIV. It helps lower the chances of getting HIV through sex.</p>
+                        <div class="cta-wrapper">
+                            <a href="#" class="eds-btn gs-btn-lg gs-btn-primary">Large Button</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 6 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">2-Column Content Block</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Variant with Image Cards and Body Text</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <!-- Column-splitter can be more than one -->
+                    <div class="column-splitter col-12 col-md-6">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <div class="eds-card card">
+                            <div class="card-img">
+                                <picture>
+                                    <!-- desktop -->
+                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- tablet -->
+                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- mobile -->
+                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- default is mobile -->
+                                    <img src="../../../assets/common/media/carousel_D_M_var3-image2.svg" class="img-fluid" alt="">
+                                </picture>
+                            </div>
+                            <div class="card-body-footer">
+                                <div class="card-body">
+                                    <!-- RTF -->
+                                    <h3 class="h6-heading">Eyebrow text</h3>
+                                    <p class="mt-1">Card body sub text</p>
+                                    <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="cta-wrapper">
+                                        <a href="#" class="eds-link link-standalone link-lg">
+                                            <span class="link-text">Large Link</span>
+                                            <i class="icon-right_arrow gs-btn-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-splitter col-12 col-md-6 mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <div class="eds-card card">
+                            <div class="card-img">
+                                <picture>
+                                    <!-- desktop -->
+                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- tablet -->
+                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- mobile -->
+                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- default is mobile -->
+                                    <img src="../../../assets/common/media/carousel_D_M_var3-image2.svg" class="img-fluid" alt="">
+                                </picture>
+                            </div>
+                            <div class="card-body-footer">
+                                <div class="card-body">
+                                    <!-- RTF -->
+                                    <h3 class="h6-heading">Eyebrow text</h3>
+                                    <p class="mt-1">Card body sub text</p>
+                                    <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="cta-wrapper">
+                                        <a href="#" class="eds-link link-standalone link-lg">
+                                            <span class="link-text">Large Link</span>
+                                            <i class="icon-right_arrow gs-btn-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 7 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">2-Column Content Block</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Variant with Icon Cards</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <!-- Column-splitter can be more than one -->
+                    <div class="column-splitter col-12 col-md-6">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <div class="eds-card card card-img-padding horizontal-card pt-4 pt-md-0">
+                            <div class="card-img">
+                                <picture>
+                                    <!-- desktop -->
+                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- tablet -->
+                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- mobile -->
+                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- default is mobile -->
+                                    <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                                </picture>
+                            </div>
+                            <div class="card-body-footer">
+                                <div class="card-body">
+                                    <!-- RTF -->
+                                    <h3 class="h6-heading">Eyebrow text</h3>
+                                    <p class="mt-1">Card body sub text</p>
+                                    <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="cta-wrapper">
+                                        <a href="#" class="eds-link link-standalone link-lg">
+                                            <span class="link-text">Large Link</span>
+                                            <i class="icon-right_arrow gs-btn-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-splitter col-12 col-md-6 mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <div class="eds-card card horizontal-card card-img-padding pt-4 pt-md-0">
+                            <div class="card-img">
+                                <picture>
+                                    <!-- desktop -->
+                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- tablet -->
+                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- mobile -->
+                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- default is mobile -->
+                                    <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                                </picture>
+                            </div>
+                            <div class="card-body-footer">
+                                <div class="card-body">
+                                    <!-- RTF -->
+                                    <h3 class="h6-heading">Eyebrow text</h3>
+                                    <p class="mt-1">Card body sub text</p>
+                                    <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="cta-wrapper">
+                                        <a href="#" class="eds-link link-standalone link-lg">
+                                            <span class="link-text">Large Link</span>
+                                            <i class="icon-right_arrow gs-btn-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 8 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">3-Column Content Block</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Variant with Small Images</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <div class="column-splitter">
+                        <h4 class="h4-heading text-center gs-mb-16">Discover more about DESCOVY</h4>
+                    </div>
+                </div>
+                <div class="row row-splitter gs-mt-32">
+                    <!-- Column-splitter can be more than one -->
+                    <div class="column-splitter col-12 col-md-4">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <div class="eds-card card card-img-padding pt-4 pt-md-0">
+                            <div class="card-img">
+                                <picture>
+                                    <!-- desktop -->
+                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- tablet -->
+                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- mobile -->
+                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- default is mobile -->
+                                    <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                                </picture>
+                            </div>
+                            <div class="card-body-footer">
+                                <div class="card-body">
+                                    <!-- RTF -->
+                                    <h3 class="h6-heading">Eyebrow text</h3>
+                                    <p class="mt-1">Card body sub text</p>
+                                    <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="cta-wrapper">
+                                        <a href="#" class="eds-link link-standalone link-lg">
+                                            <span class="link-text">Large Link</span>
+                                            <i class="icon-right_arrow gs-btn-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-splitter col-12 col-md-4 mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <div class="eds-card card card-img-padding pt-4 pt-md-0">
+                            <div class="card-img">
+                                <picture>
+                                    <!-- desktop -->
+                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- tablet -->
+                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- mobile -->
+                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- default is mobile -->
+                                    <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                                </picture>
+                            </div>
+                            <div class="card-body-footer">
+                                <div class="card-body">
+                                    <!-- RTF -->
+                                    <h3 class="h6-heading">Eyebrow text</h3>
+                                    <p class="mt-1">Card body sub text</p>
+                                    <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="cta-wrapper">
+                                        <a href="#" class="eds-link link-standalone link-lg">
+                                            <span class="link-text">Large Link</span>
+                                            <i class="icon-right_arrow gs-btn-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="column-splitter col-12 col-md-4 mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <div class="eds-card card card-img-padding pt-4 pt-md-0">
+                            <div class="card-img">
+                                <picture>
+                                    <!-- desktop -->
+                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- tablet -->
+                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- mobile -->
+                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                    <!-- default is mobile -->
+                                    <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                                </picture>
+                            </div>
+                            <div class="card-body-footer">
+                                <div class="card-body">
+                                    <!-- RTF -->
+                                    <h3 class="h6-heading">Eyebrow text</h3>
+                                    <p class="mt-1">Card body sub text</p>
+                                    <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="cta-wrapper">
+                                        <a href="#" class="eds-link link-standalone link-lg">
+                                            <span class="link-text">Large Link</span>
+                                            <i class="icon-right_arrow gs-btn-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 9 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">3-Column Content Block</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Variant with Image Cards - with Body Text</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <div class="column-splitter">
+                        <h4 class="h4-heading text-center gs-mb-16">Discover more about DESCOVY</h4>
+                        <p class="m-body text-center gs-mb-32">This is a dummy subtitle content that can be replaced by the final content</p>
+                    </div>
+                </div>
+                <div class="row row-splitter">
+                    <!-- Column-splitter can be more than one -->
+                    <div class="column-splitter col-12 col-md-4">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <div class="eds-card card">
+                            <div class="card-img">
+                                <picture>
+                                    <!-- desktop -->
+                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- tablet -->
+                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- mobile -->
+                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- default is mobile -->
+                                    <img src="../../../assets/common/media/carousel_D_M_var3-image2.svg" class="img-fluid" alt="">
+                                </picture>
+                            </div>
+                            <div class="card-body-footer">
+                                <div class="card-body">
+                                    <!-- RTF -->
+                                    <h3 class="h6-heading">Eyebrow text</h3>
+                                    <p class="mt-1">Card body sub text</p>
+                                    <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="cta-wrapper">
+                                        <a href="#" class="eds-link link-standalone link-lg">
+                                            <span class="link-text">Large Link</span>
+                                            <i class="icon-right_arrow gs-btn-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-splitter col-12 col-md-4 mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <div class="eds-card card">
+                            <div class="card-img">
+                                <picture>
+                                    <!-- desktop -->
+                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- tablet -->
+                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- mobile -->
+                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- default is mobile -->
+                                    <img src="../../../assets/common/media/carousel_D_M_var3-image2.svg" class="img-fluid" alt="">
+                                </picture>
+                            </div>
+                            <div class="card-body-footer">
+                                <div class="card-body">
+                                    <!-- RTF -->
+                                    <h3 class="h6-heading">Eyebrow text</h3>
+                                    <p class="mt-1">Card body sub text</p>
+                                    <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="cta-wrapper">
+                                        <a href="#" class="eds-link link-standalone link-lg">
+                                            <span class="link-text">Large Link</span>
+                                            <i class="icon-right_arrow gs-btn-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-splitter col-12 col-md-4 mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <div class="eds-card card">
+                            <div class="card-img">
+                                <picture>
+                                    <!-- desktop -->
+                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- tablet -->
+                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- mobile -->
+                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                    <!-- default is mobile -->
+                                    <img src="../../../assets/common/media/carousel_D_M_var3-image2.svg" class="img-fluid" alt="">
+                                </picture>
+                            </div>
+                            <div class="card-body-footer">
+                                <div class="card-body">
+                                    <!-- RTF -->
+                                    <h3 class="h6-heading">Eyebrow text</h3>
+                                    <p class="mt-1">Card body sub text</p>
+                                    <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="cta-wrapper">
+                                        <a href="#" class="eds-link link-standalone link-lg">
+                                            <span class="link-text">Large Link</span>
+                                            <i class="icon-right_arrow gs-btn-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 10 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">4-Column Content Block</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Variant with Icon and Text</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <!-- Column-splitter can be more than one -->
+                     <div class="column-splitter col-12 col-md-3 text-center">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <!-- RTF -->
+                        <picture>
+                            <!-- desktop -->
+                            <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                            <!-- tablet -->
+                            <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                            <!-- mobile -->
+                            <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                            <!-- default is mobile -->
+                            <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                        </picture>
+                        <p class="gs-mt-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="column-splitter col-12 col-md-3 text-center mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <!-- RTF -->
+                        <picture>
+                            <!-- desktop -->
+                            <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                            <!-- tablet -->
+                            <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                            <!-- mobile -->
+                            <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                            <!-- default is mobile -->
+                            <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                        </picture>
+                        <p class="gs-mt-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="column-splitter col-12 col-md-3 text-center mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <!-- RTF -->
+                        <picture>
+                            <!-- desktop -->
+                            <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                            <!-- tablet -->
+                            <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                            <!-- mobile -->
+                            <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                            <!-- default is mobile -->
+                            <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                        </picture>
+                        <p class="gs-mt-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="column-splitter col-12 col-md-3 text-center mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <!-- RTF -->
+                        <picture>
+                            <!-- desktop -->
+                            <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                            <!-- tablet -->
+                            <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                            <!-- mobile -->
+                            <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                            <!-- default is mobile -->
+                            <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="">
+                        </picture>
+                        <p class="gs-mt-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 11 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">4-Column Content Block</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Variant with Numbers</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <!-- Column-splitter can be more than one -->
+                     <div class="column-splitter col-12 col-md-3 text-center">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <!-- RTF -->
+                        <h2 class="h1-heading gs-text-neutral_60">50%</h2>
+                        <p class="gs-mt-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="column-splitter col-12 col-md-3 text-center mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <!-- RTF -->
+                        <h2 class="h1-heading gs-text-neutral_60">20K</h2>
+                        <p class="gs-mt-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="column-splitter col-12 col-md-3 text-center mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <!-- RTF -->
+                        <h2 class="h1-heading gs-text-neutral_60">50%</h2>
+                        <p class="gs-mt-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="column-splitter col-12 col-md-3 text-center mt-4 mt-md-0">
+                        <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                        <!-- RTF -->
+                        <h2 class="h1-heading gs-text-neutral_60">100+</h2>
+                        <p class="gs-mt-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 12 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">In Page Banner</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Banner with a Background Color. This option can be used when the image is busy or there is too much content to be shown on the banner. Adding a solid-color background for the text enhances the readability of the content.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <div class="col-12">
+                        <!-- Inpage banners should the row and column splitters should be wrapped inside else it can be a normal row and column splitter -->
+                        <!-- gs-bg-neutral_20 is an example free text bg color class. It can also have spacing, Bootstrap classes aswell -->
+                        <div class="column-splitter gs-bg-neutral_20">
+                            <!-- Nested row splitter inside column-splitter -->
+                            <div class="row row-splitter align-items-md-center">
+                                <!-- Column-splitter can be more than one -->
+                                <div class="column-splitter col-12 col-md-6">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/Varaint5_Banner1.jpg" class="img-fluid" alt="image">
+                                    </picture>
+                                </div>
+                                <div class="column-splitter col-12 col-md-6">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <div class="px-3 py-4 py-md-2 ps-md-0">
+                                        <h5 class="h5-heading">This is why I choose DESCOVY</h5>
+                                        <p class="gs-mt-16 gs-mb-16">This is a dummy subtitle content that can be replaced by the final content</p>
+                                        <div class="cta-wrapper">
+                                            <a href="#" class="eds-btn gs-btn-lg gs-btn-primary">Large Button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 13 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">In Page Banner</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Banner with a Background Color. This option can be used when the image is busy or there is too much content to be shown on the banner. Adding a solid-color background for the text enhances the readability of the content.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <div class="col-12">
+                        <!-- Inpage banners should the row and column splitters should be wrapped inside else it can be a normal row and column splitter -->
+                        <!-- gs-bg-neutral_20 is an example free text bg color class. It can also have spacing, Bootstrap classes aswell -->
+                        <div class="column-splitter gs-bg-neutral_20">
+                            <!-- Nested row splitter inside column-splitter -->
+                            <div class="row row-splitter flex-md-row-reverse align-items-md-center">
+                                <!-- Column-splitter can be more than one -->
+                                <div class="column-splitter col-12 col-md-6">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/Varaint5_Banner1.jpg" class="img-fluid" alt="image">
+                                    </picture>
+                                </div>
+                                <div class="column-splitter col-12 col-md-6">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <div class="px-3 py-4 py-md-2 ps-md-4 pe-md-0">
+                                        <h5 class="h5-heading">This is why I choose DESCOVY</h5>
+                                        <p class="gs-mt-16 gs-mb-16">This is a dummy subtitle content that can be replaced by the final content</p>
+                                        <div class="cta-wrapper">
+                                            <a href="#" class="eds-btn gs-btn-lg gs-btn-primary">Large Button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 14 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">In Page Banner</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Banner with a Background Color and Image clickable. This option can be used when the image is busy or there is too much content to be shown on the banner. Adding a solid-color background for the text enhances the readability of the content.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <div class="col-12">
+                        <!-- Inpage banners should the row and column splitters should be wrapped inside else it can be a normal row and column splitter -->
+                        <!-- gs-bg-neutral_20 is an example free text bg color class. It can also have spacing, Bootstrap classes aswell -->
+                        <div class="column-splitter gs-bg-neutral_20">
+                            <!-- Nested row splitter inside column-splitter -->
+                            <div class="row row-splitter align-items-md-center">
+                                <!-- Column-splitter can be more than one -->
+                                <div class="column-splitter col-12 col-md-6">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <a href="https://www.gilead.com" class="eds-link link-standalone link-lg">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/Varaint5_Banner1.jpg" class="img-fluid" alt="image">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="column-splitter col-12 col-md-6">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <div class="px-3 py-4 py-md-2 ps-md-0">
+                                        <h5 class="h5-heading">This is why I choose DESCOVY</h5>
+                                        <p class="gs-mt-16 gs-mb-16">This is a dummy subtitle content that can be replaced by the final content</p>
+                                        <div class="cta-wrapper">
+                                            <a href="#" class="eds-btn gs-btn-lg gs-btn-primary">Large Button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 15 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">In Page Banner</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Banner with a Background Color and clickable image that triggers video modal. This option can be used when the image is busy or there is too much content to be shown on the banner. Adding a solid-color background for the text enhances the readability of the content.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <div class="col-12">
+                        <!-- Inpage banners should the row and column splitters should be wrapped inside else it can be a normal row and column splitter -->
+                        <!-- gs-bg-neutral_20 is an example free text bg color class. It can also have spacing, Bootstrap classes aswell -->
+                        <div class="column-splitter gs-bg-neutral_20">
+                            <!-- Nested row splitter inside column-splitter -->
+                            <div class="row row-splitter align-items-md-center">
+                                <!-- Column-splitter can be more than one -->
+                                <div class="column-splitter col-12 col-md-6">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                     <a class="eds-link link-standalone player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;Video&quot;,&quot;eventAction&quot;:&quot;Downloaded&quot;,&quot;eventLabel&quot;:&quot;Video 11&quot;,&quot;intendedAudience&quot;:&quot;Family/Caregiver&quot;,&quot;subject&quot;:&quot;Video Activity&quot;,&quot;language&quot;:&quot;English&quot;}">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/Varaint5_Banner1.jpg" class="img-fluid" alt="image">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="column-splitter col-12 col-md-6">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <div class="px-3 py-4 py-md-2 ps-md-0">
+                                        <h5 class="h5-heading">This is why I choose DESCOVY</h5>
+                                        <p class="gs-mt-16 gs-mb-16">This is a dummy subtitle content that can be replaced by the final content</p>
+                                        <div class="cta-wrapper">
+                                            <a href="#" class="eds-btn gs-btn-lg gs-btn-primary">Large Button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 16 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">In Page Banner</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Banner with Image Thumbnail. This option can be used when we need to add an image to a banner.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <div class="col-12">
+                        <!-- Inpage banners should the row and column splitters should be wrapped inside else it can be a normal row and column splitter -->
+                        <!-- gs-bg-neutral_20 is an example free text bg color class. It can also have spacing, Bootstrap classes aswell -->
+                        <div class="column-splitter gs-bg-neutral_20 pt-4 pb-md-4 px-3 px-md-5">
+                            <!-- Nested row splitter inside column-splitter -->
+                            <div class="row row-splitter align-items-md-center">
+                                <!-- Column-splitter can be more than one -->
+                                <div class="column-splitter col-12 col-md-5">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/Varaint5_Banner1.jpg" class="img-fluid" alt="image">
+                                    </picture>
+                                </div>
+                                <div class="column-splitter col-12 col-md-7">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <div class="py-4 py-md-2">
+                                        <h5 class="h5-heading">This is why I choose DESCOVY</h5>
+                                        <p class="gs-mt-16 gs-mb-16">This is a dummy subtitle content that can be replaced by the final content</p>
+                                        <div class="cta-wrapper">
+                                            <a href="#" class="eds-btn gs-btn-lg gs-btn-primary">Large Button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 17 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">In Page Banner</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Banner with Image Thumbnail. This option can be used when we need to add an image to a banner.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <div class="col-12">
+                        <!-- Inpage banners should the row and column splitters should be wrapped inside else it can be a normal row and column splitter -->
+                        <!-- gs-bg-neutral_20 is an example free text bg color class. It can also have spacing, Bootstrap classes aswell -->
+                        <div class="column-splitter gs-bg-neutral_20 pt-4 pb-md-4 px-3 px-md-5">
+                            <!-- Nested row splitter inside column-splitter -->
+                            <div class="row row-splitter flex-md-row-reverse align-items-md-center">
+                                <!-- Column-splitter can be more than one -->
+                                <div class="column-splitter col-12 col-md-5">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint5_Banner1.jpg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/Varaint5_Banner1.jpg" class="img-fluid" alt="image">
+                                    </picture>
+                                </div>
+                                <div class="column-splitter col-12 col-md-7">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <div class="py-4 py-md-2">
+                                        <h5 class="h5-heading">This is why I choose DESCOVY</h5>
+                                        <p class="gs-mt-16 gs-mb-16">This is a dummy subtitle content that can be replaced by the final content</p>
+                                        <div class="cta-wrapper">
+                                            <a href="#" class="eds-btn gs-btn-lg gs-btn-primary">Large Button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 18 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">In Page Banner</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Banner with Icon. This option can be used when we need to add icon on a banner.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <div class="col-12">
+                        <!-- Inpage banners should the row and column splitters should be wrapped inside else it can be a normal row and column splitter -->
+                        <!-- gs-bg-neutral_20 is an example free text bg color class. It can also have spacing, Bootstrap classes aswell -->
+                        <div class="column-splitter gs-bg-neutral_20 px-3 pt-4 px-md-5 py-md-4">
+                            <!-- Nested row splitter inside column-splitter -->
+                            <div class="row row-splitter align-items-md-center">
+                                <!-- Column-splitter can be more than one -->
+                                <div class="column-splitter col-12 col-md-5">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/icon-step-3@2x.png">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/icon-step-3@2x.png">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/icon-step-3@2x.png">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/icon-step-3@2x.png" class="img-fluid" alt="">
+                                    </picture>
+                                </div>
+                                <div class="column-splitter col-12 col-md-7">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <div class="py-4 py-md-2">
+                                        <h5 class="h5-heading">This is why I choose DESCOVY</h5>
+                                        <p class="gs-mt-16 gs-mb-16">This is a dummy subtitle content that can be replaced by the final content</p>
+                                        <div class="cta-wrapper">
+                                            <a href="#" class="eds-btn gs-btn-lg gs-btn-primary">Large Button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 19 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">In Page Banner</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Banner with Icon. This option can be used when we need to add icon on a banner.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-splitter">
+                    <div class="col-12">
+                        <!-- Inpage banners should the row and column splitters should be wrapped inside else it can be a normal row and column splitter -->
+                        <!-- gs-bg-neutral_20 is an example free text bg color class. It can also have spacing, Bootstrap classes aswell -->
+                        <div class="column-splitter gs-bg-neutral_20 px-3 pt-4 px-md-5 py-md-4">
+                            <!-- Nested row splitter inside column-splitter -->
+                            <div class="row row-splitter flex-md-row-reverse align-items-md-center">
+                                <!-- Column-splitter can be more than one -->
+                                <div class="column-splitter col-12 col-md-5 d-flex justify-content-md-end">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/icon-step-3@2x.png">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/icon-step-3@2x.png">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/icon-step-3@2x.png">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/icon-step-3@2x.png" class="img-fluid" alt="">
+                                    </picture>
+                                </div>
+                                <div class="column-splitter col-12 col-md-7">
+                                    <!-- Each column-splitter can hold micro components (linked-list, images, videos, CTA's) and RTF's -->
+                                    <div class="py-4 py-md-2">
+                                        <h5 class="h5-heading">This is why I choose DESCOVY</h5>
+                                        <p class="gs-mt-16 gs-mb-16">This is a dummy subtitle content that can be replaced by the final content</p>
+                                        <div class="cta-wrapper">
+                                            <a href="#" class="eds-btn gs-btn-lg gs-btn-primary">Large Button</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Video modal -->
+            <div class="eds-modal modal variant-a fade video-modal" data-bs-backdrop="true" data-bs-keyboard="true" tabindex="-1" aria-labelledby="exampleModalSixLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- include 'gs-video-close-btn' class for video-modal close button -->
+                            <button type="button" class="btn-close gs-video-close-btn" aria-label="Close" data-gtm="">Close</button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- RTF -->
+                            <div class="vimeo-video">
+                                <iframe id="video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</main>
+<!-- footer -->
+<footer class="eds-footer"> </footer>
+</div>
+
+<script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+<script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/player.min.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-video-modal.js"></script>
+
+</body>
+
+</html>

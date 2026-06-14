@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Kite Locator Map</title>
+
+<!-- Common CSS -->
+<link href="../../../assets/common/styles/bootstrap-v5.3.3.min.css" rel="stylesheet" />
+<!-- ATC specific recources -->
+<link href="../../../assets/atc/styles/mapbox-gl.css" rel="stylesheet" />
+<link href="../../../assets/atc/styles/mapbox-gl-geocoder.css" rel="stylesheet" />
+<link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+
+<!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+<!-- Proxima nova font for Gcom and other Affiliates -->
+<link href="https://use.typekit.net/iad1gkg.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Note: Should have flexibility to add additional classes next to eeds-atc -->
+<div class="eds-atc">
+<!-- Container for locator map -->
+<!-- Notes:
+   1. data-locator-theme: should be configurable ad abel to provide the theme name of the site.
+2. id: locator, is a constant
+3. class: locator, is a constant
+-->
+<div id="locator" data-locator-theme="kite" class="locator">
+<!-- This is configurable based on each site. The keys and structure are constant, values should be read spefic to the site -->
+<style>
+.locator {
+--font: "Open Sans", sans-serif;
+--primaryColor: #033b92;
+--secondaryColor: rgba(100, 180, 225, 1);
+--secondaryLight: rgba(100, 180, 225, 1);
+--secondaryLighter: rgba(100, 180, 225, 0.5);
+--secondaryLightest: rgba(100, 180, 225, 0.1);
+--grayLight: #f0f0f0;
+}
+</style>
+<!-- Image should come from the sitecore. Give a placeholder to add an image -->
+<div class="locator__logo">
+<img id="locator-logo" src="../../../assets/atc/media/kite-logo.svg" alt="alt text" />
+</div>
+
+<!-- Below section is constant, but need to look at how we can set the images to a constant location -->
+<div class="locator__mode__controls">
+<button id='locator-map-mode' class='active'>
+<svg width="100%" height="100%">
+<use href="../../../assets/atc/media/icons.svg#map" />
+</svg>
+</button>
+<button id="locator-list-mode">
+<svg width="100%" height="100%">
+<use href="../../../assets/atc/media/icons.svg#list" />
+</svg>
+</button>
+</div>
+
+<div class="locator__overlay">
+<div class="locator__search">
+<!-- Conteent: Traveling from, should be from SiteCore data soure
+SC Label: "Traveling From Text"
+-->
+<span class="locator__search__label">Traveling From</span>
+
+<div class="locator__search__box">
+<!-- Show locator button if no location, otherwise, show pin -->
+<div class="">
+<!--
+aria-label should be comming SiteCore data source
+  SC Label: "Locate Me aria-label text"
+-->
+<button aria-label="Locate me" id="locator-find" class="locator__locate__icon">
+<svg width="100%" height="100%" fill="#fff">
+<!-- Below image is constant, but need to look at how we can set the images to a constant location -->
+<use href="../../../assets/atc/media/icons.svg#Locate_Me" />
+</svg>
+</button>
+
+<button aria-label="My Location" class="locator__location__icon">
+<svg width="100%" height="100%" fill="#fff">
+<!-- Below image is constant, but need to look at how we can set the images to a constant location -->
+<use href="../../../assets/atc/media/icons.svg#MyLocation" />
+</svg>
+</button>
+</div>
+
+<!-- Container where ATC map is loaded -->
+<div id="locator-search" class="locator__search__field"></div>
+
+<!-- Reset button -->
+<button aria-label="Reset" id="locator-reset" class="locator__reset">
+<svg width="100%" height="100%" fill="#fff">
+<!-- Below image is constant, but need to look at how we can set the images to a constant location -->
+<use href="../../../assets/atc/media/icons.svg#Close" />
+</svg>
+</button>
+</div>
+
+<!-- Below structure is constant, but the text part should come from SiteCore data source
+SC Label: "Driving times text" - "Typical driving times around your location"
+SC Label: "1hr text" - "1 hour"
+SC Label: "2hr text" - "2 hours"
+-->
+<div class="locator__search__key locator__no-print">
+<span class="locator__search__key__label">Typical driving times around your location</span>
+<div class="locator__search__key__bar">
+<div class="locator__search__key__bar__segment"></div>
+<div class="locator__search__key__bar__segment"></div>
+</div>
+
+<div class="locator__search__key__labels">
+<span class="locator__search__key__segment__label">1 hour</span>
+<span class="locator__search__key__segment__label">2 hours</span>
+</div>
+</div>
+</div>
+
+<!-- Constant structure, JS will plug the Closest centers are added here -->
+<div class="locator__centers">
+<div id="locator-centers" class="locator__centers__list"></div>
+</div>
+
+<!-- Details are added here -->
+<!-- Constant structure, JS will plug the centers here -->
+<div id="locator-selected" class="locator__selected">
+<!-- aria-label should be comming SiteCore data source
+SC Label: "Close btn text" - "Close"
+-->
+<button aria-label="Close" id="locator-close" class="locator__close">
+<svg width="100%" height="100%" fill="#fff">
+<!-- Below image is constant, but need to look at how we can set the images to a constant location -->
+<use href="../../../assets/atc/media/icons.svg#Close" />
+</svg>
+</button>
+<!-- Constant structure, JS will plug the center details here -->
+<div id="locator-selected-details" class="locator__selected__details"></div>
+</div>
+
+<!-- Below print section is constant, but the text part should come from SiteCore data source
+SC Label: "Copy link text" - "Copy link"
+SC Label: "Print info text" - "Print information"
+-->
+<div class="locator__no-mobile locator__no-print">
+<div class="locator__centers__controls">
+<button id="centers-copy-link" class="centers-copy-link">Copy link</button>
+<button id="centers-print" class="locator__print-centers locator__trigger-print">Print information</button>
+</div>
+</div>
+</div>
+
+<!-- Below map container section is constant -->
+<div class="locator__map">
+<div id="locator-popup" class="locator__map__popup locator__map__popup--selected locator__no-print">
+<div class="locator__map__popup__contents">
+<span></span>
+</div>
+</div>
+
+<div id="locator-map" class="locator__map__graphic"></div>
+
+<div class="locator__mini__map">
+<div id="locator-mini-map" class="locator__mini__map__content"></div>
+</div>
+</div>
+
+<!-- List container -->
+<div class="locator__list">
+<div class="locator__list__controls">
+<div class="locator__list__search">
+<!-- placeholder="Center Name or State", value should come from SiteCore data source -->
+<input id="locator-list-search" type="text" class="locator__list__search__field" placeholder="Center Name or State" />
+<button aria-label="Clear search" id="locator-list-reset" class="locator__list__reset">
+<svg width="100%" height="100%" fill="#fff">
+<!-- Below image is constant, but need to look at how we can set the images to a constant location -->
+<use href="../../../assets/atc/media/icons.svg#Close" />
+</svg>
+</button>
+</div>
+</div>
+<!-- Constant, List of centers -->
+<div id="locator-list" class="locator__list__list"></div>
+<!-- Constant, Sidebar with letters -->
+<div id="locator-list-navigation" class="locator__list__navigation"></div>
+<!-- Constant, Not using this -->
+<div id="locator-list-details" class="locator__list__details"></div>
+
+<!-- Contents of below script should be inline in a <script> tag and should be configurable based on each site. The keys and structure are constant, values should be read spefic to the site -->
+<script src="../../../assets/atc/scripts-local/atc-sc-config.js"></script>
+
+<!-- <script>
+
+</script> -->
+
+<!-- free text area, where any CSS or JS can be added based on the site needs. This is to provide flexibility to the sites to add any custom code without impacting the core structure and code of ATC. This can be used for any custom tracking or any custom styling that the site wants to add. -->
+<!-- for example, I should be able add below -->
+<!-- <script src="../atc-config.js"></script>
+<script type="module" src="../locator.js"></script>
+<style></style> -->
+</div>
+</div>
+</div>
+
+<script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+<script src="../../../assets/atc/scripts/mapbox-gl.js"></script>
+<script src="../../../assets/atc/scripts/mapbox-gl-geocoder.min.js"></script>
+<script src="../../../assets/atc/scripts/turf.min.js"></script>
+<script src="../../../assets/atc/scripts/d3.v7.min.js"></script>
+<!-- ATC config scripts -->
+<script src="../../../assets/atc/scripts-local/atc-config-local-image-path.js"></script>
+<script src="../../../assets/atc/scripts-local/feature-atc.js"></script>
+<script src="../../../assets/common/scripts/gtm-tracking/gtm-tracking.js"></script>
+</body>
+</html>

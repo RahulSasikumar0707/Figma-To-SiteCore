@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inpage Navigation</title>
+    <link rel="stylesheet" href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" />
+    <link rel="stylesheet" href="../../../assets/eds/styles/eds-native.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+    <style>
+        .cmp-details {
+            font-family: "Inter", sans-serif;
+            padding: 32px 0;
+            font-size: 24px;
+            color: #c8102e;
+        }
+
+        .color-777777 {
+            color: #777777;
+        }
+
+        .name-seperator {
+            color: #f2f;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="header">
+            <!-- component gs-header: fixed clases part of the OOTB SC component wrapper -->
+            <!-- Modifier classes: sticky-header show-submenu-onhover -->
+            <div class="component eds-header header-variant-one sticky-header show-submenu-onhover">
+                <div class="component secondary-navigation">
+                    <div class="component container-fluid">
+                        <!-- If there is no content or links within the secondary navigation container, the container should not be generated. -->
+                        <div class="row row-splitter secondary-navigation-links">
+                            <!--
+                                There should be two columns under secondary navigation - a left and a right column.
+                                These columns can hold either free text (RTF) or a linked list components.
+                                If there is no content within these containers, the div should not be generated.
+                            -->
+                            <div class="column-splitter col sn-left-column">
+                                <!-- RTF component: <p>For US audiences only</p> -->
+                                <!-- Linked list Component: -->
+                                <ul>
+                                    <li>For US audiences only</li>
+                                </ul>
+                            </div>
+                            <div class="column-splitter col sn-right-column">
+                                <!-- Linked list Component: should have placeholder for authors to add class at UL and LI level-->
+                                <ul>
+                                    <li class="d-none d-lg-block"><a href="#">Important Facts and Important Warning</a></li>
+                                    <li><a href="#">Important Safety Information</a></li>
+                                    <li><a href="#">For Healthcare Professionals <span><img src="../../../assets/common/media/MasterHead/External%20Link.svg" alt="external link"> </span></a></li>
+                                </ul>
+                                <!-- Please note: The visibility of the CTA wrapper below will depend on the site requirements. -->
+                                <!-- Authors have to enable it, if no link, the DIV should not be generated. -->
+                                <!-- <div class="cta-wrapper"><a class="" href="#">Link</a></div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="component primary-navigation">
+                    <div class="component container-fluid">
+                        <div class="row-splitter row">
+                            <div class="column-splitter col">
+                                <div class="logo-container">
+                                    <div class="logo-wrapper">
+                                        <a href="#"><img src="../../../assets/common/media/MasterHead/Affinity_Logo.png" alt="Affinity logo"/></a>
+                                    </div>
+                                </div>
+                                <!-- Note: This should be handled only for the sites where dropdown-item has active class in multi-header-indicator and has to be displayed beside logo in mobile dynamically eg: TDLY patient site. Prefered JS solution. -->
+                                <!-- Indicator list from dropdown should have active class for JS to pick and append dynamically. -->
+                                <!-- <div class="indication-text">Metastatic Triple-Negative Breast Cancer (mTNBC)</div> -->
+                                <div class="hamburger-menu">
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavigation" aria-controls="primaryNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                                        <div class="hamburger-lines">
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                        </div>
+                                        <div class="hamburger-text">
+                                            <span class="menu-text">Menu</span>
+                                            <span class="close-text">Close</span>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="primary-navigation-container collapse" id="primaryNavigation">
+                                    <div class="nav-menu-overlay">
+                                        <!-- Navigation Menu overlay for Mobile -->
+                                    </div>
+                                    <!-- Note: The multi head indicator div below will be shown or hidden depending on the project requirements.-->
+                                    <div class="primary-navigation-items">
+                                        <div class="mobile-menu-back-btn">
+                                            <a class="back-button"  role="button" href="#">Back to main menu</a>
+                                        </div>
+                                        <div class="multi-head-indicator-wrapper">
+                                            <div class="multi-head-indicator">
+                                                <!-- Note: This should be handled only for TDLY site. Prefered JS solution. -->
+                                                <!-- Indicator list from dropdown should have active class for JS to pick and append dynamically. -->
+                                                <!-- <div class="indication-text">Metastatic Triple-Negative Breast Cancer (mTNBC)</div> -->
+                                                <!-- ID and aria-labelledby should be dynamic/unique in page -->
+                                                <div class="dropdown">
+                                                    <button class="btn dropdown-toggle" type="button" id="indicatorSelection" data-bs-toggle="dropdown" aria-expanded="false" data-ind-gtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;Header Dropdown&quot;,&quot;eventAction&quot;:&quot;expand&quot;,&quot;eventLabel&quot;:&quot;Change Cancer Type&quot;,&quot;eventDestination&quot;:&quot;#&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;button&quot;}">
+                                                        Select cancer type
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="indicatorSelection">
+                                                        <!-- Active indicator should be added witha active class -->
+                                                        <!-- Indicator href should point to indication landing page -->
+                                                        <li><a class="dropdown-item active" href="#">HR+/HER2- metastatic breast cancer</a></li>
+                                                        <li><a class="dropdown-item" href="#">Metastatic triple-negative breast cancer</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">No submenu</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link" href="https://trodelvy.com/" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Main Nav Item One</a>
+                                                <!-- If arrow is needed for mobile view below code can be used -->
+                                                <!-- <a class="nav-link" href="https://trodelvy.com/" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span>Main Nav Item One</span><i class="material-symbols-outlined d-lg-none">keyboard_arrow_down</i></a> -->
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="https://trodelvy.com/">Page 1</a></li>
+                                                    <li><a class="dropdown-item" href="#">Page 2</a></li>
+                                                    <li><a class="dropdown-item" href="#">Page 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Main Nav Item Two</a>
+                                                <!-- If arrow is needed for mobile view below code can be used -->
+                                                <!-- <a class="nav-link" href="https://trodelvy.com/" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span>Main Nav Item Two</span><i class="material-symbols-outlined d-lg-none">keyboard_arrow_down</i></a> -->
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Page 1</a></li>
+                                                    <li><a class="dropdown-item" href="#">Page 2</a></li>
+                                                    <li><a class="dropdown-item" href="#">Page 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Main Nav Item Three</a>
+                                                <!-- If arrow is needed for mobile view below code can be used -->
+                                                <!-- <a class="nav-link" href="https://trodelvy.com/" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span>Main Nav Item Three</span><i class="material-symbols-outlined d-lg-none">keyboard_arrow_down</i></a> -->
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Page 1</a></li>
+                                                    <li><a class="dropdown-item" href="#">Page 2</a></li>
+                                                    <li><a class="dropdown-item" href="#">Page 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Main Nav Item Four</a>
+                                                <!-- If arrow is needed for mobile view below code can be used -->
+                                                <!-- <a class="nav-link" href="https://trodelvy.com/" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"><span>Main Nav Item Four</span><i class="material-symbols-outlined d-lg-none">keyboard_arrow_down</i></a> -->
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Page 1</a></li>
+                                                    <li><a class="dropdown-item" href="#">Page 2</a></li>
+                                                    <li><a class="dropdown-item" href="#">Page 3</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <!-- Note: The mobile other links div below should be authored depending on the project requirements. -->
+                                        <ul class="mobile-hm-links">
+                                            <li class="nav-item"><a href="#" class="nav-link leave-site">Patient Site <span><img src="../../../assets/common/media/MasterHead/Black_External Link Icon.svg" alt="external link"> </span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="eds-main">
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Inpage Navigation</span>
+                                <div class="mt-2"></div>
+                                <ul>
+                                    <li>'eds-inpage-navigation' class is mandatory at the parent level</li>
+                                    <li>Sitecore should be able to add/remove classes on parent level eds-inpage-navigation div</li>
+                                    <li>Add class 'highlight-hash-location' to highlight the active section in navigation based on the scroll position.</li>
+                                    <li>Developer can choose to use either desktop or mobile navigation or both based on the requirement.</li>
+                                    <li>Sitecore should be able to add/remove classes on both nav-desktop and nav-mobile div based on the requirement.</li>
+                                    <li>Sitecore should be able to add/remove 'inpage-scroll-trigger' class on anchor tag based on the requirement. This class is used to trigger the scroll event and to identify the active section while scrolling.</li>
+                                    <li>By default, make sure to add first section name in the active-section-title div. This will be updated based on the scroll position to show the current active section name in mobile view while scrolling.</li>
+                                    <li>Sitecore should wrap each section of components inside a div with 'inpage-scroll-target' class and a unique id to identify the section.</li>
+                                    <li>The id will be used to scroll to the section when the corresponding navigation link is clicked. Make sure the id is unique and does not contain any special characters or spaces and should match the href value of the corresponding navigation link. For example, if the navigation link has href="#section1", then the corresponding section should have id="section1". This is important for the scroll functionality to work correctly.</li>
+                                    <li>Also, make sure to add 'data-name' attribute with the section name to update the active section name in mobile view while scrolling.</li>
+                                    <li>Sitecore should be able to add/remove classes on 'inpage-scroll-target' div based on the requirement.</li>
+                                </ul>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 'eds-inpage-navigation' class is mandatory at the parent level -->
+            <!-- Sitecore should be able to add/remove classes on parent level eds-inpage-navigation div -->
+            <!-- Add class 'highlight-hash-location' at parent level to highlight the active section in navigation based on the scroll position. -->
+            <div class="eds-inpage-navigation">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="inpage-nav-container">
+                                <!-- Developer can choose to use either desktop or mobile navigation or both based on the requirement. Below is the implementation of both desktop and mobile navigation. -->
+                                <!-- Sitecore should be able to add/remove classes on both nav-desktop and nav-mobile div based on the requirement.  -->
+                                <div class="nav-desktop">
+                                    <div class="nav-label">Jump to:</div>
+                                    <ul class="nav-list">
+                                        <!-- Sitecore should be able to add/remove 'inpage-scroll-trigger' class on anchor tag based on the requirement. This class is used to trigger the scroll event and to identify the active section while scrolling. -->
+                                        <li class="nav-item"><a class="inpage-scroll-trigger" href="#section1">Section 1</a></li>
+                                        <li class="nav-item"><a class="inpage-scroll-trigger" href="#section2">Section 2</a></li>
+                                        <li class="nav-item"><a class="inpage-scroll-trigger" href="#section3">Section 3</a></li>
+                                        <li class="nav-item"><a class="inpage-scroll-trigger" href="#section4">Section 4</a></li>
+                                    </ul>
+                                </div>
+                                <div class="nav-mobile">
+                                    <!-- By default, make sure to add first section name in the active-section-title div. This will be updated based on the scroll position to show the current active section name in mobile view.  -->
+                                    <div class="active-section-title">Section 1</div>
+                                    <div class="dropdown">
+                                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="">Jump to</span>
+                                        </button>
+                                        <!-- Sitecore should be able to add/remove 'inpage-scroll-trigger' class on anchor tag based on the requirement. This class is used to trigger the scroll event and to identify the active section while scrolling. -->
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <li><a class="dropdown-item inpage-scroll-trigger" href="#section1">Section 1</a></li>
+                                            <li><a class="dropdown-item inpage-scroll-trigger" href="#section2">Section 2</a></li>
+                                            <li><a class="dropdown-item inpage-scroll-trigger" href="#section3">Section 3</a></li>
+                                            <li><a class="dropdown-item inpage-scroll-trigger" href="#section4">Section 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sitecore should wrap each section of components inside a div with 'inpage-scroll-target' class and a unique id to identify the section. -->
+            <!-- The id will be used to scroll to the section when the corresponding navigation link is clicked. Make sure the id is unique and does not contain any special characters or spaces and should match the href value of the corresponding navigation link. For example, if the navigation link has href="#section1", then the corresponding section should have id="section1". This is important for the scroll functionality to work correctly. -->
+            <!-- Also, make sure to add 'data-name' attribute with the section name to update the active section name in mobile view while scrolling. -->
+            <!-- Sitecore should be able to add/remove classes on 'inpage-scroll-target' div based on the requirement. -->
+            <div class="inpage-scroll-target mt-4" id="section1" data-name="Section 1">
+                <!-- Micro components and RTE comes here. -->
+                <div class="container-fluid">
+                    <div class="row row-splitter">
+                        <div class="col-12">
+                            <div style="background-color: red; height: 800px; border-radius: 0.75rem;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inpage-scroll-target mt-4" id="section2" data-name="Section 2">
+                <!-- Micro components and RTE comes here. -->
+                <div class="container-fluid">
+                    <div class="row row-splitter">
+                        <div class="col-12">
+                            <div style="background-color: blue; height: 800px; border-radius: 0.75rem;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inpage-scroll-target mt-4" id="section3" data-name="Section 3">
+                <!-- Micro components and RTE comes here. -->
+                <div class="container-fluid">
+                    <div class="row row-splitter">
+                        <div class="col-12">
+                            <div style="background-color: green; height: 800px; border-radius: 0.75rem;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inpage-scroll-target mt-4" id="section4" data-name="Section 4">
+                <!-- Micro components and RTE comes here. -->
+                <div class="container-fluid">
+                    <div class="row row-splitter">
+                        <div class="col-12">
+                            <div style="background-color: yellow; height: 800px; border-radius: 0.75rem;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer class="eds-footer"> </footer>
+    </div>
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-header.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-inpage-navigation.js"></script>
+</body>
+
+</html>

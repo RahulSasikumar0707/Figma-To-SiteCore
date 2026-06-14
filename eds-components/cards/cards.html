@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards</title>
+    <link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet">
+    <link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <style>
+        .cmp-details {
+            padding: 32px 0;
+            font-size: 24px;
+            color: #C8102E;
+        }
+
+        .color-777777 {
+            color: #777777;
+        }
+
+        .name-seperator {
+            color: #F2F;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+    </style>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+        <!--main-->
+        <main id="eds-main">
+            <!-- Note:
+                ATTR [class]: eds-card, card (default)
+                    [modifier-name]: card-img-padding, card-img-center, card-img-right, horizontal-card, flex-column-reverse, flex-md-row-reverses
+                        card-img-padding: For padding around the card image, left and right.
+                        card-img-center: Centers the card image or icon horizontally within its container.
+                        card-img-right: Aligns the card image or icon to the right side of the card.
+                        horizontal-card: Displays the card layout in a horizontal row, placing the image and card body side by side.
+                        flex-column-reverse: Reverses the vertical order of card elements, placing the image below the card body.
+                        flex-md-row-reverse: Reverses the horizontal layout of the card on medium screens and above (≥768px), placing the card body before the image.
+                    [sitecore-predefined-classes-multi-list]: predefined list of classes that can add the spacings, e.g: mt-x, mb-x, text-center etc.
+                    [free-text-class]: any free text for user to add a class, that could change the beahviour or style of the component
+                        Below are the classes used here:
+                        card-shadow: Applies a default box-shadow style used for ads cards.
+                        border-0: Removes all borders from the card or element.
+                        br-(4 to 40): Applies a border-radius in multiples of 4 pixels. Available values include .br-4, .br-8, .br-12, ..., up to .br-40.
+           
+                If <div class="card-img"> is inside an <a> tag with class "video-modal-trigger", then that <a> tag MUST also include:
+                    - class "player-link"
+                    - attribute:
+                        'data-videogtm' with appropriate JSON value, e.g.:
+                            data-videogtm='{
+                                "event":"gild.event",
+                                "eventCategory":"Video",
+                                "eventAction":"Downloaded",
+                                "eventLabel":"Video 1",
+                                "intendedAudience":"Family/Caregiver",
+                                "subject":"Video Activity",
+                                "language":"English"
+                            }'
+                        'data-link' with the SAME URL as the 'href' attribute
+                        (both should point to the video player URL, e.g. https://player.vimeo.com/video/...)
+            -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                <span class="color-777777">These classes should be given beside eds-card to modify "card"</span>
+                                <span class="name-seperator"> | </span> Modifier Class:<span class="color-777777"> Class list defined for the component as a
+                                    rendering variants: card-img-padding, card-img-center, card-img-right, horizontal-card, flex-column-reverse, flex-md-row-reverses </span>
+                                <span class="name-seperator"> | </span>Custom classes: <span class="color-777777">free text: card-shadow, border-0, br-(4 to 40): Applies a border-radius in multiples of 4 pixels.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-1 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Cards title, Icon, card shadow, border-radius-20, card content with unorder list, footer rtf and clickable links that triggers video modals</span>
+                                <style>
+                                    .cta-wrapper {
+                                        display: inline-flex;
+                                        flex-direction: column;
+                                    }
+                                </style>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card card-img-padding card-shadow br-20">
+                                <h2 class="h6-heading p-3 mb-0">Card title</h2>
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        <ul class="gs-unordered-list">
+                                            <li>List text</li>
+                                            <li>List text</li>
+                                            <li>List text</li>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link1</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/1024529402?h=cde621b4a7&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" data-link="https://player.vimeo.com/video/1024529402?h=cde621b4a7&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link2</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-2 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Cards title, Icon, no border, box-shadow, card content with unorder list, footer rtf and clickable links</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card card-img-padding card-img-center border-0 card-shadow">
+                                <h2 class="h6-heading p-3 mb-0">Card title</h2>
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        <ul class="gs-unordered-list">
+                                            <li>List text</li>
+                                            <li>List text</li>
+                                            <li>List text</li>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link1</span>
+                                            </a>
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/1024529402?h=cde621b4a7&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" data-link="https://player.vimeo.com/video/1024529402?h=cde621b4a7&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link2</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-3 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Cards title, Icon, no border, box-shadow, card content with unorder list, footer rtf and clickable links</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card card-img-padding card-img-right border-0 card-shadow">
+                                <h2 class="h6-heading p-3 mb-0">Card title</h2>
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid w-auto" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        <ul class="gs-unordered-list">
+                                            <li>List text</li>
+                                            <li>List text</li>
+                                            <li>List text</li>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                            eiusmod tempor incididunt ut labore</p>
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link1</span>
+                                            </a>
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/1024529402?h=cde621b4a7&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" data-link="https://player.vimeo.com/video/1024529402?h=cde621b4a7&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link2</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-4 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Image, card content and clickable link</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card">
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image2.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/carousel_D_M_var3-image2.svg" class="img-fluid" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link" href="https://www.gilead.com" data-gtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-5-->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Title, Image, card content and clickable link</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card">
+                                <h2 class="h6-heading p-3 mb-0">Card title</h2>
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/carousel_D_M_var3-image1.svg" class="img-fluid" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link" href="https://www.gilead.com" data-gtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-6 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">BG Title, Image, card content and clickable link</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card">
+                                <h2 class="h6-heading p-3 mb-0" style="background-color: #BE0F2C; color: #FFFFFF;">Card title</h2>
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/carousel_D_M_var3-image1.svg" class="img-fluid" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link" href="https://www.gilead.com" data-gtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-7 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Title, card content and clickable links that triggers a video modal</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card">
+                                <h2 class="mb-0 px-3 pt-3">Card title</h2>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-8 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">BG Title, card content and clickable links that triggers a video modal</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card">
+                                <h2 class="mb-0 p-3" style="background-color: #BE0F2C; color: #FFFFFF;">Card title</h2>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-9 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Image, card content and clickable link that triggers a video modal</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card">
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/carousel_D_M_var3-image1.svg" class="img-fluid" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-10-->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Image, card content, RTF and clickable link that triggers a video modal</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card">
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/carousel_D_M_var3-image1.svg" class="img-fluid" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-11 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Image, card content, RTF and clickable link that triggers a video modal</span>
+                                <style>
+                                    .eds-card.bg-primary-footer .card-footer {
+                                        background-color: #BE0F2C;
+                                        color: #FFFFFF;
+                                        padding: 20px;
+                                        margin: 0 -20px -20px;
+                                    }
+                                </style>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card bg-card-footer bg-primary-footer">
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/carousel_D_M_var3-image1.svg" class="img-fluid" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="py-2 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link text-white player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-12 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Clickable image that triggers a video modal, card content and clickable link</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card">
+                                <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                    <div class="card-img">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/carousel_D_M_var3-image1.svg" class="img-fluid" alt="carousel image" />
+                                        </picture>
+                                    </div>
+                                </a>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link" href="https://www.gilead.com" data-gtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-13 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Clickable image that triggers a video modal, card content and clickable link that triggers a video modal</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card">
+                                <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                    <div class="card-img">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/carousel_D_M_var3-image1.svg" class="img-fluid" alt="carousel image" />
+                                        </picture>
+                                    </div>
+                                </a>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-14 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Image, card content and clickable links that triggers a video modal</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card">
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/carousel_D_M_var3-image1.svg" class="img-fluid" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link1</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/1024529402?h=cde621b4a7&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" data-link="https://player.vimeo.com/video/1024529402?h=cde621b4a7&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link2</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-15 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Column-reverse, image, card content and clickable links that triggers a video modal</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card flex-column-reverse">
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/carousel_D_M_var3-image1.svg" class="img-fluid" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-16 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Horizontal card, image, card content and clickable links that triggers a video modal</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-8">
+                            <div class="eds-card card horizontal-card">
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/carousel_D_M_var3-image1.svg" class="img-fluid" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-17 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Horizontal card, mobile column-reverse, image, card content and clickable links that triggers a video modal</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-8">
+                            <div class="eds-card card horizontal-card flex-md-row-reverse flex-column-reverse">
+                                <div class="card-img">
+                                    <picture>
+                                        <!-- desktop -->
+                                        <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- tablet -->
+                                        <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- mobile -->
+                                        <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                        <!-- default is mobile -->
+                                        <img src="../../../assets/common/media/carousel_D_M_var3-image1.svg" class="img-fluid" alt="carousel image" />
+                                    </picture>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-18 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Video, card content and clickable links that triggers a video modal</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="eds-card card">
+                                <div class="card-video">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://player.vimeo.com/video/1076086221?h=03f44dc01c&badge=0&autopause=0&player_id=0&app_id=58479"></iframe>
+                                    </div>
+                                </div>
+                                <div class="card-body-footer">
+                                    <div class="card-body">
+                                        <!-- RTF -->
+                                        <h3 class="h6-heading">Eyebrow text</h3>
+                                        <p class="mt-1">Card body sub text</p>
+                                        <p class="gs-mt-20 gs-mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="cta-wrapper">
+                                            <a class="eds-link player-link" href="https://player.vimeo.com/video/3784524?h=10939251d6" data-link="https://player.vimeo.com/video/3784524?h=10939251d6" data-videogtm='{"event":"gild.event","eventCategory":"Video","eventAction":"Downloaded","eventLabel":"Video 11","intendedAudience":"Family/Caregiver","subject":"Video Activity","language":"English"}'>
+                                                <span class="link-text">Link</span>
+                                                <span class="material-symbols-outlined ms-2">smart_display</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-19 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Card</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Clickable card (eds-card is wrapped inside a tag), card image, card content</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <!-- Below a tag is a standard micro component and beside eds-link SC has feasibilty to add/remove the classes -->
+                            <a href="#" class="eds-link gs-text-neutral_100 text-decoration-none">
+                                <div class="eds-card card">
+                                    <div class="card-img">
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/carousel_D_M_var3-image1.svg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/carousel_D_M_var3-image1.svg" class="img-fluid" alt="carousel image" />
+                                        </picture>
+                                    </div>
+                                    <div class="card-body-footer">
+                                        <div class="card-body">
+                                            <!-- RTF -->
+                                            <h3 class="h6-heading">Eyebrow text</h3>
+                                            <p class="mt-1">Card body sub text</p>
+                                            <p class="gs-mt-20 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Video modal -->
+            <div class="eds-modal modal variant-a fade video-modal" data-bs-backdrop="true" data-bs-keyboard="true" tabindex="-1" aria-labelledby="exampleModalSixLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- include 'gs-video-close-btn' class for video-modal close button -->
+                            <button type="button" class="btn-close gs-video-close-btn" aria-label="Close" data-gtm="">Close</button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- RTF -->
+                            <div class="vimeo-video">
+                                <iframe id="video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--footer-->
+        <footer class="eds-footer"></footer>
+    </div>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/player.min.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-video-modal.js"></script>
+</body>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EDS Accordion</title>
+        <link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+        <link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+        <style>
+        :root {
+            --font-family-primary: Inter, serif;
+        }
+
+        .cmp-details {
+            padding: 32px 0;
+            font-size: 24px;
+            line-height: 2;
+            color: #C8102E;
+        }
+
+        .color-777777 {
+            color: #777777;
+        }
+
+        .name-seperator {
+            color: #F2F;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+
+        /* demo only */
+        .eds-accordion .accordion-button-wrapper img {
+            width: 40px;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div id="eds-wrapper">
+            <!--header-->
+            <header id="eds-header">
+                <div class="component eds-header"> </div>
+            </header>
+            <!--main-->
+            <main id="eds-main">
+                <!-- Accordion with plain text plus minus -->
+                <div class="cmp-rich-text">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="cmp-details">Component: <span class="color-777777">Accordion</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Accordion with plain text and Plus/Minus collasable icons</span> <span class="name-seperator"> | </span> Feature: <span class="color-777777">Accordion heads expand independently</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="eds-accordion accordion accordion-plus" id="video">
+                                <!--"accordion-item" section will take dynamic classes-->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="manufacturing">
+                                        <button class="accordion-button collapsed" type="button" data-gtm='' data-bs-toggle="collapse" data-bs-target="#manufacturing_body" aria-expanded="false" aria-controls="manufacturing_body">
+                                            <span class="accordion-button-wrapper">
+                                                <span class="accordion-button-title">
+                                                    <!--RTF Section-->
+                                                    Accordion Item #1
+                                                </span>
+                                            </span>
+                                            <i class="icon-indicator"></i>
+                                        </button>
+                                    </h2>
+                                    <!--.accordion-collapse: This level "data-bs-parent" is configurable add or remove-->
+                                    <div id="manufacturing_body" class="accordion-collapse collapse" aria-labelledby="manufacturing" aria-expanded="true">
+                                        <div class="accordion-body">
+                                            <!--RTF Section-->
+                                            <p> HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="acc_BE532CC9">
+                                        <button class="accordion-button collapsed" type="button" data-gtm='' data-bs-toggle="collapse" data-bs-target="#acc_BE532CC9_body" aria-expanded="false" aria-controls="acc_BE532CC9_body">
+                                            <span class="accordion-button-wrapper">
+                                                <span class="accordion-button-title">
+                                                    <!--RTF Section-->
+                                                    Accordion Item #3
+                                                </span>
+                                            </span>
+                                            <i class="icon-indicator"></i>
+                                        </button>
+                                    </h2>
+                                    <!--.accordion-collapse: This level "data-bs-parent" is configurable add or remove-->
+                                    <div id="acc_BE532CC9_body" class="accordion-collapse collapse" aria-labelledby="acc_BE532CC9" aria-expanded="false">
+                                        <div class="accordion-body">
+                                            <!--RTF Section-->
+                                            <p> HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment <a href="http://option.This" target="_blank">option.&nbsp;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item ">
+                                    <h2 class="accordion-header" id="acc_DC1B9ABC">
+                                        <button class="accordion-button collapsed" type="button" data-gtm='' data-bs-toggle="collapse" data-bs-target="#acc_DC1B9ABC_body" aria-expanded="false" aria-controls="acc_DC1B9ABC_body">
+                                            <span class="accordion-button-wrapper">
+                                                <span class="accordion-button-title">
+                                                    <!--RTF Section-->
+                                                     Accordion Item #4
+                                                </span>
+                                            </span>
+                                            <i class="icon-indicator"></i>
+                                        </button>
+                                    </h2>
+                                    <!--.accordion-collapse: This level "data-bs-parent" is configurable add or remove-->
+                                    <div id="acc_DC1B9ABC_body" class="accordion-collapse collapse" aria-labelledby="acc_DC1B9ABC" aria-expanded="true">
+                                        <div class="accordion-body">
+                                            <!--RTF Section-->
+                                            <p> HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 pt-5"></div>
+                <!-- Accordion with plain text + icon and plus minus collasable icons -->
+                <div class="cmp-rich-text">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="cmp-details">Component: <span class="color-777777">Accordion</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Accordion with plain text + icon and Plus/Minus collasable icons</span> | </span> Feature: <span class="color-777777">Accordion heads collpase when other head is opened</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="eds-accordion accordion accordion-chevron" id="acc_2069A58C">
+                                <!--"accordion-item" section will take dynamic classes-->
+                                <div class="accordion-item ">
+                                    <h2 class="accordion-header" id="acc_A7FBEE59">
+                                        <button class="accordion-button collapsed" type="button" data-gtm='' data-bs-toggle="collapse" data-bs-target="#acc_A7FBEE59_body" aria-expanded="false" aria-controls="acc_A7FBEE59_body">
+                                            <span class="accordion-button-wrapper">
+                                                <picture class="accordion-button-img">
+                                                    <!-- desktop -->
+                                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/icon-step-1@2x.png">
+                                                    <!-- tablet -->
+                                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/icon-step-1@2x.png">
+                                                    <!-- mobile -->
+                                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/icon-step-1@2x.png">
+                                                    <!-- default is mobile -->
+                                                    <img src="../../../assets/common/media/icon-step-1@2x.png" alt="sitecore field value" class="img-fluid">
+                                                </picture>
+                                                <span class="accordion-button-title">
+                                                    <!--RTF Section--> Accordion Item #1 </span>
+                                            </span>
+                                            <i class="icon-indicator"></i>
+                                        </button>
+                                    </h2>
+                                    <!--.accordion-collapse: This level "data-bs-parent" is configurable add or remove-->
+                                    <div id="acc_A7FBEE59_body" class="accordion-collapse collapse" aria-labelledby="acc_A7FBEE59" aria-expanded="true" data-bs-parent="#acc_2069A58C">
+                                        <div class="accordion-body">
+                                            <!--RTF Section-->
+                                            <p> HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option.HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item ">
+                                    <h2 class="accordion-header" id="acc_8A9C79FA">
+                                        <button class="accordion-button collapsed" type="button" data-gtm='' data-bs-toggle="collapse" data-bs-target="#acc_8A9C79FA_body" aria-expanded="false" aria-controls="acc_8A9C79FA_body">
+                                            <span class="accordion-button-wrapper">
+                                                <picture class="accordion-button-img">
+                                                    <!-- desktop -->
+                                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/icon-step-1@2x.png">
+                                                    <!-- tablet -->
+                                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/icon-step-1@2x.png">
+                                                    <!-- mobile -->
+                                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/icon-step-1@2x.png">
+                                                    <!-- default is mobile -->
+                                                    <img src="../../../assets/common/media/icon-step-1@2x.png" alt="sitecore field value" class="img-fluid">
+                                                </picture>
+                                                <span class="accordion-button-title">
+                                                    <!--RTF Section--> Accordion Item #3 </span>
+                                            </span>
+                                            <i class="icon-indicator"></i>
+                                        </button>
+                                    </h2>
+                                    <!--.accordion-collapse: This level "data-bs-parent" is configurable add or remove-->
+                                    <div id="acc_8A9C79FA_body" class="accordion-collapse collapse" aria-labelledby="acc_8A9C79FA" aria-expanded="true" data-bs-parent="#acc_2069A58C">
+                                        <div class="accordion-body">
+                                            <!--RTF Section-->
+                                            <p> HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item ">
+                                    <h2 class="accordion-header" id="acc_BF73F2A5">
+                                        <button class="accordion-button collapsed" type="button" data-gtm='{ "event": "gild.event", "eventCategory": "accordian", "eventAction": "expand", "eventLabel": "Accordion title goes here", "eventPosition": "4", "intendedAudience": "patient", "language": "english", "subject": "accordian" }' data-bs-toggle="collapse" data-bs-target="#acc_BF73F2A5_body" aria-expanded="false" aria-controls="acc_BF73F2A5_body">
+                                            <span class="accordion-button-wrapper">
+                                                <picture class="accordion-button-img">
+                                                    <!-- desktop -->
+                                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/icon-step-1@2x.png">
+                                                    <!-- tablet -->
+                                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/icon-step-1@2x.png">
+                                                    <!-- mobile -->
+                                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/icon-step-1@2x.png">
+                                                    <!-- default is mobile -->
+                                                    <img src="../../../assets/common/media/icon-step-1@2x.png" alt="sitecore field value" class="img-fluid">
+                                                </picture>
+                                                <span class="accordion-button-title">
+                                                    <!--RTF Section-->
+                                                     Accordion Item #4
+                                                </span>
+                                            </span>
+                                            <i class="icon-indicator"></i>
+                                        </button>
+                                    </h2>
+                                    <!--.accordion-collapse: This level "data-bs-parent" is configurable add or remove-->
+                                    <div id="acc_BF73F2A5_body" class="accordion-collapse collapse" aria-labelledby="acc_BF73F2A5" aria-expanded="true" data-bs-parent="#acc_2069A58C">
+                                        <div class="accordion-body">
+                                            <!--RTF Section-->
+                                            <p> HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available. Talk to your healthcare provider and learn more about a treatment option. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!--footer-->
+            <footer class="eds-footer"></footer>
+        </div>
+        <!-- /#wrapper -->
+        <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+        <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+        <!-- Common file should be given first in hierarchy before including any other feature js files -->
+        <script src="../../../assets/eds/Scripts/feature-common.js"></script>
+        <!-- <script src="../../../assets/eds/Scripts/feature-accordion.js"></script> -->
+    </body>
+
+</html>

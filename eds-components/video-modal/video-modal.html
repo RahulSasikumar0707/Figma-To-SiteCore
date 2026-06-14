@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video-Modal</title>
+    <link rel="stylesheet" href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" />
+    <link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google icons -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded" rel="stylesheet"> -->
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="eds-wrapper">
+        <!-- header -->
+        <header id="eds-header">
+            <div class="component eds-header">
+
+            </div>
+        </header>
+        <main id="eds-main">
+            <div class="mt-5"></div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Make sure to add class "player-link" to trigger the video modal -->
+                            <!-- Also, add data-link attribute with video link as value to the anchor tag. -->
+                            <p>Video modal - <a href="https://player.vimeo.com/video/3784524?h=10939251d6" class="player-link" data-link="https://player.vimeo.com/video/3784524?h=10939251d6">Play Video</a></p>
+                            <p>Refer to <a href="../video/video.html#video-links-gtm">video.html</a> file for more examples of video modal with different variants and GTM data implementation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+            <!-- Modal -->
+            <!-- Video Modal -->
+            <!-- Modifier class: use any variant as per the requirement, but make sure to add class 'video-modal' to the modal div. -->
+            <!-- Place iframe inside modal-body div. -->
+            <div class="eds-modal modal variant-a fade video-modal" data-bs-backdrop="true" data-bs-keyboard="true" tabindex="-1" aria-labelledby="exampleModalSixLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- include 'gs-video-close-btn' class for video-modal close button -->
+                            <button type="button" class="btn-close gs-video-close-btn" aria-label="Close" data-gtm="">Close</button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- RTF -->
+                            <div class="vimeo-video">
+                                <iframe id="video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer id="eds-footer"> </footer>
+    </div>
+
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/player.min.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+    <script src="../../../assets/eds/Scripts/eds-common-gtm-tracking.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-video-modal.js"></script>
+</body>
+
+</html>

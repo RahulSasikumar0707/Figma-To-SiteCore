@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+    <link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+    <style>
+       
+        .cmp-details {
+            font-family: "Inter", sans-serif;
+            padding: 32px 0;
+            font-size: 24px;
+            color: #c8102e;
+        }
+
+        .color-777777 {
+            color: #777777;
+        }
+
+        .name-seperator {
+            color: #f2f;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+        <!-- main -->
+        <main id="eds-main">
+            <!-- Variant 1 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">RTF Tables</span> <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777"></span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-splitter row">
+                    <div class="column-splitter col-12">
+                        <!-- Modifier classes and Free text classes can be added to acheive feasibility -->
+                        <table class="eds-table table table-bordered [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                            <thead>
+                                <!-- It contains the table rows(<tr>) and headers(<th>) -->
+                                <!-- free text classes like "text-center" are used for text alignment and "gs-bg-primary" for background color -->
+                                <tr class="text-center">
+                                    <th rowspan="2">Adverse Reactions(ARs)(All Grades) Reported in > 2% of Adults Who
+                                        Received DESCOVY</th>
+                                    <th colspan="2" class="gs-bg-primary gs-text-neutral_10">Study 1490</th>
+                                    <th colspan="2" class="gs-bg-neutral_20">Study 1489</th>
+                                </tr>
+                                <tr class="text-center">
+                                    <th class="gs-bg-primary_10 gs-text-primary">DESCOVY (n=314)</th>
+                                    <th class="gs-bg-primary_10">DESCOVY (n=314)</th>
+                                    <th class="gs-bg-neutral_20">DESCOVY (n=314)</th>
+                                    <th class="gs-bg-neutral_20">DESCOVY (n=314)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- It contains the table rows(<tr>) and data(<td>) -->
+                                <tr class="text-center">
+                                    <td class="text-start">Diarrhea,%</td>
+                                    <td>6</td>
+                                    <td>18</td>
+                                    <td>18</td>
+                                    <td>18</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class="text-start">Headache,%</td>
+                                    <td>6</td>
+                                    <td>18</td>
+                                    <td>18</td>
+                                    <td>18</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class="text-start">Fatigue,%</td>
+                                    <td>6</td>
+                                    <td>18</td>
+                                    <td>18</td>
+                                    <td>18</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class="text-start">Headache,%</td>
+                                    <td>6</td>
+                                    <td>18</td>
+                                    <td>18</td>
+                                    <td>18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 2 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">RTF Table</span> <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Table with Nested Rows</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-splitter row">
+                    <div class="column-splitter col-12">
+                        <!-- Modifier classes and Free text classes can be added to acheive feasibility -->
+                        <table class="eds-table table table-bordered [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                            <thead>
+                                <!-- It contains the table rows(<tr>) and headers(<th>) -->
+                                <!-- free text classes like "gs-text-neutral_10" are used for text color and "gs-bg-primary" for background color -->
+                                <tr>
+                                    <th class="gs-bg-primary gs-text-neutral_10">Severe Neutropenia</th>
+                                    <th>Occurrence</th>
+                                    <th>Dose Modification</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- It contains the table rows(<tr>) and data(<td>) -->
+                                <tr>
+                                    <td rowspan="3">Grade 4 neutropenia &gt; 7 days,OR Grade 3–4 febrile neutropenia,OR
+                                        At time of scheduled treatment, Grade 3–4 neutropenia, which delays dosing by 2
+                                        or 3 weeks for recovery to &lt; Grade 1</td>
+                                    <td>First</td>
+                                    <td>25% dose reduction and administer granulocyte colony-stimulation factor (G-CSF)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Second</td>
+                                    <td>50% dose reduction and administer G-CSF</td>
+                                </tr>
+                                <tr>
+                                    <td>Third</td>
+                                    <td>Discontinue treatment and administer G-CSF</td>
+                                </tr>
+                                <tr>
+                                    <td>At time of scheduled treatment, Grade 3–4 neutropenia, which delays dosing
+                                        beyond 3 weeks for recovery to &lt; Grade 1</td>
+                                    <td>First</td>
+                                    <td>25% dose reduction and administer granulocyte colony-stimulation factor (G-CSF)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 3 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">RTF Table</span> <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Table with CTAs</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-splitter row">
+                    <div class="column-splitter col-12">
+                        <!-- Modifier classes and Free text classes can be added to acheive feasibility -->
+                        <table
+                            class="eds-table table table-bordered [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                            <thead class="gs-bg-neutral_20">
+                                <!-- free text classes like "gs-bg-neutral_20" is used for background color  -->
+                                <!-- It contains the table rows(<tr>) and headers(<th>) -->
+                                <tr>
+                                    <th></th>
+                                    <th>Population</th>
+                                    <th>HBV DNA (IU/ml)</th>
+                                    <th>ALT (U/L)</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- It contains the table rows(<tr>) and data(<td>) -->
+                                <tr>
+                                    <td>SABA 2022</td>
+                                    <td>&gt;30 years old</td>
+                                    <td>&gt;2000</td>
+                                    <td>Regardless of ALT level</td>
+                                    <!-- Any CTA can be added here -->
+                                    <td>
+                                        <a class="eds-link link-sm" href="#">
+                                            <span class="link-text">View more</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>SABA 2022</td>
+                                    <td>&gt;30 years old</td>
+                                    <td>&gt;2000</td>
+                                    <td>&gt;ULN* or if fibrosis present other risk factors &gt;ULN* or if fibrosis
+                                        present</td>
+                                    <!-- Any CTA can be added here -->
+                                    <td>
+                                        <a class="eds-link link-sm" href="#">
+                                            <span class="link-text">376-768PX - Anatomy</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 4 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">RTF Table</span> <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Table with Icons</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-splitter row">
+                    <div class="column-splitter col-12">
+                        <!-- Modifier classes and Free text classes can be added to acheive feasibility -->
+                        <table
+                            class="eds-table table table-bordered [modifier-classes] [sitecore-pre-defined-class-multi-list] [free-text-classes]">
+                            <thead class="gs-bg-primary gs-text-neutral_10">
+                                <!-- free text classes like "gs-text-neutral_10" are used for text color and "gs-bg-primary" for background color -->
+                                <!-- It contains the table rows(<tr>) and headers(<th>) -->
+                                <tr>
+                                    <th>Type of adverse reactions</th>
+                                    <th>DESCOVY (n=532) n(%)</th>
+                                    <th>Placebo (n=516) n(%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- It contains the table rows(<tr>) and data(<td>) -->
+                                <tr class="text-center">
+                                    <td class="text-start">Any adverse reaction, Grades &gt;3</td>
+                                    <!-- Any icon can be added here -->
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class="text-start">Serious adverse reactions</td>
+                                    <!-- Any icon can be added here -->
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class="text-start">Adverse reactions leading treatment discontinuation</td>
+                                    <!-- Any icon can be added here -->
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 5 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">RTF Table</span> <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Bootstrap Tables Out of the Box</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-splitter row">
+                    <div class="column-splitter col-12">
+                        <!-- Below given are bootstrap contextual classes for tables that you can use to style and customize the appearance, layout, and responsiveness of HTML tables, such as adding borders, striped rows, hover effects, and contextual colors. -->
+                        <mark>table-primary class is bootstrap utility class which is added here and is used to visually
+                            highlight information that is important or signifies a primary action</mark>
+                        <table class="eds-table table table-primary table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-secondary class is bootstrap utility class which is added here and is used to visually
+                            highlight information that is important or signifies a secondary action</mark>
+                        <table class="eds-table table table-secondary table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-success class is bootstrap utility class which is added here and used to visually
+                            highlight information that indicates a successful or positive action</mark>
+                        <table class="eds-table table table-success table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-danger class is bootstrap utility class which is added here and is used to visually
+                            highlight information that is important or signifies a negative or, a critical error, or a
+                            failed status</mark>
+                        <table class="eds-table table table-danger table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-warning class is bootstrap utility class which is added here and is used to visually
+                            highlight information that is important or signifies a warning that might need attention</mark>
+                        <table class="eds-table table table-warning table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-info class is bootstrap utility class which is added here and is used to visually
+                            highlight information that is important or signifies a neutral or informational alert</mark>
+                        <table class="eds-table table table-info table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-light class is bootstrap utility class which is added here and is used to visually
+                            highlight information that needs to be presented with a subtle, light-gray background</mark>
+                        <table class="eds-table table table-light table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-dark class is bootstrap utility class which is added here and is used to visually
+                            highlight information that signifies a dark background style</mark>
+                        <table class="eds-table table table-dark table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-striped class is used to add zebra-striping to any table row within the table body</mark>
+                        <table class="eds-table table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-striped-columns class is used to add zebra-striping to any table column within the
+                            table body</mark>
+                        <table class="eds-table table table-striped-columns">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-hover class is used to enable a hover state on table rows within the table body</mark>
+                        <table class="eds-table table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-active class is used to highlight a specific row or cell within the table</mark>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-active">
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td class="table-active">@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-bordered class is used to add borders on all sides of the table and cells</mark>
+                        <table class="eds-table table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-borderless class is used to get a table without borders</mark>
+                        <table class="eds-table table table-borderless">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-sm class is to make any table more compact by cutting all cell padding in half.</mark>
+                        <table class="eds-table table table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-group-divider class is used to add a divider between gropps of table rows.</mark>
+                        <table class="eds-table table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>@social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5"></div>
+                        <mark>table-responsive class is used to make the table scrollable horizontally. Use ".table-responsive{-sm|-md|-lg|-xl|-xxl}" as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.</mark>
+                        <div class="table-responsive">
+                            <table class="eds-table table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>@social</td>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>@social</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-5"></div>
+                        <mark>Typography table</mark>
+                        <table class="eds-table table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Desktop</th>
+                                    <th scope="col">Mobile</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Headings -->
+                                <tr>
+                                    <th scope="row" class="h1">H1</th>
+                                    <td>fs: 4.5rem; lh: 5.5rem; fw: 600</td>
+                                    <td>fs: 4rem; lh: 4.5rem; fw: 600</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="h2">H2</th>
+                                    <td>fs: 3.5rem; lh: 4rem; fw: 600</td>
+                                    <td>fs: 2.5rem; lh: 3rem; fw: 600</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="h3">H3</th>
+                                    <td>fs: 2.75rem; lh: 3.5rem; fw: 600</td>
+                                    <td>fs: 2rem; lh: 2.5rem; fw: 600</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="h4">H4</th>
+                                    <td>fs: 2.5rem; lh: 3.25rem; fw: 600</td>
+                                    <td>fs: 1.75rem; lh: 2.25rem; fw: 600</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="h5">H5</th>
+                                    <td>fs: 2rem; lh: 2.5rem; fw: 600</td>
+                                    <td>fs: 1.5rem; lh: 2rem; fw: 600</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="h6">H6</th>
+                                    <td>fs: 1.5rem; lh: 2rem; fw: 600</td>
+                                    <td>fs: 1.25rem; lh: 1.75rem; fw: 600</td>
+                                </tr>
+                                <!-- Body -->
+                                <tr>
+                                    <th scope="row" class="l-body">Body L</th>
+                                    <td>fs: 1.375rem; lh: 1.75rem</td>
+                                    <td>fs: 1.125rem; lh: 1.75rem</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="m-body" cl>Body M</th>
+                                    <td>fs: 1.125rem; lh: 1.75rem</td>
+                                    <td>fs: 1rem; lh: 1.5rem</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="s-body">Body S</th>
+                                    <td>fs: 0.875rem; lh: 1.25rem</td>
+                                    <td>fs: 0.875rem; lh: 1.25rem</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="xs-body">Body XS</th>
+                                    <td>fs: 0.75rem; lh: 1rem</td>
+                                    <td>fs: 0.75rem; lh: 1rem</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer class="eds-footer"></footer>
+    </div>
+
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Read more read less Component</title>
+<link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+<link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+    <style>
+        .cmp-details {
+            padding: 32px 0;
+            font-size: 24px;
+            color: #c8102e;
+        }
+
+        .color-777777 {
+            color: #777777;
+        }
+
+        .name-seperator {
+            color: #f2f;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+<!--main-->
+        <main id="eds-main">
+            <!-- Variant 1 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Read more read less</span> <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Read more content is shown by default</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <!-- Add class "show-content" by default beside read-more-less-wrapper so that read more content is shown by default -->
+                        <!-- The read-more-less-wrapper serves as the container for the visible-content, hidden-content, and the Read More/Read Less CTAs. -->
+                        <!-- The visible-content section contains the content that is displayed by default. -->
+                        <!-- The hidden-content section contains the content that remains hidden and is revealed when the "Read More" button is clicked. -->
+                        <div class="read-more-less-wrapper show-content">
+                            <div class="visible-content">
+                                <p>Hear open and honest conversations from real people sharing their experiences and thoughts about living with HIV</p>
+                            </div>
+                            <div class="hidden-content">
+                                <p>Our community is so resilient, so strong, and we are here for each other.</p>
+                                <p>This damage to the bile ducts is irreversible and so it’s important to seek treatment for PBC as soon as possible.</p>
+                                <p>It can cause symptoms such as:</p>
+                                <ul class="gs-unordered-list">
+                                    <li>Itching </li>
+                                    <li>Fatigue</li>
+                                </ul>
+                            </div>
+                            <div class="cta-wrapper gs-mt-20">
+                                <a href="#" class="eds-link link-md read-more" data-gtm="">
+                                    <span class="link-text">Read More</span>
+                                </a>
+                                <a href="#" class="eds-link link-md read-less" data-gtm="">
+                                    <span class="link-text">Read Less</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Read more read less</span> <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Read more content is not shown by default</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <!-- The read-more-less-wrapper serves as the container for the visible-content, hidden-content, and the Read More/Read Less CTAs. -->
+                        <!-- The visible-content section contains the content that is displayed by default. -->
+                        <!-- The hidden-content section contains the content that remains hidden and is revealed when the "Read More" button is clicked. -->
+                        <div class="read-more-less-wrapper">
+                            <div class="visible-content">
+                                <p>Discover inspiring stories from individuals who have overcome challenges and achieved their goals.</p>
+                            </div>
+                            <div class="hidden-content">
+                                <p>These stories highlight the resilience and determination of people from all walks of life.</p>
+                                <p>They serve as a reminder that with the right mindset and support, anything is possible.</p>
+                                <p>Key takeaways include:</p>
+                                <ul class="gs-unordered-list">
+                                    <li>Perseverance leads to success.</li>
+                                    <li>Support from others can make a big difference.</li>
+                                </ul>
+                            </div>
+                            <div class="cta-wrapper gs-mt-20">
+                                <a href="#" class="eds-link link-md read-more" data-gtm="">
+                                    <span class="link-text">Read More</span>
+                                </a>
+                                <a href="#" class="eds-link link-md read-less" data-gtm="">
+                                    <span class="link-text">Read Less</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Read more read less</span> <span class="name-seperator"> |
+                                </span> Variant: <span class="color-777777">Read more content is not shown by default, text truncation is applied on visible-content</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <!-- visible-text-ellipsis will have default line clamp of 3lines to visible content -->
+                        <!-- The read-more-less-wrapper serves as the container for the visible-content, hidden-content, and the Read More/Read Less CTAs. -->
+                        <!-- The visible-content section contains the content that is displayed by default. -->
+                        <!-- The hidden-content section contains the content that remains hidden and is revealed when the "Read More" button is clicked. -->
+                        <div class="read-more-less-wrapper visible-text-ellipsis">
+                            <div class="visible-content">
+                                <p>Hear open and honest conversations from real people sharing their experiences and thoughts about living with HIV. These stories provide a deep insight into the challenges faced by individuals and how they overcome them with resilience. By sharing their journeys, they inspire others to stay strong and hopeful. The visible content highlights the importance of community support and the power of open dialogue. It serves as a reminder that no one is alone in their struggles, and together, we can create a supportive environment.</p>
+                            </div>
+                            <div class="hidden-content">
+                                <p>These stories highlight the resilience and determination of people from all walks of life.</p>
+                                <p>They serve as a reminder that with the right mindset and support, anything is possible.</p>
+                                <p>Key takeaways include:</p>
+                                <ul class="gs-unordered-list">
+                                    <li>Perseverance leads to success.</li>
+                                    <li>Support from others can make a big difference.</li>
+                                </ul>
+                            </div>
+                            <div class="cta-wrapper gs-mt-20">
+                                <a href="#" class="eds-link link-md read-more" data-gtm="">
+                                    <span class="link-text">Read More</span>
+                                </a>
+                                <a href="#" class="eds-link link-md read-less" data-gtm="">
+                                    <span class="link-text">Read Less</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</main>
+<!--footer-->
+        <footer class="eds-footer"></footer>
+</div>
+
+<script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+<script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+<!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+<script src="../../../assets/eds/Scripts/feature-read-more-read-less.js"></script>
+</body>
+</html>

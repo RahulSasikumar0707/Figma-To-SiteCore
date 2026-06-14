@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDS ISI option 1</title>
+    <link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet">
+<link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&amp;display=swap" rel="stylesheet">
+   
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+        <!--main-->
+        <main id="eds-main">
+            <!-- <div class="component eds-[component-name] [modifier-name] [sitecore--predefined-classes-multi-list] [free-text-class]"></div> -->
+            <!--
+                Modifier Class:  Class list defined for the component as a rendering varinats
+                    isi-option-1
+                    isi-floating-tray
+
+                Custom classes - free text
+                    padding/margin utility classes
+            -->
+            <!-- eds-isi-wrapper should be handled from layout level -->
+            <div class="container-fluid eds-isi-wrapper">
+                <!-- core component starts from here and it should be always be accompanied with parent wrapper div eds-isi-wrapper -->
+                <!-- isi-option-1 isi-floating-tray is a sticky and concise floating ISI tray. A "Read More" button that will open the side drawer with more information. -->
+                <!-- only eds-isi isi-option-1 classes makes isi float till the end of the screnn making it's position fixed. A "Read More" button that will open the side drawer with more information. -->
+                <!-- feasibility should be provided to add/remove modifier classes -->
+                <section class="eds-isi isi-option-1 isi-floating-tray">
+                    <div class="row">
+                        <div class="col">
+                            <div class="isi-floating-section">
+                                <div class="isi-bottom-left-section">
+                                    <div class="section-heading">
+                                        <!-- RTE -->
+                                        What is EPCLUSA?
+                                    </div>
+                                    <div class="section-content">
+                                        <!-- RTE -->
+                                        <p>EPCLUSA is a prescription medicine used to treat adults with chronic (lasting a long time) hepatitis C (Hep C) genotype ...</p>
+                                    </div>
+                                </div>
+                                <div class="isi-bottom-middle-section">
+                                    <div class="section-heading">
+                                        <!-- RTE -->
+                                        Important Safety Information
+                                    </div>
+                                    <div class="section-content">
+                                        <!-- RTE -->
+                                        <p>EPCLUSA can cause serious side effects, including:</p>
+                                        <p>What should I tell my healthcare provider before taking ...</p>
+                                    </div>
+                                </div>
+                                <!-- on click of read-more-btn side drawer will open -->
+                                <div class="isi-bottom-end-section read-more-btn">
+                                    <button class="eds-btn gs-btn-primary gs-btn-sm" tabindex="0" type="button" data-gtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;isi tray&quot;,&quot;eventAction&quot;:&quot;readmore&quot;,&quot;eventLabel&quot;:&quot;important safety info&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;isi tray&quot;}" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> Read More </button>
+                                </div>
+                            </div>
+                            <!-- A scrollable side drawer with 2 tabs, navigable to the respective information. -->
+                            <div class="isi-overlay-content">
+                                <div class="offcanvas offcanvas-end isi-page" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" aria-hidden="true">
+                                    <!-- should be able to add classes beside offcanvas-header -->
+                                    <div class="offcanvas-header isi-header">
+                                        <div class="close-icon">
+                                            <a tabindex="0" class="btn-close-section" data-gtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;isi tray&quot;,&quot;eventAction&quot;:&quot;close&quot;,&quot;eventLabel&quot;:&quot;important safety info&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;isi tray&quot;}" data-bs-dismiss="offcanvas" aria-label="Close"> Close <span aria-hidden="true">×</span></a>
+                                        </div>
+                                        <div class="isi-tabs">
+                                            <ul>
+                                                <!-- li's can be more than 1 -->
+                                                <!-- should have feasibility to add classes beside section-heading -->
+                                                <li><a href="#firstSection" class="section-heading tab-header1 active" data-gtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;tab&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;What is EPCLUSA?&quot;,&quot;eventPosition&quot;:&quot;1&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;tab&quot;}">What is EPCLUSA?</a></li>
+                                                <li><a href="#secondSection" class="section-heading tab-header2" data-gtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;tab&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;Important Safety Information&quot;,&quot;eventPosition&quot;:&quot;2&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;tab&quot;}">Important Safety Information</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- should be able to add classes beside offcanvas-body -->
+                                    <div class="offcanvas-body isi-body scrollToToptray">
+                                        <!-- should be able to add classes beside section-styling and id should be unique -->
+                                        <div class="first-section section-styling" id="firstSection">
+                                            <div class="section-heading">
+                                                <!-- RTE -->
+                                                What is EPCLUSA?
+                                            </div>
+                                            <div class="section-content">
+                                                <!-- RTE -->
+                                                <p>EPCLUSA is a prescription medicine used to treat adults with chronic (lasting a long time) hepatitis C (Hep C) genotype 1-6 infection with or without cirrhosis (compensated).</p>
+                                            </div>
+                                        </div>
+                                        <!-- should be able to add classes beside section-styling and id should be unique -->
+                                        <div class="second-section section-styling" id="secondSection">
+                                            <div class="section-heading">
+                                                <!-- RTE -->
+                                                Important Safety Information
+                                            </div>
+                                            <div class="section-content">
+                                                <!-- RTE -->
+                                                <p>What is the most important information I should know about EPCLUSA?</p>
+                                                <p>EPCLUSA can cause serious side effects, including:</p>
+                                                <p>What should I tell my healthcare provider before taking EPCLUSA?</p>
+                                                <ul>
+                                                    <li><span>Tell your healthcare provider and pharmacist about all the medicines you take,</span> including prescription and over-the-counter medicines,
+                                                        vitamins, and herbal supplements. EPCLUSA and certain other medicines
+                                                        may affect each other, or may cause side effects.
+                                                    </li>
+                                                </ul>
+                                                <p>What are the possible side effects of EPCLUSA?</p>
+                                                <p>Serious side effects may also include:</p>
+                                                <p>These are not all the possible side effects of EPCLUSA. Call your doctor for medical advice about side effects.</p>
+                                                <p>You are encouraged to report negative side effects of prescription drugs to the FDA. Visit <a class="eds-link fw-bold" href="https://www.FDA.gov/medwatch" target="_blank" data-gtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;isi tray&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;www.fda.gov/medwatch&quot;,&quot;eventPosition&quot;:&quot;1&quot;,&quot;eventDestination&quot;:&quot;https://www.FDA.gov/medwatch&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;linkClick&quot;}"><span class="link-text">www.fda.gov/medwatch</span></a>
+                                                    or call <a href="tel:18003321088" class="eds-link" data-gtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;link&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;1-800-FDA-1088.&quot;,&quot;eventPosition&quot;:&quot;1&quot;,&quot;eventDestination&quot;:&quot;tel:18003321088&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;linkClick&quot;}"><span class="link-text">1-800-FDA-1088.</span></a>
+                                                </p>
+                                                <p><a href="#" class="eds-link" target="_blank" data-gtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;resource&quot;,&quot;eventAction&quot;:&quot;download&quot;,&quot;eventLabel&quot;:&quot;Please see Important Facts about EPCLUSA including Important Warnings&quot;,&quot;eventPosition&quot;:&quot;2&quot;,&quot;eventDestination&quot;:&quot;-/media/Affinity/Epclusa/ISI/epclusa-important-facts.pdf&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;resource link&quot;}"><span class="link-text">Please see Important Facts about EPCLUSA including Important Warnings</span></a>.</p>
+                                            </div>
+                                        </div>
+                                        <div class="last-section section-styling" id="lastSection">
+                                            <p class="section-content"></p>
+                                        </div>
+                                    </div>
+                                    <!-- should be able to add classes beside offcanvas-footer -->
+                                    <!-- feasibility to be turned off if not required -->
+                                    <div class="offcanvas-footer isi-footer">
+                                        <!-- show-more-btn will be shown on scroll of entire isi-body once it reaches the page end it will be hidden -->
+                                        <!-- on click of show-more-btn it will scroll to the last section of isi-body -->
+                                        <div class="show-more-btn">
+                                            <a href="#lastSection" class="eds-btn gs-btn-sm gs-btn-rounded gs-btn-primary show-more" data-gtm="">Show more</a>
+                                        </div>
+                                        <!-- close-btn will be shown on the end scroll of isi-body -->
+                                        <div class="close-btn">
+                                            <a href="#" class="eds-btn gs-btn-sm gs-btn-rounded gs-btn-primary" data-bs-dismiss="offcanvas" data-gtm="{&quot;event&quot;:&quot;gild.event&quot;,&quot;eventCategory&quot;:&quot;isi tray&quot;,&quot;eventAction&quot;:&quot;close&quot;,&quot;eventLabel&quot;:&quot;important safety info&quot;,&quot;intendedAudience&quot;:&quot;patient&quot;,&quot;language&quot;:&quot;english&quot;,&quot;subject&quot;:&quot;isi tray&quot;}" aria-label="Close">Close</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+<!--footer-->
+        <footer class="eds-footer"></footer>
+    </div>
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-isi-option1.js"></script>
+</body>
+</html>

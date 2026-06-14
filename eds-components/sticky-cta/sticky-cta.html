@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sticky CTA Component</title>
+<link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+<link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+<!--main-->
+        <main id="eds-main">
+            <!-- <div class="component eds-[component-name] [modifier-name] [sitecore--predefined-classes-multi-list] [free-text-class]"></div> -->
+            <!--
+                Modifier Class:  Class list defined for the component as a rendering varinats
+                    Default it is horizontal
+                    sticky-rounded
+                    sticky-vertical
+                    sticky-mob-bottom
+                    sticky-mob-center
+
+                    Beside btn-sticky-cta modifier classes are
+                    flex-row
+                    text-uppercase
+                    flex-md-row-reverse
+
+                Custom classes - free text
+                padding/margin utility classes
+            -->
+            <section class="eds-sticky-cta">
+                <!-- a tag can have classes to be added or removed beside btn-sticky-cta -->
+                <!-- here it can either be an image/icon so Sitecore should have feasibilty to control it -->
+                <a href="#" class="btn-sticky-cta" data-gtm=""><span class="link-text">FEEDBACK</span><img src="../../../assets/common/icons/feedback-icon.svg" alt="" class="img-fluid"></a>
+            </section>
+</main>
+<!--footer-->
+        <footer class="eds-footer"></footer>
+</div>
+
+<script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+<script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+</body>
+</html>

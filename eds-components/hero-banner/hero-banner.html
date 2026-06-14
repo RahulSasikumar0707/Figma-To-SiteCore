@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hero Banner Component</title>
+<link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+<link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+   
+    <style>
+        :root {
+            --font-family-primary: Inter, serif;
+        }
+        .cmp-details {
+            padding: 32px 0;
+            font-size: 24px;
+            color: #C8102E;
+        }
+        .color-777777 {
+            color: #777777;
+        }
+        .name-seperator {
+            color: #F2F;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+<!--main-->
+        <main id="eds-main">
+            <!-- <div class="component eds-[component-name] [modifier-name] [sitecore--predefined-classes-multi-list] [free-text-class]"></div> -->
+            <!--
+                Modifier Class:  Class list defined for the component as a rendering varinats
+                    hero-content-left (default)
+                    hero-content-right
+                    hero-content-center
+                    hero-content-full-width
+                    hero-content-mob-pos-abs
+                    footer-outside-heromedia
+
+                Custom classes - free text
+                    bg-hero-content-banner
+                    des-gradient-banner
+                    mob-bg-container-fluid
+                    condensed-hero-banner
+            -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                <span class="color-777777">These classes should be given beside eds-hero-banner to modify "hero-banner-content" except condensed-hero-content where the width is controlled via "container-fluid"</span>
+                                <span class="name-seperator"> | </span>
+                                Modifier Class:<span class="color-777777"> Class list defined for the component as a rendering variants:
+                                    hero-content-left (default)
+                                    hero-content-right
+                                    hero-content-center
+                                    hero-content-full-width
+                                    hero-content-mob-pos-abs
+                                    footer-outside-heromedia </span>
+                                <span class="name-seperator"> | </span>
+                                Custom classes: <span class="color-777777">free text:
+                                    bg-hero-content-banner
+                                    des-gradient-banner
+                                    mob-bg-container-fluid
+                                    condensed-hero-banner </span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- EDS Hero banner structure -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Primary Banner</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">This is the main banner that should be used on the homepage. It contains a hero image, a hero title, a subtitle and a CTA.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component eds-hero-banner footer-outside-heromedia">
+                <div class="hero-media">
+                    <picture>
+                        <!-- desktop -->
+                        <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner4.jpg">
+                        <!-- tablet -->
+                        <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner4.jpg">
+                        <!-- mobile -->
+                        <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg">
+                        <!-- default is mobile -->
+                        <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg" alt="sitecore field value" class="img-fluid">
+                    </picture>
+                </div>
+                <div class="container-fluid">
+                    <div class="hero-banner-content">
+                        <!-- RTF Component -->
+                        <div class="component eds-rtf">
+                            <!-- For SEO purposes, use an H1 tag and ensure it appears only once on the entire page. For additional sections, utilize H2 tags. -->
+                            <h1 class="hero-title">Creating a healthier world for all people</h1>
+                            <div class="hero-description">This is a dummy subtitle co ntent that can be replaced by the final content</div>
+                            <div class="cta-wrapper">
+                                <a class="eds-btn eds-btn-primary btn btn-primary">X Large button</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-banner-footer">
+                        <!-- RTF Component -->
+                        <div class="hero-footer-text"><i>Not an actual patient caregiver.</i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 py-5"></div>
+            <!-- Variant-2 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Video Banner</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">This option is best suited for banners with a video running in the background.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component eds-hero-banner">
+                <div class="hero-media">
+                    <!-- For Video -->
+                    <div class="video-container">
+                        <video autoplay="" muted="" loop="" class="video-player-section ">
+                            <source src="../../../assets/common/videos/gilead-intro.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="hero-banner-content">
+                        <!-- RTF Component -->
+                        <div class="component eds-rtf">
+                            <!-- For SEO purposes, use an H1 tag and ensure it appears only once on the entire page. For additional sections, utilize H2 tags. -->
+                            <h1 class="hero-title">Creating a healthier world for all people</h1>
+                            <div class="hero-description">This is a dummy subtitle co ntent that can be replaced by the final content</div>
+                            <div class="cta-wrapper">
+                                <a class="eds-btn eds-btn-primary btn btn-primary">X Large button</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-banner-footer">
+                        <!-- RTF Component -->
+                        <a class="btn-video-control" href="#" aria-label="Play/Pause video"><i class="video-control-icon icon-pause"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 py-5"></div>
+            <!-- Varaint-3 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Banner with a Background Color</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">This option can be used where the image is busy, or there’s too much content to be shown on the banner. Adding a solid-color background for the text enhances the readability of the content.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component eds-hero-banner bg-hero-content-banner">
+                <div class="hero-media">
+                    <picture>
+                        <!-- desktop -->
+                        <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner4.jpg">
+                        <!-- tablet -->
+                        <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner4.jpg">
+                        <!-- mobile -->
+                        <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg">
+                        <!-- default is mobile -->
+                        <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg" alt="sitecore field value" class="img-fluid">
+                    </picture>
+                </div>
+                <div class="container-fluid">
+                    <div class="hero-banner-content">
+                        <!-- RTF Component -->
+                        <div class="component eds-rtf">
+                            <!-- For SEO purposes, use an H1 tag and ensure it appears only once on the entire page. For additional sections, utilize H2 tags. -->
+                            <h1 class="hero-title">Creating a healthier world for all people</h1>
+                            <div class="hero-description">This is a dummy subtitle co ntent that can be replaced by the final content</div>
+                            <div class="cta-wrapper">
+                                <a class="eds-btn eds-btn-primary btn btn-primary">X Large button</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-banner-footer">
+                        <!-- RTF Component -->
+                        <div class="hero-footer-text"><i>Not an actual patient caregiver.</i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 py-5"></div>
+            <!-- Varaint-4 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Banner with cutout image</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">This banner works best where we want to focus on the images of individuals or standalone images.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component eds-hero-banner hero-content-mob-pos-abs">
+                <div class="hero-media">
+                    <picture>
+                        <!-- desktop -->
+                        <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner5.jpg">
+                        <!-- tablet -->
+                        <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner5.jpg">
+                        <!-- mobile -->
+                        <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner5.jpg">
+                        <!-- default is mobile -->
+                        <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner5.jpg" alt="sitecore field value" class="img-fluid">
+                    </picture>
+                </div>
+                <div class="container-fluid">
+                    <div class="hero-banner-content">
+                        <!-- RTF Component -->
+                        <div class="component eds-rtf">
+                            <!-- For SEO purposes, use an H1 tag and ensure it appears only once on the entire page. For additional sections, utilize H2 tags. -->
+                            <h1 class="hero-title gs-text-neutral_100">Creating a healthier world for all people</h1>
+                            <div class="cta-wrapper">
+                                <a class="eds-btn eds-btn-primary btn btn-primary">X Large button</a>
+                            </div>
+
+                            <!-- any cutomizations further on alignments or any other should be done at site level -->
+                            <div class="hero-footer-text d-none d-md-block mt-5 gs-text-neutral_100"><i>Not an actual patient caregiver.</i></div>
+                        </div>
+                    </div>
+                    <div class="hero-banner-footer">
+                        <!-- RTF Component -->
+                        <!-- any cutomizations further on alignments or any other should be done at site level -->
+                        <div class="hero-footer-text d-md-none"><i>Not an actual patient caregiver.</i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 py-5"></div>
+            <!-- Varaint-5-->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Banner without Image</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">This can be used when we need to show more content without an image. The graphic on the right side is for reference only; a brand-specific or relevant graphic element can be displayed here.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component eds-hero-banner hero-content-mob-pos-abs">
+                <div class="hero-media">
+                    <picture>
+                        <!-- desktop -->
+                        <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner6.jpg">
+                        <!-- tablet -->
+                        <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner6.jpg">
+                        <!-- mobile -->
+                        <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner6.jpg">
+                        <!-- default is mobile -->
+                        <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner6.jpg" alt="sitecore field value" class="img-fluid">
+                    </picture>
+                </div>
+                <div class="container-fluid">
+                    <div class="hero-banner-content">
+                        <!-- RTF Component -->
+                        <div class="component eds-rtf">
+                            <!-- For SEO purposes, use an H1 tag and ensure it appears only once on the entire page. For additional sections, utilize H2 tags. -->
+                            <h1 class="hero-title gs-text-neutral_100">Creating a healthier world for all people</h1>
+                            <div class="hero-description gs-text-neutral_100">This is a dummy subtitle co ntent that can be replaced by the final content</div>
+                            <div class="cta-wrapper">
+                                <a class="eds-btn eds-btn-primary btn btn-primary">X Large button</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-banner-footer">
+                        <!-- RTF Component -->
+                        <div class="hero-footer-text"><i>Not an actual patient caregiver.</i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 py-5"></div>
+            <!-- Varaint-6-->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Banner with Title and Image</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">This can be used only with a title alongside the banner image.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component eds-hero-banner">
+                <div class="hero-media">
+                    <picture>
+                        <!-- desktop -->
+                        <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner7.jpg">
+                        <!-- tablet -->
+                        <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner7.jpg">
+                        <!-- mobile -->
+                        <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner7.jpg">
+                        <!-- default is mobile -->
+                        <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner7.jpg" alt="sitecore field value" class="img-fluid">
+                    </picture>
+                </div>
+                <div class="container-fluid">
+                    <div class="hero-banner-content">
+                        <!-- RTF Component -->
+                        <div class="component eds-rtf">
+                            <!-- For SEO purposes, use an H1 tag and ensure it appears only once on the entire page. For additional sections, utilize H2 tags. -->
+                            <h1 class="hero-title gs-text-neutral_100">Creating a healthier world for all people</h1>
+                        </div>
+                    </div>
+                    <div class="hero-banner-footer">
+                        <!-- RTF Component -->
+                        <div class="hero-footer-text"><i>Not an actual patient caregiver.</i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 py-5"></div>
+            <!-- Variant-7 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Condensed Banner</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">This can be used on the homepage. It contains a hero image, a hero title, a subtitle and a CTA.</span> <span class="name-seperator"> | </span>
+                                Note: <span class="color-777777">This variant is used when the banner should not span the full width, and its dimensions need to be controlled through site-specific styles. Refer to the styles provided in the style tag below.</span>
+                                <style>
+                                    .eds-hero-banner.condensed-hero-banner {
+                                        max-width: 1366px;
+                                        margin: 0 auto;
+                                    }
+                                    @media (max-width: 767.98px) {
+                                        .eds-hero-banner.condensed-hero-banner {
+                                            padding-left: 24px;
+                                            padding-right: 24px;
+                                        }
+                                    }
+                                    @media (max-width: 767.98px) {
+                                        .eds-hero-banner.condensed-hero-banner .hero-banner-content {
+                                            margin-left: -20px;
+                                            margin-right: -20px;
+                                            padding-left: 20px;
+                                            padding-right: 20px;
+                                            background-color: #E4F4F7;
+                                            border-top-left-radius: 30px;
+                                            border-top-right-radius: 30px;
+                                        }
+                                    }
+                                </style>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component eds-hero-banner condensed-hero-banner">
+                <div class="hero-media">
+                    <picture>
+                        <!-- desktop -->
+                        <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner8.png">
+                        <!-- tablet -->
+                        <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner8.png">
+                        <!-- mobile -->
+                        <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner8.png">
+                        <!-- default is mobile -->
+                        <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner8.png" alt="sitecore field value" class="img-fluid">
+                    </picture>
+                </div>
+                <div class="container-fluid">
+                    <div class="hero-banner-content">
+                        <!-- RTF Component -->
+                        <div class="component eds-rtf">
+                            <!-- For SEO purposes, use an H1 tag and ensure it appears only once on the entire page. For additional sections, utilize H2 tags. -->
+                            <h1 class="hero-title">Creating a healthier world for all people</h1>
+                            <div class="hero-description">This is a dummy subtitle co ntent that can be replaced by the final content</div>
+                            <div class="cta-wrapper">
+                                <a class="eds-btn eds-btn-primary btn btn-primary">X Large button</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-8 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Carousel Banner</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">This can be used on the homepage. It contains a hero image, a hero title, a subtitle and a CTA.</span> <span class="name-seperator"> | </span>
+                            </h5>
+                            <a href="../../../content/eds-components/carousel/carousel.html#hero-banner-carousel" target="_blank" class="eds-link">View Carousel Hero Banner Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 pt-5"></div>
+            <!-- Variant-9 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Carousel Banner Loop</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">This can be used on the homepage. It contains a hero image, a hero title, a subtitle and a CTA.</span> <span class="name-seperator"> | </span>
+                            </h5>
+                            <a href="../../../content/eds-components/carousel/carousel.html#hero-banner-carousel-loop" target="_blank" class="eds-link">View Carousel Hero Banner Loop Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 pt-5"></div>
+            <!-- Variant-10 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Banner with Image and Gradient bg</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">This can be used when we need to show more content with an image and gradient banner. The graphic on the right side is for reference only; a brand-specific or relevant graphic element can be displayed here.</span>
+                                <span class="name-seperator"> | </span> Note: <span class="color-777777">des-gradient-banner has fixed width of 60% and background image is a linear gradient. It's gradient color has to be controlled through project specific css. mob-bg-container-fluid has a background color of var(--gs-neutral_50) applied only on mobile .</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component eds-hero-banner des-gradient-banner mob-bg-container-fluid">
+                <div class="hero-media">
+                    <picture>
+                        <!-- desktop -->
+                        <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner4.jpg">
+                        <!-- tablet -->
+                        <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner4.jpg">
+                        <!-- mobile -->
+                        <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg">
+                        <!-- default is mobile -->
+                        <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg" alt="sitecore field value" class="img-fluid">
+                    </picture>
+                </div>
+                <div class="container-fluid">
+                    <div class="hero-banner-content">
+                        <!-- RTF Component -->
+                        <div class="component eds-rtf">
+                            <!-- For SEO purposes, use an H1 tag and ensure it appears only once on the entire page. For additional sections, utilize H2 tags. -->
+                            <h1 class="hero-title gs-text-neutral_100">Creating a healthier world for all people</h1>
+                            <div class="hero-description gs-text-neutral_100">This is a dummy subtitle co ntent that can be replaced by the final content</div>
+                            <div class="cta-wrapper">
+                                <a class="eds-btn eds-btn-primary btn btn-primary">X Large button</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-banner-footer">
+                        <!-- RTF Component -->
+                        <div class="hero-footer-text"><i>Not an actual patient caregiver.</i></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant-11 -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Banner with a Background Color</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">This option can be used where the image is busy, or there’s too much content to be shown on the banner. Adding a solid-color background for the text enhances the readability of the content.</span>
+                                <span class="name-seperator"> | </span> Note: <span class="color-777777">The mob-hero-banner-reverse class is used to apply styling that reverses the flex direction of the banner layout on mobile devices. This ensures that the hero-media section appears first, followed by the hero-banner-content. Additionally, the positioning of the hero-banner-footer is also managed through this class to maintain the intended mobile layout structure.</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="hero-title gs-text-neutral_100 d-md-none">Creating a healthier world for all people</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component eds-hero-banner mob-hero-banner-reverse">
+                <div class="hero-media">
+                    <picture>
+                        <!-- desktop -->
+                        <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner7.jpg">
+                        <!-- tablet -->
+                        <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner7.jpg">
+                        <!-- mobile -->
+                        <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner7.jpg">
+                        <!-- default is mobile -->
+                        <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner7.jpg" alt="sitecore field value" class="img-fluid">
+                    </picture>
+                </div>
+                <div class="container-fluid">
+                    <div class="hero-banner-content">
+                        <!-- RTF Component -->
+                        <div class="component eds-rtf">
+                            <!-- For SEO purposes, use an H1 tag and ensure it appears only once on the entire page. For additional sections, utilize H2 tags. -->
+                            <h1 class="hero-title gs-text-neutral_100 d-none d-md-block">Creating a healthier world for all people</h1>
+                            <div class="hero-description gs-text-neutral_100">This is a dummy subtitle content that can be replaced by the final content</div>
+                        </div>
+                    </div>
+                    <div class="hero-banner-footer">
+                        <!-- RTF Component -->
+                        <div class="hero-footer-text"><i>Not an actual patient caregiver.</i></div>
+                    </div>
+                </div>
+            </div>
+</main>
+<!--footer-->
+        <footer class="eds-footer"></footer>
+</div>
+
+<script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+<script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+<script src="../../../assets/eds/Scripts/feature-hero-banner.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quiz Component</title>
+<link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+<link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+    <style>
+        .cmp-details {
+            font-family: "Inter", sans-serif;
+            padding: 32px 0;
+            font-size: 24px;
+            color: #c8102e;
+        }
+
+        .color-777777 {
+            color: #777777;
+        }
+
+        .name-seperator {
+            color: #f2f;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+        <main id="eds-main">
+<div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Quiz</span>
+                                <span class="name-seperator"> | </span>
+                                Variant: <span class="color-777777">Quiz - variant1</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant 1 -->
+            <div class="container-fluid gs-bg-gray">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="eds-quiz">
+                            <div class="quiz-header">
+                                <!-- SC should have feasibility to add/remove any micro component, for this instance it requires title and image as per EDS design variant.
+                                This should be configurable via the authoring.
+                                This should be loaded only if they are authored -->
+                                <picture>
+                                    <!-- desktop -->
+                                    <source media="(min-width:992px)" srcset="../../../assets/common/media/t-hiv-unbranded/icon-quiz-title-copy-2.svg">
+                                    <!-- tablet -->
+                                    <source media="(min-width:768px)" srcset="../../../assets/common/media/t-hiv-unbranded/icon-quiz-title-copy-2.svg">
+                                    <!-- mobile -->
+                                    <source media="(min-width:0px)" srcset="../../../assets/common/media/t-hiv-unbranded/icon-quiz-title-copy-2.svg">
+                                    <!-- default is mobile -->
+                                    <img src="../../../assets/common/media/t-hiv-unbranded/icon-quiz-title-copy-2.svg" alt="" class="img-fluid">
+                                </picture>
+                                <h3>Title : Knowledge Check</h3>
+                            </div>
+                            <div class="quiz-content-wrapper">
+                                <div class="quiz-questions-container">
+                                    <!-- This section is controlled via Javascript for progress active indication -->
+                                    <div class="indicators progress-bars">
+                                        <ul class="nav">
+                                            <!-- dynamic active class will come -->
+                                            <!-- The number li's should match the quiz question sets below -->
+                                            <li class="nav-item" role="presentation"><span class="progress-line"></span></li>
+                                            <li class="nav-item" role="presentation"><span class="progress-line"></span></li>
+                                            <li class="nav-item" role="presentation"><span class="progress-line"></span></li>
+                                            <li class="nav-item" role="presentation"><span class="progress-line"></span></li>
+
+                                            <!-- The below feasibility should also be considered if the text and progress bar are required to be shown together or independently. -->
+                                            <!-- <li class="nav-item" role="presentation"><span class="progress-line"></span><span>Step 1</span></li>
+                                            <li class="nav-item" role="presentation"><span class="progress-line"></span><span>Step 2</span></li>
+                                            <li class="nav-item" role="presentation"><span class="progress-line"></span><span>Step 3</span></li>
+                                            <li class="nav-item" role="presentation"><span class="progress-line"></span><span>Step 4</span></li> -->
+                                        </ul>
+                                    </div>
+                                    <div class="quiz-questions-block">
+                                        <!-- SC should have feasibility to add or remove quiz-section-set based on requirement -->
+                                        <div class="quiz-question-set">
+                                            <h6 class="question-title">What is the name of the condition where the body's immune system attacks its own tissues?</h6>
+                                            <!-- SC should have feasibilty to add or remove options based on requirement -->
+                                            <div class="question-multi-options">
+                                                <div class="eds-form-check">
+                                                    <input class="eds-control" type="radio" name="question1" id="qs-1-ans-1" data-answer="true">
+                                                    <label class="form-check-label" for="qs-1-ans-1"><span class="m-body">Respiratory disease</span></label>
+                                                </div>
+                                                <div class="eds-form-check">
+                                                    <input class="eds-control" type="radio" name="question1" id="qs-1-ans-2" data-answer="false">
+                                                    <label class="form-check-label" for="qs-1-ans-2"><span class="m-body">Autoimmune disease</span></label>
+                                                </div>
+                                                <div class="eds-form-check">
+                                                    <input class="eds-control" type="radio" name="question1" id="qs-1-ans-3" data-answer="false">
+                                                    <label class="form-check-label" for="qs-1-ans-3"><span class="m-body">Influenza</span></label>
+                                                </div>
+                                            </div>
+                                            <!-- This hint-text may or may not be there so SC should have feasibility to add or remove it -->
+                                            <p class="hint-text"><span class="foot-notes"><span class="foot-note-syl"><span class="sign">*</span>Not all PrEP options can be used in cisgender women and transgender men.<sup>2</sup></span></span></p>
+                                            <div class="question-result-status">
+                                                <p><span class="status-label correct-label">Correct!</span><span class="status-label wrong-label">Incorrect.</span>Autoimmune disease : If you have an autoimmune disease, your immune system attacks the healthy cells of your organs and tissues by mistake. There are more than 80 types of autoimmune diseases.</p>
+                                            </div>
+                                        </div>
+                                        <div class="quiz-question-set">
+                                            <h6 class="question-title">What is the name of the condition where the body's immune system attacks its own tissues?</h6>
+                                            <!-- SC should have feasibilty to add or remove options based on requirement -->
+                                            <div class="question-multi-options">
+                                                <div class="eds-form-check">
+                                                    <input class="eds-control" type="radio" name="question2" id="qs-2-ans-1" data-answer="true">
+                                                    <label class="form-check-label" for="qs-2-ans-1"><span class="m-body">Respiratory disease</span></label>
+                                                </div>
+                                                <div class="eds-form-check">
+                                                    <input class="eds-control" type="radio" name="question2" id="qs-2-ans-2" data-answer="false">
+                                                    <label class="form-check-label" for="qs-2-ans-2"><span class="m-body">Autoimmune disease</span></label>
+                                                </div>
+                                                <div class="eds-form-check">
+                                                    <input class="eds-control" type="radio" name="question2" id="qs-2-ans-3" data-answer="false">
+                                                    <label class="form-check-label" for="qs-2-ans-3"><span class="m-body">Influenza</span></label>
+                                                </div>
+                                            </div>
+                                            <!-- This hint-text may or may not be there so SC should have feasibility to add or remove it -->
+                                            <p class="hint-text"><span class="foot-notes"><span class="foot-note-syl"><span class="sign">*</span>Not all PrEP options can be used in cisgender women and transgender men.<sup>2</sup></span></span></p>
+                                            <div class="question-result-status">
+                                                <p><span class="status-label correct-label">Correct!</span><span class="status-label wrong-label">Incorrect.</span>Autoimmune disease : If you have an autoimmune disease, your immune system attacks the healthy cells of your organs and tissues by mistake. There are more than 80 types of autoimmune diseases.</p>
+                                            </div>
+                                        </div>
+                                        <div class="quiz-question-set">
+                                            <h6 class="question-title">HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available?</h6>
+                                            <!-- SC should have feasibilty to add or remove options based on requirement -->
+                                            <div class="question-multi-options">
+                                                <div class="eds-form-check">
+                                                    <input class="eds-control" type="radio" name="question3" id="qs-3-ans-1" data-answer="false">
+                                                    <label class="form-check-label" for="qs-3-ans-1"><span class="m-body">Dose’nt protect your body from harmful substances.</span></label>
+                                                </div>
+                                                <div class="eds-form-check">
+                                                    <input class="eds-control" type="radio" name="question3" id="qs-3-ans-2" data-answer="true">
+                                                    <label class="form-check-label" for="qs-3-ans-2"><span class="m-body">Germs and cell changes that could make you ill, Dose’nt protect your body from harmful substances.</span></label>
+                                                </div>
+                                                <div class="eds-form-check">
+                                                    <input class="eds-control" type="radio" name="question3" id="qs-3-ans-3" data-answer="false">
+                                                    <label class="form-check-label" for="qs-3-ans-3"><span class="m-body">The Germs and cell changes that could make you ill, Dose’nt protect your body from harmful substances. Germs and cell changes that could make you ill, Dose’nt protect your body from harmful substances.</span></label>
+                                                </div>
+                                            </div>
+                                            <!-- This hint-text may or may not be there so SC should have feasibility to add or remove it -->
+                                            <p class="hint-text"><span class="foot-notes"><span class="foot-note-syl"><span class="sign">*</span>Not all PrEP options can be used in cisgender women and transgender men.<sup>2</sup></span></span></p>
+                                            <div class="question-result-status">
+                                                <p><span class="status-label correct-label">Correct!</span><span class="status-label wrong-label">Incorrect.</span>Autoimmune disease : If you have an autoimmune disease, your immune system attacks the healthy cells of your organs and tissues by mistake. There are more than 80 types of autoimmune diseases.</p>
+                                            </div>
+                                        </div>
+                                        <div class="quiz-question-set">
+                                            <h6 class="question-title">HIV (human immunodeficiency virus) is a virus that attacks the human immune system. Unlike some other viruses, such as the common cold, HIV cannot be cleared from the body. There is no cure for HIV, but there are treatments available?</h6>
+                                            <!-- SC should have feasibilty to add or remove options based on requirement -->
+                                            <div class="question-multi-options">
+                                                <div class="eds-form-check">
+                                                    <input class="eds-control" type="radio" name="question4" id="qs-4-ans-1" data-answer="false">
+                                                    <label class="form-check-label" for="qs-4-ans-1"><span class="m-body">Dose’nt protect your body from harmful substances.</span></label>
+                                                </div>
+                                                <div class="eds-form-check">
+                                                    <input class="eds-control" type="radio" name="question4" id="qs-4-ans-2" data-answer="false">
+                                                    <label class="form-check-label" for="qs-4-ans-2"><span class="m-body">Germs and cell changes that could make you ill, Dose’nt protect your body from harmful substances.</span></label>
+                                                </div>
+                                                <div class="eds-form-check">
+                                                    <input class="eds-control" type="radio" name="question4" id="qs-4-ans-3" data-answer="true">
+                                                    <label class="form-check-label" for="qs-4-ans-3"><span class="m-body">The Germs and cell changes that could make you ill, Dose’nt protect your body from harmful substances. Germs and cell changes that could make you ill, Dose’nt protect your body from harmful substances.</span></label>
+                                                </div>
+                                            </div>
+                                            <!-- This hint-text may or may not be there so SC should have feasibility to add or remove it -->
+                                            <p class="hint-text"><span class="foot-notes"><span class="foot-note-syl"><span class="sign">*</span>Not all PrEP options can be used in cisgender women and transgender men.<sup>2</sup></span></span></p>
+                                            <div class="question-result-status">
+                                                <p><span class="status-label correct-label">Correct!</span><span class="status-label wrong-label">Incorrect.</span>Autoimmune disease : If you have an autoimmune disease, your immune system attacks the healthy cells of your organs and tissues by mistake. There are more than 80 types of autoimmune diseases.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cta-wrapper">
+                                        <a href="#" class="eds-btn gs-btn-secondary gs-btn-sm gs-btn-icon-before back-btn"><span class="link-text">BACK</span><i class="icon-left_arrow gs-btn-icon icon-md"></i></a>
+                                        <a href="#" class="eds-btn gs-btn-primary gs-btn-sm next-btn disabled"><span class="link-text">NEXT</span><i class="icon-right_arrow gs-btn-icon icon-md"></i></a>
+                                    </div>
+                                </div>
+                                <div class="quiz-results-container">
+                                    <div class="result-title">
+                                        <!-- SC should have feasibility to add/remove any micro component, for this instance it requires title and image as per EDS design variant.
+                                        This should be configurable via the authoring.
+                                        This should be loaded only if they are authored -->
+                                        <picture>
+                                            <!-- desktop -->
+                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/t-hiv-unbranded/icon-quiz-title-copy-2.svg">
+                                            <!-- tablet -->
+                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/t-hiv-unbranded/icon-quiz-title-copy-2.svg">
+                                            <!-- mobile -->
+                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/t-hiv-unbranded/icon-quiz-title-copy-2.svg">
+                                            <!-- default is mobile -->
+                                            <img src="../../../assets/common/media/t-hiv-unbranded/icon-quiz-title-copy-2.svg" alt="" class="img-fluid">
+                                        </picture>
+                                        <h5 class="h3-heading">Thank you for completing the quiz.</h5>
+                                    </div>
+                                    <div class="result-content">
+                                        <!-- RTF -->
+                                        <h6>Learn about the immune system attack!</h6>
+                                        <div class="cta-wrapper">
+                                            <a href="#" class="eds-btn gs-btn-primary gs-btn-sm"><span class="link-text">PrEP Impact</span><i class="icon-right_arrow gs-btn-icon icon-md"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="cta-wrapper">
+                                        <a href="#" class="eds-btn gs-btn-secondary gs-btn-sm gs-btn-icon-before result-back-btn"><span class="link-text">BACK</span><i class="icon-left_arrow gs-btn-icon icon-md"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</main>
+<!--footer-->
+        <footer class="eds-footer"></footer>
+</div>
+
+<script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+<script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+<script src="../../../assets/eds/Scripts/feature-quiz.js"></script>
+</body>
+</html>

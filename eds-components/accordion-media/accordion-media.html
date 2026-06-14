@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion Linked With Image</title>
+    <link href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" rel="stylesheet" />
+<link href="../../../assets/eds/styles/eds-native.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+     <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+        <!--main-->
+        <main id="eds-main">
+            <style>
+                .cmp-details {
+                    padding: 24px;
+                    font-size: 24px;
+                    color: #C8102E;
+                }
+                .color-777777 {
+                    color: #777777;
+                }
+                .name-seperator {
+                    color: #F2F;
+                    padding: 0 10px;
+                    font-weight: 900;
+                    display: inline-block;
+                }
+            </style>
+           
+            <!-- Variant 1 -->
+            <h5 class="cmp-details">
+                Component: <span class="color-777777">Accordion Media</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Accordion Cheveron</span> <span class="name-seperator"> | </span> Indicator Variant: <span class="color-777777">icon-sm, icon-md, icon-lg, icon-xl</span>
+            </h5>
+            <!-- Contsant class: eds-accordion-media, others are configurable -->
+            <section class="eds-accordion-media _2col-layout" style="">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="accordion-media-wrapper row">
+                                <div class="col dyn-accordion-media">
+                                    <!--accordion section-->
+                                    <!--
+                                        Fixed Classes: accordion js-accordion-media
+                                        Variant classes: accordion-chevron
+                                        Possibel variants: accordion-chevron, accordion-chevron-rounded, accordion-plus, accordion-plus-rounded
+                                        Dynamic Values:
+                                            id="accordionMedia_1"
+                                    -->
+                                    <div class="accordion js-accordion-media accordion-chevron" id="accordionMedia_1">
+                                        <!-- Repearting accordion item -->
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_1a"
+                                                    data-bs-target="#accBody_1a"
+                                                    aria-controls="accBody_1a"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                            -->
+                                            <h2 class="accordion-header" id="accHead_1a">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_1a" aria-expanded="true" aria-controls="accBody_1a" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-sm indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-sm
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-sm"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_1a"
+                                                    aria-labelledby="accHead_1a"
+                                                    data-bs-parent="#accordionMedia_1"
+                                            -->
+                                            <div id="accBody_1a" class="accordion-collapse collapse show" aria-labelledby="accHead_1a" data-bs-parent="#accordionMedia_1">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 1 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/accordion-media/accordion-media-tempimg@2x.png">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/accordion-media/icn-mobile-stomach-glow-v-2@3x.png">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/accordion-media/icn-mobile-stomach-glow-v-2@3x.png">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/accordion-media/icn-mobile-stomach-glow-v-2@3x.png" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_2a"
+                                                    data-bs-target="#accBody_2a"
+                                                    aria-controls="accBody_2a"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                                -->
+                                            <h2 class="accordion-header" id="accHead_2a">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_2a" aria-expanded="true" aria-controls="accBody_2a" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-md indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-md
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-md"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_2a"
+                                                    aria-labelledby="accHead_2a"
+                                                    data-bs-parent="#accordionMedia_1"
+                                            -->
+                                            <div id="accBody_2a" class="accordion-collapse collapse" aria-labelledby="accHead_2a" data-bs-parent="#accordionMedia_1">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 2 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner4.jpg">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_3a"
+                                                    data-bs-target="#accBody_3a"
+                                                    aria-controls="accBody_3a"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                            -->
+                                            <h2 class="accordion-header" id="accHead_3a">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_3a" aria-expanded="true" aria-controls="accBody_3a" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-lg indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-lg
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-lg"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_3a"
+                                                    aria-labelledby="accHead_3a"
+                                                    data-bs-parent="#accordionMedia_1"
+                                            -->
+                                            <div id="accBody_3a" class="accordion-collapse collapse" aria-labelledby="accHead_3a" data-bs-parent="#accordionMedia_1">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 3 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner1.jpg">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_4a"
+                                                    data-bs-target="#accBody_4a"
+                                                    aria-controls="accBody_4a"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                            -->
+                                            <h2 class="accordion-header" id="accHead_4a">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_4a" aria-expanded="true" aria-controls="accBody_4a" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-xl indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-xl
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-xl"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_4a"
+                                                    aria-labelledby="accHead_4a"
+                                                    data-bs-parent="#accordionMedia_1"
+                                            -->
+                                            <div id="accBody_4a" class="accordion-collapse collapse" aria-labelledby="accHead_4a" data-bs-parent="#accordionMedia_1">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 4 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner1.jpg">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--accordion section ends-->
+                                </div>
+                                <div class="col dyn-media-content">
+                                    <!-- Dynamic media, content will be via JavaScript in this div -->
+                                    <div class="accordion-media__relmedia-container">
+                                        <!-- the content will be injected via script -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div style="margin-top: 2rem"></div>
+
+            <!-- Varinat 2 -->
+            <h5 class="cmp-details">
+                Component: <span class="color-777777">Accordion Media</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Accordion Cheveron Rounded</span> <span class="name-seperator"> | </span> Indicator Variant: <span class="color-777777">icon-sm</span>
+            </h5>
+            <!-- Contsant class: eds-accordion-media, others are configurable -->
+            <section class="eds-accordion-media _2col-layout" style="">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="accordion-media-wrapper row">
+                                <div class="col dyn-accordion-media">
+                                    <!--accordion section-->
+                                    <!--
+                                        Fixed Classes: accordion js-accordion-media
+                                        Variant classes: accordion-chevron-rounded
+                                        Possibel variants: accordion-chevron, accordion-chevron-rounded, accordion-plus, accordion-plus-rounded
+                                        Dynamic Values:
+                                            id="accordionMedia_2"
+                                    -->
+                                    <div class="accordion js-accordion-media accordion-chevron-rounded" id="accordionMedia_2">
+                                        <!-- Repearting accordion item -->
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_1b"
+                                                    data-bs-target="#accBody_1b"
+                                                    aria-controls="accBody_1b"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                            -->
+                                            <h2 class="accordion-header" id="accHead_1b">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_1b" aria-expanded="true" aria-controls="accBody_1b" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-sm indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-sm
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-sm"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_1b"
+                                                    aria-labelledby="accHead_1b"
+                                                    data-bs-parent="#accordionMedia_2"
+                                            -->
+                                            <div id="accBody_1b" class="accordion-collapse collapse show" aria-labelledby="accHead_1b" data-bs-parent="#accordionMedia_2">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 1 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/accordion-media/accordion-media-tempimg@2x.png">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/accordion-media/icn-mobile-stomach-glow-v-2@3x.png">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/accordion-media/icn-mobile-stomach-glow-v-2@3x.png">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/accordion-media/icn-mobile-stomach-glow-v-2@3x.png" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_2b"
+                                                    data-bs-target="#accBody_2b"
+                                                    aria-controls="accBody_2b"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                                -->
+                                            <h2 class="accordion-header" id="accHead_2b">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_2b" aria-expanded="true" aria-controls="accBody_2b" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-sm indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-sm
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-sm"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_2b"
+                                                    aria-labelledby="accHead_2b"
+                                                    data-bs-parent="#accordionMedia_2"
+                                            -->
+                                            <div id="accBody_2b" class="accordion-collapse collapse" aria-labelledby="accHead_2b" data-bs-parent="#accordionMedia_2">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 2 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner4.jpg">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_3b"
+                                                    data-bs-target="#accBody_3b"
+                                                    aria-controls="accBody_3b"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                            -->
+                                            <h2 class="accordion-header" id="accHead_3b">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_3b" aria-expanded="true" aria-controls="accBody_3b" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-sm indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-sm
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-sm"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_3b"
+                                                    aria-labelledby="accHead_3b"
+                                                    data-bs-parent="#accordionMedia_2"
+                                            -->
+                                            <div id="accBody_3b" class="accordion-collapse collapse" aria-labelledby="accHead_3b" data-bs-parent="#accordionMedia_2">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 3 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner1.jpg">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_4b"
+                                                    data-bs-target="#accBody_4b"
+                                                    aria-controls="accBody_4b"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                            -->
+                                            <h2 class="accordion-header" id="accHead_4b">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_4b" aria-expanded="true" aria-controls="accBody_4b" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-sm indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-sm
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-sm"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_4b"
+                                                    aria-labelledby="accHead_4b"
+                                                    data-bs-parent="#accordionMedia_2"
+                                            -->
+                                            <div id="accBody_4b" class="accordion-collapse collapse" aria-labelledby="accHead_4b" data-bs-parent="#accordionMedia_2">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 4 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner1.jpg">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--accordion section ends-->
+                                </div>
+                                <div class="col dyn-media-content">
+                                    <!-- Dynamic media, content will be via JavaScript in this div -->
+                                    <div class="accordion-media__relmedia-container">
+                                        <!-- the content will be injected via script -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div style="margin-top: 2rem;"></div>
+
+            <!-- Varinat 3 -->
+            <h5 class="cmp-details">
+                Component: <span class="color-777777">Accordion Media</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Accordion Plus</span> <span class="name-seperator"> | </span> Indicator Variant: <span class="color-777777">icon-sm</span>
+            </h5>
+            <!-- Contsant class: eds-accordion-media, others are configurable -->
+            <section class="eds-accordion-media _2col-layout" style="">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="accordion-media-wrapper row">
+                                <div class="col dyn-accordion-media">
+                                    <!--accordion section-->
+                                    <!--
+                                        Fixed Classes: accordion js-accordion-media
+                                        Variant classes: accordion-plus
+                                        Possibel variants: accordion-chevron, accordion-chevron-rounded, accordion-plus, accordion-plus-rounded
+                                        Dynamic Values:
+                                            id="accordionMedia_3"
+                                    -->
+                                    <div class="accordion js-accordion-media accordion-plus" id="accordionMedia_3">
+                                        <!-- Repearting accordion item -->
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_1c"
+                                                    data-bs-target="#accBody_1c"
+                                                    aria-controls="accBody_1c"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                            -->
+                                            <h2 class="accordion-header" id="accHead_1c">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_1c" aria-expanded="true" aria-controls="accBody_1c" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-sm indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-sm
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-sm"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_1c"
+                                                    aria-labelledby="accHead_1c"
+                                                    data-bs-parent="#accordionMedia_3"
+                                            -->
+                                            <div id="accBody_1c" class="accordion-collapse collapse show" aria-labelledby="accHead_1c" data-bs-parent="#accordionMedia_3">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 1 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/accordion-media/accordion-media-tempimg@2x.png">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/accordion-media/icn-mobile-stomach-glow-v-2@3x.png">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/accordion-media/icn-mobile-stomach-glow-v-2@3x.png">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/accordion-media/icn-mobile-stomach-glow-v-2@3x.png" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_2c"
+                                                    data-bs-target="#accBody_2c"
+                                                    aria-controls="accBody_2c"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                                -->
+                                            <h2 class="accordion-header" id="accHead_2c">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_2c" aria-expanded="true" aria-controls="accBody_2c" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-sm indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-sm
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-sm"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_2c"
+                                                    aria-labelledby="accHead_2c"
+                                                    data-bs-parent="#accordionMedia_3"
+                                            -->
+                                            <div id="accBody_2c" class="accordion-collapse collapse" aria-labelledby="accHead_2c" data-bs-parent="#accordionMedia_3">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 2 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner4.jpg">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_3c"
+                                                    data-bs-target="#accBody_3c"
+                                                    aria-controls="accBody_3c"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                            -->
+                                            <h2 class="accordion-header" id="accHead_3c">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_3c" aria-expanded="true" aria-controls="accBody_3c" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-sm indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-sm
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-sm"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_3c"
+                                                    aria-labelledby="accHead_3c"
+                                                    data-bs-parent="#accordionMedia_3"
+                                            -->
+                                            <div id="accBody_3c" class="accordion-collapse collapse" aria-labelledby="accHead_3c" data-bs-parent="#accordionMedia_3">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 3 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner1.jpg">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_4c"
+                                                    data-bs-target="#accBody_4c"
+                                                    aria-controls="accBody_4c"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                            -->
+                                            <h2 class="accordion-header" id="accHead_4c">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_4c" aria-expanded="true" aria-controls="accBody_4c" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-sm indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-sm
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-sm"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_4c"
+                                                    aria-labelledby="accHead_4c"
+                                                    data-bs-parent="#accordionMedia_3"
+                                            -->
+                                            <div id="accBody_4c" class="accordion-collapse collapse" aria-labelledby="accHead_4c" data-bs-parent="#accordionMedia_3">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 4 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner1.jpg">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--accordion section ends-->
+                                </div>
+                                <div class="col dyn-media-content">
+                                    <!-- Dynamic media, content will be via JavaScript in this div -->
+                                    <div class="accordion-media__relmedia-container">
+                                        <!-- the content will be injected via script -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div style="margin-top: 2rem;"></div>
+
+            <!-- Varinat 4 -->
+            <h5 class="cmp-details">
+                Component: <span class="color-777777">Accordion Media</span> <span class="name-seperator"> | </span> Variant: <span class="color-777777">Accordion Plus Rounded</span> <span class="name-seperator"> | </span> Indicator Variant: <span class="color-777777">icon-lg</span>
+            </h5>
+            <!-- Contsant class: eds-accordion-media, others are configurable -->
+            <section class="eds-accordion-media _2col-layout" style="">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="accordion-media-wrapper row">
+                                <div class="col dyn-accordion-media">
+                                    <!--accordion section-->
+                                    <!--
+                                        Fixed Classes: accordion js-accordion-media
+                                        Variant classes: accordion-plus-rounded
+                                        Possibel variants: accordion-chevron, accordion-chevron-rounded, accordion-plus, accordion-plus-rounded
+                                        Dynamic Values:
+                                            id="accordionMedia_4"
+                                    -->
+                                    <div class="accordion js-accordion-media accordion-plus-rounded" id="accordionMedia_4">
+                                        <!-- Repearting accordion item -->
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_1d"
+                                                    data-bs-target="#accBody_1d"
+                                                    aria-controls="accBody_1d"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                            -->
+                                            <h2 class="accordion-header" id="accHead_1d">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_1d" aria-expanded="true" aria-controls="accBody_1d" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-lg indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-lg
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-lg"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_1d"
+                                                    aria-labelledby="accHead_1d"
+                                                    data-bs-parent="#accordionMedia_4"
+                                            -->
+                                            <div id="accBody_1d" class="accordion-collapse collapse show" aria-labelledby="accHead_1d" data-bs-parent="#accordionMedia_4">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 1 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/accordion-media/accordion-media-tempimg@2x.png">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/accordion-media/icn-mobile-stomach-glow-v-2@3x.png">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/accordion-media/icn-mobile-stomach-glow-v-2@3x.png">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/accordion-media/icn-mobile-stomach-glow-v-2@3x.png" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_2d"
+                                                    data-bs-target="#accBody_2d"
+                                                    aria-controls="accBody_2d"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                                -->
+                                            <h2 class="accordion-header" id="accHead_2d">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_2d" aria-expanded="true" aria-controls="accBody_2d" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-lg indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-lg
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-lg"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_2d"
+                                                    aria-labelledby="accHead_2d"
+                                                    data-bs-parent="#accordionMedia_4"
+                                            -->
+                                            <div id="accBody_2d" class="accordion-collapse collapse" aria-labelledby="accHead_2d" data-bs-parent="#accordionMedia_4">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 2 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner4.jpg">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner4.jpg" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_3d"
+                                                    data-bs-target="#accBody_3d"
+                                                    aria-controls="accBody_3d"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                            -->
+                                            <h2 class="accordion-header" id="accHead_3d">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_3d" aria-expanded="true" aria-controls="accBody_3d" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-lg indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-lg
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-lg"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_3d"
+                                                    aria-labelledby="accHead_3d"
+                                                    data-bs-parent="#accordionMedia_4"
+                                            -->
+                                            <div id="accBody_3d" class="accordion-collapse collapse" aria-labelledby="accHead_3d" data-bs-parent="#accordionMedia_4">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 3 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner1.jpg">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accHead_4d"
+                                                    data-bs-target="#accBody_4d"
+                                                    aria-controls="accBody_4d"
+                                                    data-gtm = '{"event": "[gild.event]", "eventCategory": "[Dynamic Media Accordion]", "eventAction": "[Expanded]", "eventLabel": "[Accordion Title]", "intendedAudience": "[Family/Caregiver]", "subject": "[Subject]", "language": "[English]"}'
+                                            -->
+                                            <h2 class="accordion-header" id="accHead_4d">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accBody_4d" aria-expanded="true" aria-controls="accBody_4d" data-gtm=''>
+                                                    <div class="accordion-title">
+                                                        <!-- RTF -->
+                                                        <span class="accordion-title--text">Accordion title with icon-lg indicator</span>
+                                                    </div>
+                                                    <!--
+                                                        Fixed class: icon-indicator
+                                                        Variant class: icon-lg
+                                                        Possible varinats: icon-sm, icon-md. icon-lg, icon-xl
+                                                    -->
+                                                    <i class="icon-indicator icon-lg"></i>
+                                                </button>
+                                            </h2>
+                                            <!--
+                                                Dynamic values:
+                                                    ID: "accBody_4d"
+                                                    aria-labelledby="accHead_4d"
+                                                    data-bs-parent="#accordionMedia_4"
+                                            -->
+                                            <div id="accBody_4d" class="accordion-collapse collapse" aria-labelledby="accHead_4d" data-bs-parent="#accordionMedia_4">
+                                                <div class="accordion-body">
+                                                    <!-- Accordion body RTF Start -->
+                                                    <p>Accordion body 4 content</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                                    <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+                                                    <!-- Accordion body RTF end -->
+                                                   
+                                                    <div class="accordion-media__relmedia">
+                                                        <!-- Can hold any media type, video, image or content -->
+                                                        <!-- for current requirement its media type is image/picture -->
+                                                        <picture>
+                                                            <!-- desktop -->
+                                                            <source media="(min-width:992px)" srcset="../../../assets/common/media/HeroBanner/Desktop/D_banner1.jpg">
+                                                            <!-- tablet -->
+                                                            <source media="(min-width:768px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- mobile -->
+                                                            <source media="(min-width:0px)" srcset="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg">
+                                                            <!-- default is mobile -->
+                                                            <img src="../../../assets/common/media/HeroBanner/Mobile/M_banner1.jpg" alt="sitecore field value" class="img-fluid">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--accordion section ends-->
+                                </div>
+                                <div class="col dyn-media-content">
+                                    <!-- Dynamic media, content will be via JavaScript in this div -->
+                                    <div class="accordion-media__relmedia-container">
+                                        <!-- the content will be injected via script -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        <footer class="eds-footer"></footer>
+    </div>
+   
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-accordion-media.js"></script>
+</body>
+
+</html>

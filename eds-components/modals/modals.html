@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Window</title>
+    <link rel="stylesheet" href="../../../assets/common/styles/bootstrap-v5.1.3.min.css" />
+    <link rel="stylesheet" href="../../../assets/eds/styles/eds-native.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google fonts: Inter & Google icons: Material Icons rounded and outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Material+Symbols+Outlined&amp;family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+    <style>
+        .cmp-details {
+            font-family: "Inter", sans-serif;
+            padding: 32px 0;
+            font-size: 24px;
+            color: #c8102e;
+        }
+
+        .color-777777 {
+            color: #777777;
+        }
+
+        .name-seperator {
+            color: #f2f;
+            padding: 0 10px;
+            font-weight: 900;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eds-wrapper">
+        <!--header-->
+        <header id="eds-header">
+            <div class="component eds-header"> </div>
+        </header>
+        <main id="eds-main">
+            <!-- Modal Component begins -->
+            <!-- Variant A Modal -->
+            <!-- 'eds-modal' and 'modal' classes are mandatory for all modal components. -->
+            <!-- Sitecore should able to add/remove classes at parent level. -->
+            <!-- data-bs-backdrop attribute should be set to "static" to prevent closing the modal when clicking outside of modal overlay. If you want to close the modal when clicking outside of it, set data-bs-backdrop to "true". -->
+            <!-- data-bs-keyboard attribute should be set to "false" to prevent closing the modal when pressing the escape key. By default, it is set to "true". -->
+            <!-- If the modal is being used to prevent users from moving forward without an acknowledgement or making a selection, the “close button” icon should not be used. -->
+            <!-- add id attribute to modal title, the value should match the aria-labelledby attribute on the modal div -->
+            <!-- Make sure that the button which triggers the modal has a class like 'open-modal-xxx' (e.g., 'open-modal-patient'), and the corresponding modal has a matching class 'modal-xxx' (e.g., 'modal-patient'). The 'xxx' part must be the same for both the trigger and the modal. -->
+            <!-- Example: If the trigger button has class 'open-modal-external', then the modal should have class 'modal-external'. -->
+            <!-- Modifier class: 'variant-a' with icon and center aligned content. Individual elements such as the icon or body text can be removed as needed. -->
+            <div class="eds-modal modal variant-a fade modal-one text-center" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalOneLabel" aria-hidden="true">
+                <!-- Sitecore should be able to add/remove modal-dialog-centered class on modal-dialog div. It is used to vertically center the modal in viewport. -->
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <!-- Optional -->
+                        <!-- Sitecore should be able to add/remove new classes on modal-image div -->
+                        <div class="modal-image">
+                            <picture>
+                                <source media="(min-width: 992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                <source media="(min-width: 768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                <source media="(min-width: 0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid" alt="..." />
+                            </picture>
+                        </div>
+                        <!-- Sitecore should be able to add/remove new classes on modal-header div -->
+                        <div class="modal-header">
+                            <!-- Heading is optional inside modal-header for variant A -->
+                            <!-- <h6 class="modal-title" id="exampleModalOneLabel">Modal title</h6> -->
+                            <!-- Optional -->
+                            <!-- 'btn-close' is the bootstrap class for the close button which shows a close icon. -->
+                            <!-- 'btn-close-modal' class is used to close the modal. This class can be used in close button elements within the modal. -->
+                            <button type="button" class="btn-close btn-close-modal" aria-label="Close" data-gtm=""></button>
+                        </div>
+                        <!-- Sitecore should be able to add/remove new classes on modal-body div -->
+                        <div class="modal-body">
+                            <!-- RTF -->
+                            <h6 class="modal-title gs-mb-12" id="exampleModalOneLabel">Modal title</h6>
+                            <p class="s-body mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                        </div>
+                        <!-- Optional -->
+                        <!-- Modifier class: justify-content-center, justify-content-start classes should be used for aligning centered, start aligned buttons in modal-footer -->
+                        <!-- by default, buttons are left aligned in modal-footer -->
+                        <!-- Sitecore should be able to add/remove modifier classes on modal-footer div -->
+                        <div class="modal-footer justify-content-center">
+                            <!-- Sitecore should be able to add/remove target attribute with different applicable values on buttons inside modal-footer wherever needed -->
+                            <a href="#" class="eds-btn gs-btn-md gs-btn-secondary" data-gtm="">
+                                <span class="link-text">Medium Button</span>
+                            </a>
+                            <a href="#" class="eds-btn gs-btn-md gs-btn-primary" data-gtm="">
+                                <span class="link-text">Medium Button</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variant B Modal -->
+            <!-- Modifier class: 'variant-b' used for scrollable body text -->
+            <!-- Sitecore should able to add/remove classes at parent level. -->
+            <div class="eds-modal modal variant-b modal-two fade" data-bs-backdrop="true" data-bs-keyboard="true" tabindex="-1" aria-labelledby="exampleModalTwoLabel" aria-hidden="true">
+                <!-- Sitecore should be able to add/remove modal-dialog-centered class on modal-dialog div. It is used to vertically center the modal in viewport. -->
+                <!-- For secondary-modal, make sure to include the 'modal-dialog-scrollable' class on the modal-dialog div. -->
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <!-- Sitecore should be able to add/remove new classes on modal-header div -->
+                        <div class="modal-header">
+                            <!-- Sitecore should be able to add/remove new classes on modal-title div -->
+                            <h6 class="modal-title mb-0" id="exampleModalTwoLabel">Modal title</h6>
+                            <!-- Optional -->
+                            <button type="button" class="btn-close btn-close-modal" aria-label="Close" data-gtm=""></button>
+                        </div>
+                        <!-- Sitecore should be able to add/remove new classes on modal-body div -->
+                        <div class="modal-body">
+                            <!-- RTF -->
+                            <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                            <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                            <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                            <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                            <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                            <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                            <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                            <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                            <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                            <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                            <p class="s-body mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                        </div>
+                        <!-- Optional -->
+                        <!-- Sitecore should be able to add/remove modifier classes on modal-footer div -->
+                        <div class="modal-footer">
+                            <!-- Sitecore should be able to add/remove target attribute with different applicable values on buttons inside modal-footer wherever needed -->
+                            <a href="#" class="eds-btn gs-btn-md gs-btn-secondary" data-gtm="">
+                                <span class="link-text">Medium Button</span>
+                            </a>
+                            <a href="#" class="eds-btn gs-btn-md gs-btn-primary" data-gtm="">
+                                <span class="link-text">Medium Button</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variant C Modal -->
+            <!-- Modifier class: 'variant-c' used for an extra scrollable section for terms -->
+            <!-- Sitecore should able to add/remove classes at parent level. -->
+            <div class="eds-modal modal variant-c modal-three fade" data-bs-backdrop="true" data-bs-keyboard="true" tabindex="-1" aria-labelledby="exampleModalThreeLabel" aria-hidden="true">
+                <!-- Sitecore should be able to add/remove modal-dialog-centered class on modal-dialog div. It is used to vertically center the modal in viewport. -->
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <!-- Sitecore should be able to add/remove new classes on modal-header div -->
+                        <div class="modal-header">
+                            <!-- Sitecore should be able to add/remove new classes on modal-title div -->
+                            <h6 class="modal-title mb-0" id="exampleModalThreeLabel">Modal title</h6>
+                            <!-- Optional -->
+                            <button type="button" class="btn-close btn-close-modal" aria-label="Close" data-gtm=""></button>
+                        </div>
+                        <!-- Sitecore should be able to add/remove new classes on modal-body div -->
+                        <div class="modal-body">
+                            <div class="modal-text">
+                                <!-- RTF -->
+                                <p class="s-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi enim ullam est saepe itaque aliquam excepturi magnam voluptatibus consectetur quisquam voluptates repellendus magni, quaerat iusto. Cupiditate dignissimos ipsam distinctio iste.</p>
+                            </div>
+                            <div class="modal-terms">
+                                <div class="modal-terms-content">
+                                    <!-- RTF -->
+                                    <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                                    <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                                    <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                                    <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                                    <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                                    <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                                    <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                                    <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                                    <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                                    <p class="s-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                                    <p class="s-body mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Optional -->
+                        <!-- Sitecore should be able to add/remove modifier classes on modal-footer div -->
+                        <div class="modal-footer">
+                            <!-- Sitecore should be able to add/remove target attribute with different applicable values on buttons inside modal-footer wherever needed -->
+                            <a href="#" class="eds-btn gs-btn-md gs-btn-secondary" data-gtm="">
+                                <span class="link-text">Medium Button</span>
+                            </a>
+                            <a href="#" class="eds-btn gs-btn-md gs-btn-primary" data-gtm="">
+                                <span class="link-text">Medium Button</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interstitial Modal -->
+            <!-- When the interstitial modal is used, to prevent users from moving forward without an acknowledgement or making a selection, the “close button” icon should not be used. -->
+            <!-- Modifier class: use any variant as per requirement, but make sure to add class 'interstitial-modal' class to the modal div. -->
+            <div class="eds-modal modal variant-a fade interstitial-modal text-center" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFourLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-image">
+                            <picture>
+                                <source media="(min-width: 992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                <source media="(min-width: 768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                <source media="(min-width: 0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid" alt="..." />
+                            </picture>
+                        </div>
+                        <!-- Removed btn-close as it is not needed for interstitial modal -->
+                        <div class="modal-header">
+                           
+                        </div>
+                        <div class="modal-body">
+                            <!-- RTF -->
+                            <h6 class="modal-title gs-mb-12" id="exampleModalFourLabel">Interstitial Modal title</h6>
+                            <p class="s-body mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <!-- Sitecore should be able to add/remove any value for target attribute. target="_blank" is used for links that open in a new tab. -->
+                            <a href="https://www.google.com" class="eds-btn gs-btn-md gs-btn-secondary" target="_blank" data-gtm="">
+                                <span class="link-text">Visit google site</span>
+                            </a>
+                            <!-- Make sure to add 'continue-link' class to the continue button/link in interstitial modal.
+                            ️This is used in JS to identify the continue button/link inside interstitial modal. -->
+                            <a href="#" class="eds-btn gs-btn-md gs-btn-primary continue-link" data-gtm="">
+                                <span class="link-text">Continue to site</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leaving Modal -->
+            <!-- Modifier class: use any variant as per the requirement, but make sure to add class 'leaving-modal-[]' class to the modal div. -->
+            <!-- Make sure that the button which triggers the modal has a class like 'leave-to-xxx' (e.g., 'leave-to-external'), and the corresponding modal has a matching class 'leaving-modal-xxx' (e.g., 'leaving-modal-external'). The 'xxx' part must be the same for both the trigger and the modal. -->
+            <!-- Example: If the trigger button has class 'leave-to-external', then the modal should have class 'leaving-modal-external'. -->
+            <div class="eds-modal modal variant-a fade leaving-modal-external text-center" data-bs-backdrop="true" data-bs-keyboard="true" tabindex="-1" aria-labelledby="exampleModalFiveLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-image">
+                            <picture>
+                                <source media="(min-width: 992px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                <source media="(min-width: 768px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                <source media="(min-width: 0px)" srcset="../../../assets/common/media/Varaint7_Icon.svg">
+                                <img src="../../../assets/common/media/Varaint7_Icon.svg" class="img-fluid" alt="..." />
+                            </picture>
+                        </div>
+                        <div class="modal-header">
+                            <button type="button" class="btn-close btn-close-modal" aria-label="Close" data-gtm=""></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- RTF -->
+                            <h6 class="modal-title gs-mb-12" id="exampleModalFiveLabel">Leaving Modal title</h6>
+                            <p class="s-body mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem odio culpa ipsa maiores quo recusandae sunt illum laborum aspernatur, sit nulla suscipit impedit odit vitae sint! Expedita, neque nulla!</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <!-- Sitecore should be able to add/remove any value for target attribute. target="_blank" is used for links that open in a new tab. -->
+                            <a href="#" class="eds-btn gs-btn-md gs-btn-secondary btn-close-modal" data-gtm="">
+                                <span class="link-text">Go back</span>
+                            </a>
+                            <!-- Make sure to add 'continue-link' class to the continue button/link in leaving modal.
+                            ️This is used in JS to identify the continue button/link inside leaving modal. -->
+                            <a href="#" class="eds-btn gs-btn-md gs-btn-primary continue-link" target="_blank" data-gtm="">
+                                <span class="link-text">Leave site</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Modal -->
+            <!-- Modifier class: use any variant as per the requirement, but make sure to add class 'video-modal' to the modal div. -->
+            <!-- Place iframe inside modal-body div. -->
+            <div class="eds-modal modal variant-a fade video-modal" data-bs-backdrop="true" data-bs-keyboard="true" tabindex="-1" aria-labelledby="exampleModalSixLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- include 'gs-video-close-btn' class for video-modal close button -->
+                            <button type="button" class="btn-close gs-video-close-btn" aria-label="Close" data-gtm="">Close</button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- RTF -->
+                            <div class="vimeo-video">
+                                <iframe id="video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Component ends -->
+
+
+
+            <!-- Variant A-->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Modal</span>
+                                <span class="name-seperator"> | </span>
+                                Variant: <span class="color-777777">Modal with icon and center aligned content. Individual elements such as icon or body text can be removed as needed.</span>
+                                <div class="mt-2"></div>
+                                <ul>
+                                    <li>'eds-modal' and 'modal' classes are mandatory for all modal components.</li>
+                                    <li>Sitecore should able to add/remove classes at parent level.</li>
+                                    <li>data-bs-backdrop attribute should be set to "static" to prevent closing the modal when clicking outside of modal overlay. If you want to close the modal when clicking outside of it, set data-bs-backdrop to "true".</li>
+                                    <li>data-bs-keyboard attribute should be set to "false" to prevent closing the modal when pressing the escape key. By default, it is set to "true".</li>
+                                    <li>If the modal is being used to prevent users from moving forward without an acknowledgement or making a selection, the “close button” icon should not be used.</li>
+                                    <li>add id attribute to modal title, the value should match the aria-labelledby attribute on the modal div</li>
+                                    <li>Make sure that the button which triggers the modal has a class like 'open-modal-xxx' (e.g., 'open-modal-patient'), and the corresponding modal has a matching class 'modal-xxx' (e.g., 'modal-patient'). The 'xxx' part must be the same for both the trigger and the modal.</li>
+                                    <li>Example: If the trigger button has class 'open-modal-external', then the modal should have class 'modal-external'.</li>
+                                    <li>Modifier class: 'variant-a' with icon and center aligned content. Individual elements such as the icon or body text can be removed as needed.</li>
+                                </ul>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Make sure to add class "open-modal-[]" to trigger a modal -->
+                            <!-- Add any single word to the 'open-modal-[]' class for triggering the modal as per the design requirements and button context. -->
+                            <!-- for example: class should be like 'open-modal-one', 'open-modal-two', etc. -->
+                            <!-- Make sure to follow the naming convention and only single word should be added next to 'open-modal-' class. -->
+                            <!-- wrong class example that need to be avoided: 'open-modal-xxx-xxx' -->
+                            <p>modal link - <a href="#" class="open-modal-one">Open Modal</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant B-->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Modal</span>
+                                <span class="name-seperator"> | </span>
+                                Variant: <span class="color-777777">Modal with scrollable body text.</span>
+                                <div class="mt-2"></div>
+                                <ul>
+                                    <li>Modifier class: 'variant-b' used for scrollable body text.</li>
+                                    <li>Sitecore should able to add/remove classes at parent level.</li>
+                                </ul>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>modal link - <a href="#" class="open-modal-two">Open Modal</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant C-->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Modal</span>
+                                <span class="name-seperator"> | </span>
+                                Variant: <span class="color-777777">Modal with an extra scrollable section for terms.</span>
+                                <div class="mt-2"></div>
+                                <ul>
+                                    <li>Modifier class: 'variant-c' used for scrollable body text.</li>
+                                    <li>Sitecore should able to add/remove classes at parent level.</li>
+                                </ul>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>modal link - <a href="#" class="open-modal-three">Open Modal</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature: Interstitial Modal -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Modal</span>
+                                <span class="name-seperator"> | </span>
+                                Feature: <span class="color-777777">Interstitial Modal</span>
+                                <div class="mt-2"></div>
+                                <ul>
+                                    <li>When the interstitial modal is used, to prevent users from moving forward without an acknowledgement or making a selection, the “close button” icon should not be used.</li>
+                                    <li>Modifier class: use any variant as per requirement, but make sure to add class 'interstitial-modal' class to the modal div.</li>
+                                </ul>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>This modal triggers when the user opens site in new session and it wont appear again even if pages got refreshed or navigated to different page with the same session.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature: Leaving Modal -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Modal</span>
+                                <span class="name-seperator"> | </span>
+                                Feature: <span class="color-777777">Leaving Modal</span>
+                                <div class="mt-2"></div>
+                                <ul>
+                                    <li>Modifier class: use any variant as per the requirement, but make sure to add class 'leaving-modal-[]' class to the modal div.</li>
+                                    <li>Make sure that the button which triggers the modal has a class like 'leave-to-xxx' (e.g., 'leave-to-external'), and the corresponding modal has a matching class 'leaving-modal-xxx' (e.g., 'leaving-modal-external'). The 'xxx' part must be the same for both the trigger and the modal.</li>
+                                    <li>Example: If the trigger button has class 'leave-to-external', then the modal should have class 'leaving-modal-external'.</li>
+                                </ul>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Make sure to add 'leave-to-[]' class for triggering the leaving modal. -->
+                            <!-- Add any single word to the 'leave-to-[]' class for triggering the leaving modal as per the design requirements and button context. -->
+                            <!-- for example: class should be like 'leave-to-external', 'leave-to-internal', etc. -->
+                            <!-- Make sure to follow the naming convention and only single word should be added next to 'leave-to-' class. -->
+                            <!-- wrong class examples that need to be avoided: 'leave-to-external-site', 'leave-to-internal-site', etc. -->
+                            <p>Leave site - <a href="https://www.google.com" class="leave-to-external">Google.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature: Interstitial Modal with referrer -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Modal</span>
+                                <span class="name-seperator"> | </span>
+                                Feature: <span class="color-777777">Interstitial Modal with referrer</span>
+                                <div class="mt-2"></div>
+                                <ul>
+                                    <li>Modifier class: 'inc-referrer-logic' - Make sure to add this class to the interstitial modal div.</li>
+                                    <li>Add this class to prevent showing the interstitial modal when users are navigating between subdomains.</li>
+                                    <li>It is to ensure the modal is only shown when a user is coming from a different website but not when navigating within the same domain and sub-domain sites, providing a better user experience.</li>
+                                </ul>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Variant: Video Modal -->
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="cmp-details">
+                                Component: <span class="color-777777">Modal</span>
+                                <span class="name-seperator"> | </span>
+                                Variant: <span class="color-777777">Video Modal</span>
+                                <div class="mt-2"></div>
+                                <ul>
+                                    <li>Modifier class: Make sure to add class 'video-modal' to the modal div.</li>
+                                    <li>Place iframe inside modal-body div.</li>
+                                </ul>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rich-text">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Make sure to add class "player-link" to trigger the video modal -->
+                            <!-- Also, add data-link attribute with video link as value to the anchor tag. -->
+                            <p>Video modal - <a href="https://player.vimeo.com/video/3784524?h=10939251d6" class="player-link" data-link="https://player.vimeo.com/video/3784524?h=10939251d6">Play Video</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer class="eds-footer"> </footer>
+    </div>
+    <script src="../../../assets/common/scripts/ui-lib/jquery-v3.7.1.min.js"></script>
+    <script src="../../../assets/common/scripts/ui-lib/bootstrap.js"></script>
+    <!-- Common file should be given first in hierarchy before including any other feature js files -->
+<script src="../../../assets/eds/Scripts/feature-common.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-modal-window.js"></script>
+    <script src="../../../assets/eds/Scripts/feature-video-modal.js"></script>
+</body>
+
+</html>
