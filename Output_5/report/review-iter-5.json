@@ -1,0 +1,59 @@
+{
+  "score": 72,
+  "pass": false,
+  "summary": "Both sections are present in correct order with the required eds-hero-banner signature class and accurate text content. However, the CTA button is positioned far too low—it appears below the visible banner in the render and the arrow icon is misplaced (x=426 vs 288), causing the entire button to be missing from the visible output.",
+  "issues": [
+    {
+      "severity": "critical",
+      "area": "Banner 2 / cta-wrapper",
+      "expected": "'Get to know YEZTUGO' pill button visible in lower-left of photo (design strip 5, button box y≈349.6)",
+      "actual": "Button is pushed off the visible banner area; render strip 5 shows no button at all",
+      "fix": "Reposition cta-wrapper so the pill renders within the 459px banner over the photo; verify top offset relative to banner not content block"
+    },
+    {
+      "severity": "minor",
+      "area": "arrow-up-thin_I68327-3843-68327-3840.svg",
+      "expected": "x=288px @1366 artboard",
+      "actual": "x=426px",
+      "fix": "Shift arrow horizontally to x≈288px via column/alignment adjustment"
+    },
+    {
+      "severity": "major",
+      "area": "Banner 2 title color",
+      "expected": "'twice-yearly PrEP is here' rendered in white/light over the photo (design strip 4)",
+      "actual": "h1 sets color:#000000 on the title element with white only on inner spans; risk of mismatch though inner spans override—verify computed color",
+      "fix": "Ensure visible title lines use --gs-tertiary_10 (white) consistently; avoid setting black on parent"
+    },
+    {
+      "severity": "minor",
+      "area": "Banner 1 title position",
+      "expected": "Title baseline aligned within banner (design strip 1-2)",
+      "actual": "Render shows 'treatment with TRODELVY' line partially clipped at banner bottom edge",
+      "fix": "Adjust hero-banner-content top so both title lines fit fully within 232px banner"
+    },
+    {
+      "severity": "minor",
+      "area": "styles.css typography",
+      "expected": "Use design tokens for font sizes where available (e.g., bt2-line1 27.9px ~ h6/custom)",
+      "actual": "Many raw px font-sizes (25px, 27.9px, 46.49px, 15.58px, 11.62px) used instead of tokens",
+      "fix": "Map sizes to nearest design tokens where applicable; raw hex/px acceptable only when no token matches"
+    },
+    {
+      "severity": "minor",
+      "area": "banner-actor-2 color",
+      "expected": "Footnote color matches design (#000000 black for line-3/4 readability shown white on dark)",
+      "actual": "line3/line4 forced white but render strip 5 shows them legible—acceptable, verify contrast",
+      "fix": "Confirm footnote/body text colors match design strips"
+    }
+  ],
+  "layoutFailures": [
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "arrow-up-thin_I68327-3843-68327-3840.svg",
+      "expected": "x=288px @1366 artboard",
+      "actual": "x=426px",
+      "fix": "Shift horizontally to x≈288px (check column/alignment classes)"
+    }
+  ]
+}

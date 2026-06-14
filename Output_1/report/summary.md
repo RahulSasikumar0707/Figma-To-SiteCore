@@ -1,0 +1,25 @@
+# Run #1 — Epclusa Landing Page
+
+- Target: file `C14xdH8bSbAkcSi1QzEOBX`, node `68226:5173` ("Epclusa Landing Page")
+- Output: `Output_1/index.html`
+- Sections: 11 | Assets: 22 (12 images, 9 icons, 1 vectors)
+- **Measured pixel match: 92.2%** (history: 91.7 -> 92 -> 92.2)
+- Layout assertion failures remaining: 11 (0 critical)
+- Review iterations: 2 | Last reviewer score: 88/100
+- Broken asset refs: 0
+- Generator usage (key 1): 4 calls, 240340 in / 46137 out tokens
+- Reviewer usage (key 2): 2 calls, 89472 in / 2311 out tokens
+- Duration: 9.1 min
+
+## Section -> EDS mapping
+- Header/Indicator Selector Placed To The Right Of The Logo -> **header**
+- Section 02 -> **announcement-banner**
+- Promo/hero banner -> **hero-banner**
+- Plain RTF_02/text -> **content-block**
+- card container/NA -> **cards**
+- Plain RTF_03/text -> **content-block**
+- video 01/Ratio 21x9 -> **video**
+- card container 02/NA -> **cards**
+- Plain RTF/text -> **content-block**
+- Content Block 02 -> **isi**
+- footer/footer with three columns -> **footer**

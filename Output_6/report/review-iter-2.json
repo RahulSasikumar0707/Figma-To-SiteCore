@@ -1,0 +1,98 @@
+{
+  "score": 89,
+  "pass": false,
+  "summary": "A faithful, well-structured implementation matching the design closely across all sections with correct EDS signature classes and asset references. Main deductions are for the long-RTF body font being too large/wrong weight/color, the header secondary-nav background being too dark, the footer Gilead logo left-aligned instead of centered, and minor card font-size scaling differences.",
+  "issues": [
+    {
+      "severity": "major",
+      "area": "Plain RTF (long ISI text) 68226:5176",
+      "expected": "Body/list font-size 15px, key bold lines at font-weight 700, text color #000000",
+      "actual": "Some lines render at 18px font-size, font-weight 400, and color rgb(33,37,41) — computed-style failures flagged on 'Hepatitis B virus reactivation' and 'What is EPCLUSA?' lines",
+      "fix": "Force .ep-longrtf p/li to 15px, weight 700 on bold lead-ins, and color #000000 (override Bootstrap body defaults)"
+    },
+    {
+      "severity": "minor",
+      "area": "Header secondary-nav 68226:5185",
+      "expected": "Secondary nav bar background tone matching design (#50758A muted blue)",
+      "actual": "Renders noticeably darker/grayer than the design strip",
+      "fix": "Verify the secondary-nav background color renders as #50758A, not a darker gray overlay"
+    },
+    {
+      "severity": "minor",
+      "area": "Footer 68226:5174",
+      "expected": "Gilead logo positioned at x≈275px (centered/indented within content column)",
+      "actual": "Logo at x=155px, left-aligned to the padding edge",
+      "fix": "Adjust footer logo column alignment to place the image near x≈275px per the design"
+    },
+    {
+      "severity": "minor",
+      "area": "Cards 68226:5180",
+      "expected": "Card titles sized so two-word headings wrap as in design (e.g. 'EPCLUSA can treat Hep C')",
+      "actual": "Card title font-size slightly larger causing different line wrapping vs design",
+      "fix": "Reduce .ep-card-title font-size to match design scale (~22px) for consistent wrapping"
+    },
+    {
+      "severity": "minor",
+      "area": "ZIP Code input 68226:5177",
+      "expected": "'ZIP Code' present as text content",
+      "actual": "Flagged as missing-text (placeholder attribute not counted as text content)",
+      "fix": "Ensure 'ZIP Code' is rendered as visible/accessible text content, not only a placeholder"
+    },
+    {
+      "severity": "minor",
+      "area": "Hero CTA 68226:5182",
+      "expected": "Arrow icon points up-right per arrow-up-thin asset",
+      "actual": "Arrow rotated to point downward via transform:rotate(90deg)",
+      "fix": "Use the asset orientation matching the design (up/right arrow), remove incorrect rotation"
+    }
+  ],
+  "pixelScore": 91.8,
+  "layoutFailures": [
+    {
+      "severity": "critical",
+      "type": "missing-text",
+      "text": "ZIP Code",
+      "fix": "Add this text content exactly as written"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "What is EPCLUSA? EPCLUSA is a prescripti",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "15px",
+      "actual": "18px",
+      "fix": "Set font-size to 15px (use the matching token/heading class)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "#000000",
+      "actual": "rgb(33, 37, 41)",
+      "fix": "Set color to #000000 (or its token)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "image_I68226-5174-1-631.png",
+      "expected": "x=275px @1366 artboard",
+      "actual": "x=155px",
+      "fix": "Shift horizontally to x≈275px (check column/alignment classes)"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "score": 74,
+  "pass": false,
+  "summary": "All four sections are present in order with correct EDS signature classes (eds-hero-banner, eds-card, eds-footer) and accurate text, but the hero title font-size/weight are wrong and the content-block-1 layout is badly broken (image placed full-width below text instead of as a right-side column at 548x391). Several typography and color details diverge from spec, consistent with the 76.4% pixel match.",
+  "issues": [
+    {
+      "severity": "major",
+      "area": "Section 01 hero-title",
+      "expected": "font-size 33px, font-weight 400 (ACHIEVING BOLD AMBITIONS)",
+      "actual": "48px / 600",
+      "fix": "Set .hero-title font-size to 33px and font-weight to 400"
+    },
+    {
+      "severity": "major",
+      "area": "Section 02 content block 1",
+      "expected": "Two-column row: text left, image right sized 548x391 at x≈699",
+      "actual": "Image renders full-width (1160x829) stacked below text/button",
+      "fix": "Constrain the image column to 548x391 and ensure the lg-6 columns sit side-by-side; do not let image expand full-bleed"
+    },
+    {
+      "severity": "major",
+      "area": "footer Global Operations link",
+      "expected": "text color #404040, font-weight 400",
+      "actual": "rgb(13,110,253) weight 500",
+      "fix": "Set .footer-inline-link/.footer-unity-link span color to #404040 and weight 400"
+    },
+    {
+      "severity": "major",
+      "area": "Section 02 cb1-card heading",
+      "expected": "'Transformative' and 'Therapies' both orange-red per design",
+      "actual": "'Transformative' is black bold; only 'Therapies' is orange",
+      "fix": "Apply the orange/primary color to both 'Transformative' and 'Therapies' spans"
+    },
+    {
+      "severity": "minor",
+      "area": "hero line-32_1-578.svg",
+      "expected": "0x28px at x≈1176",
+      "actual": "0x0px at x=0, hidden via .hero-line32{display:none}",
+      "fix": "Render the divider at 0x28px in the nav-right separator at correct position"
+    },
+    {
+      "severity": "minor",
+      "area": "cb-heading typography",
+      "expected": "weight per design (~h tokens 600) and correct scale",
+      "actual": "font-weight 500, 40px",
+      "fix": "Align heading font-size/weight to design heading tokens"
+    },
+    {
+      "severity": "minor",
+      "area": "footer link 'Medical Information'",
+      "expected": "'Medical Information'",
+      "actual": "'medical Information' (lowercase m)",
+      "fix": "Capitalize to 'Medical Information'"
+    },
+    {
+      "severity": "minor",
+      "area": "Quick Links order",
+      "expected": "Pipeline, News, Stories@Gilead, Investors, Find a Trial, Search for Jobs (per spec list)",
+      "actual": "Investors, Find a Trial, Pipeline, Search for Jobs, News, Stories@Gilead",
+      "fix": "Match the design's visible Quick Links order"
+    },
+    {
+      "severity": "minor",
+      "area": "footer export icon x-positions",
+      "expected": "x≈533/545/573",
+      "actual": "x=477/488/520",
+      "fix": "Adjust footer column padding/gaps to align icons"
+    },
+    {
+      "severity": "minor",
+      "area": "CTA arrows",
+      "expected": "Arrows point right/up-right (arrow-up-thin rotated)",
+      "actual": "Arrows rotated 90deg point downward",
+      "fix": "Rotate arrow icons to point upward-right per design"
+    },
+    {
+      "severity": "minor",
+      "area": "hero-description font",
+      "expected": "per body token (~22px L-body)",
+      "actual": "20px/26px",
+      "fix": "Use --l-dsk-body token values"
+    }
+  ],
+  "pixelScore": 76.4,
+  "layoutFailures": [
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "ACHIEVING BOLD AMBITIONS",
+      "expected": "33px",
+      "actual": "48px",
+      "fix": "Set font-size to 33px (use the matching token/heading class)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "ACHIEVING BOLD AMBITIONS",
+      "expected": "400",
+      "actual": "600",
+      "fix": "Set font-weight to 400"
+    },
+    {
+      "severity": "major",
+      "type": "image-size",
+      "file": "line-32_1-578.svg",
+      "expected": "0x28px",
+      "actual": "0x0px",
+      "fix": "Resize to 0x28px (design value)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "line-32_1-578.svg",
+      "expected": "x=1176px @1366 artboard",
+      "actual": "x=0px",
+      "fix": "Shift horizontally to x≈1176px (check column/alignment classes)"
+    },
+    {
+      "severity": "major",
+      "type": "image-size",
+      "file": "image-11_1-564.png",
+      "expected": "548x391px",
+      "actual": "1160x829px",
+      "fix": "Resize to 548x391px (design value)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "image-11_1-564.png",
+      "expected": "x=699px @1366 artboard",
+      "actual": "x=103px",
+      "fix": "Shift horizontally to x≈699px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "arrow-up-thin_1-570.svg",
+      "expected": "x=434px @1366 artboard",
+      "actual": "x=396px",
+      "fix": "Shift horizontally to x≈434px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I1-552-37-450-37-425.svg",
+      "expected": "x=533px @1366 artboard",
+      "actual": "x=477px",
+      "fix": "Shift horizontally to x≈533px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I1-552-37-450-37-429.svg",
+      "expected": "x=545px @1366 artboard",
+      "actual": "x=488px",
+      "fix": "Shift horizontally to x≈545px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I1-552-37-450-37-433.svg",
+      "expected": "x=573px @1366 artboard",
+      "actual": "x=520px",
+      "fix": "Shift horizontally to x≈573px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "Global Operations",
+      "expected": "400",
+      "actual": "500",
+      "fix": "Set font-weight to 400"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "Global Operations",
+      "expected": "#404040",
+      "actual": "rgb(13, 110, 253)",
+      "fix": "Set color to #404040 (or its token)"
+    }
+  ]
+}

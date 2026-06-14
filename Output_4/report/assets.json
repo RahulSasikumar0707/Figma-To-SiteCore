@@ -1,0 +1,197 @@
+[
+  {
+    "nodeId": "I1:552;37:448;37:443;163:709",
+    "name": "Image",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "1e6770646dc671af55e3a08a66f0f5135427a2f1",
+    "w": 184,
+    "h": 51,
+    "file": "assets/images/image_I1-552-37-448-37-443-163-709.png"
+  },
+  {
+    "nodeId": "I1:552;37:448;37:399",
+    "name": "link list 4/unordered list",
+    "kind": "vector",
+    "format": "svg",
+    "w": 176,
+    "h": 24,
+    "file": "assets/vectors/link-list-4-unordered-list_I1-552-37-448-37-399.svg"
+  },
+  {
+    "nodeId": "I1:552;37:450;37:425",
+    "name": "export",
+    "kind": "icon",
+    "format": "svg",
+    "w": 12,
+    "h": 12,
+    "file": "assets/icons/export_I1-552-37-450-37-425.svg"
+  },
+  {
+    "nodeId": "I1:552;37:450;37:429",
+    "name": "export",
+    "kind": "icon",
+    "format": "svg",
+    "w": 12,
+    "h": 12,
+    "file": "assets/icons/export_I1-552-37-450-37-429.svg"
+  },
+  {
+    "nodeId": "I1:552;37:450;37:433",
+    "name": "export",
+    "kind": "icon",
+    "format": "svg",
+    "w": 12,
+    "h": 12,
+    "file": "assets/icons/export_I1-552-37-450-37-433.svg"
+  },
+  {
+    "nodeId": "I1:552;37:449;37:417",
+    "name": "export",
+    "kind": "icon",
+    "format": "svg",
+    "w": 12,
+    "h": 12,
+    "file": "assets/icons/export_I1-552-37-449-37-417.svg"
+  },
+  {
+    "nodeId": "I1:552;37:446;37:374",
+    "name": "Line 32",
+    "kind": "vector",
+    "format": "svg",
+    "w": 1150,
+    "h": 0,
+    "file": "assets/vectors/line-32_I1-552-37-446-37-374.svg"
+  },
+  {
+    "nodeId": "I1:552;37:446;37:377",
+    "name": "web",
+    "kind": "icon",
+    "format": "svg",
+    "w": 18,
+    "h": 18,
+    "file": "assets/icons/web_I1-552-37-446-37-377.svg"
+  },
+  {
+    "nodeId": "1:553",
+    "name": "content block 3/banner with background color inverse",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "e4b090ac3ff64a54551c5fad02baaba0a6c8a9f7",
+    "w": 1366,
+    "h": 776,
+    "file": "assets/images/content-block-3-banner-with-background-color-inverse_1-553.png"
+  },
+  {
+    "nodeId": "1:559",
+    "name": "arrow-up-thin",
+    "kind": "icon",
+    "format": "svg",
+    "w": 31,
+    "h": 26,
+    "file": "assets/icons/arrow-up-thin_1-559.svg"
+  },
+  {
+    "nodeId": "1:564",
+    "name": "image 11",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "10bc0576bb1f947a69a82605ccb836b66bb4d737",
+    "w": 548,
+    "h": 391,
+    "file": "assets/images/image-11_1-564.png"
+  },
+  {
+    "nodeId": "1:570",
+    "name": "arrow-up-thin",
+    "kind": "icon",
+    "format": "svg",
+    "w": 26,
+    "h": 26,
+    "file": "assets/icons/arrow-up-thin_1-570.svg"
+  },
+  {
+    "nodeId": "I1:572;35:289",
+    "name": "image 13",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "4bfe794ba8c792ed32d9365ce815ed624a18394f",
+    "w": 1366,
+    "h": 440,
+    "file": "assets/images/image-13_I1-572-35-289.png"
+  },
+  {
+    "nodeId": "I1:572;35:286",
+    "name": "arrow-up-thin",
+    "kind": "icon",
+    "format": "svg",
+    "w": 28,
+    "h": 28,
+    "file": "assets/icons/arrow-up-thin_I1-572-35-286.svg"
+  },
+  {
+    "nodeId": "I1:574;49:1888",
+    "name": "Banner Image",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "17f54db46f8050d1062d5640d912e2156bc12031",
+    "w": 1366,
+    "h": 768,
+    "file": "assets/images/banner-image_I1-574-49-1888.png"
+  },
+  {
+    "nodeId": "I1:574;49:1884",
+    "name": "image 3",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "172873ee099a9b6612e0eed224c3ae4490751d09",
+    "w": 282,
+    "h": 72,
+    "file": "assets/images/image-3_I1-574-49-1884.png"
+  },
+  {
+    "nodeId": "I1:577;49:1850",
+    "name": "web",
+    "kind": "icon",
+    "format": "svg",
+    "w": 24,
+    "h": 24,
+    "file": "assets/icons/web_I1-577-49-1850.svg"
+  },
+  {
+    "nodeId": "I1:577;49:1855",
+    "name": "menu-down",
+    "kind": "icon",
+    "format": "svg",
+    "w": 24,
+    "h": 24,
+    "file": "assets/icons/menu-down_I1-577-49-1855.svg"
+  },
+  {
+    "nodeId": "1:578",
+    "name": "Line 32",
+    "kind": "icon",
+    "format": "svg",
+    "w": 0,
+    "h": 28,
+    "file": "assets/icons/line-32_1-578.svg"
+  },
+  {
+    "nodeId": "1:579",
+    "name": "magnify",
+    "kind": "icon",
+    "format": "svg",
+    "w": 24,
+    "h": 24,
+    "file": "assets/icons/magnify_1-579.svg"
+  },
+  {
+    "nodeId": "1:581",
+    "name": "Line 32",
+    "kind": "vector",
+    "format": "svg",
+    "w": 1366,
+    "h": 0,
+    "file": "assets/vectors/line-32_1-581.svg"
+  }
+]

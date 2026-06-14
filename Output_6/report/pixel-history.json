@@ -1,0 +1,44 @@
+{
+  "pixelHistory": [
+    91.4,
+    91.8,
+    93.3,
+    93.3,
+    93.3
+  ],
+  "finalPixelScore": 93.3,
+  "finalLayoutFailures": [
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "What is EPCLUSA? EPCLUSA is a prescripti",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "15px",
+      "actual": "18px",
+      "fix": "Set font-size to 15px (use the matching token/heading class)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "#000000",
+      "actual": "rgb(33, 37, 41)",
+      "fix": "Set color to #000000 (or its token)"
+    }
+  ]
+}

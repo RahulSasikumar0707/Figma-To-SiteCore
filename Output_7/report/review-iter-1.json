@@ -1,0 +1,273 @@
+{
+  "score": 80,
+  "pass": false,
+  "summary": "The page reproduces all 11 sections in correct order with EDS signature classes present and most text faithful, but the hero banner is critically broken — the patient image, headline, TO-DAY LIST logo, CTA and description are all missing in the render, leaving only a flat gradient bar. Several header/video icons are missing, card-2 image sizing is wrong, ISI font sizes/colors are off, and multiple image x-positions are misaligned.",
+  "issues": [
+    {
+      "severity": "critical",
+      "area": "Hero banner (68226:5182)",
+      "expected": "Patient image (image-39), headline 'Put curing hepatitis C on your', TO-DAY LIST logo, 'Why EPCLUSA?' CTA with arrow, and description visible inside a 1070x461 rounded hero",
+      "actual": "Only a thin gradient bar renders; the hero image and all overlaid content are missing/collapsed (worst mismatch region 75-98%)",
+      "fix": "Ensure .ep-hero-img loads and the absolute-positioned .ep-hero-content sits over a sized image; the hero is collapsing to near-zero height"
+    },
+    {
+      "severity": "critical",
+      "area": "Header (68226:5185)",
+      "expected": "Two additional 12x12 export SVG icons (export_...5107.svg, export_...5111.svg) on the top nav links",
+      "actual": "Only one export icon referenced via CSS background; the other two are missing",
+      "fix": "Add the two missing export SVG icons to the appropriate top-link items"
+    },
+    {
+      "severity": "critical",
+      "area": "Video (68226:5178)",
+      "expected": "Play button (svg 44x24), mute button (20x20), settings (20x20), fullscreen (20x20) and '01:00' / 'Play' controls overlaid on the poster",
+      "actual": "No control SVGs rendered; only the poster image shows, no play/mute/settings/fullscreen icons or timestamp",
+      "fix": "Add the four video control SVGs and the '01:00' timestamp/Play label over the poster"
+    },
+    {
+      "severity": "major",
+      "area": "assets/.../rectangle-4_I68226-5177-68226-4359-68226-4311.png & 4314.png",
+      "expected": "Card-2 images sized 48x71 and 54x93",
+      "actual": "Rendered at 167x246 and 156x269 (oversized)",
+      "fix": "Constrain card-2 image dimensions to design values"
+    },
+    {
+      "severity": "major",
+      "area": "ISI block (68226:5175)",
+      "expected": "Heading/body font-size 15px, body color #000000",
+      "actual": "font-size 18.3px and color rgb(34,34,34)/rgb(33,37,41)",
+      "fix": "Set ISI text to 15px and #000000 per spec"
+    },
+    {
+      "severity": "major",
+      "area": "Plain RTF long (68226:5176)",
+      "expected": "'What is EPCLUSA?' heading at font-weight 700 and 'Hepatitis B virus reactivation' content at 700/15px",
+      "actual": "font-weight 400 measured on some headings; sizes 18-18.3px",
+      "fix": "Apply correct bold weights and font sizes to RTF headings/list items"
+    },
+    {
+      "severity": "minor",
+      "area": "Header logo position",
+      "expected": "Logo x≈155px @1366",
+      "actual": "x=4px",
+      "fix": "Align logo to the content column (x≈155px)"
+    },
+    {
+      "severity": "minor",
+      "area": "Footer logo (image_I68226-5174-1-631.png)",
+      "expected": "Gilead logo x≈275px @1366 (left-aligned column)",
+      "actual": "x=613px (centered)",
+      "fix": "Left-align the footer logo to x≈275px"
+    },
+    {
+      "severity": "minor",
+      "area": "Card-2 / ZIP icon positions",
+      "expected": "magnify x≈314, rectangle images x≈225/799, button x≈877",
+      "actual": "Each offset ~50-70px",
+      "fix": "Adjust horizontal alignment of card-2 images/icons/button"
+    },
+    {
+      "severity": "minor",
+      "area": "Secondary nav background color",
+      "expected": "Design top bar appears blue-grey (#50758A)",
+      "actual": "Render top bar is dark grey/near-black",
+      "fix": "Verify the secondary-nav background renders as #50758A not a dark fallback"
+    },
+    {
+      "severity": "minor",
+      "area": "Card text/title typography",
+      "expected": "Card titles use teal #50758A-consistent design tokens/scale",
+      "actual": "Uses raw hex values (#50758A, #06B7AB) which lack tokens — acceptable but verify weights/sizes match",
+      "fix": "No token exists for these teals; confirm font sizes/weights match design"
+    }
+  ],
+  "pixelScore": 89.2,
+  "layoutFailures": [
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "rectangle-4_I68226-5185-68226-5124-68226-5120.png",
+      "expected": "x=155px @1366 artboard",
+      "actual": "x=4px",
+      "fix": "Shift horizontally to x≈155px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I68226-5185-68226-5125-68226-5103.svg",
+      "expected": "x=763px @1366 artboard",
+      "actual": "x=864px",
+      "fix": "Shift horizontally to x≈763px (check column/alignment classes)"
+    },
+    {
+      "severity": "critical",
+      "type": "missing-image",
+      "file": "export_I68226-5185-68226-5125-68226-5107.svg",
+      "expected": "12x12 (\"export\")",
+      "fix": "Add <img src=\"...export_I68226-5185-68226-5125-68226-5107.svg\"> (or background-image) sized 12x12px"
+    },
+    {
+      "severity": "critical",
+      "type": "missing-image",
+      "file": "export_I68226-5185-68226-5125-68226-5111.svg",
+      "expected": "12x12 (\"export\")",
+      "fix": "Add <img src=\"...export_I68226-5185-68226-5125-68226-5111.svg\"> (or background-image) sized 12x12px"
+    },
+    {
+      "severity": "critical",
+      "type": "missing-image",
+      "file": "svg_I68226-5178-1-683.svg",
+      "expected": "44x24 (\"SVG\")",
+      "fix": "Add <img src=\"...svg_I68226-5178-1-683.svg\"> (or background-image) sized 44x24px"
+    },
+    {
+      "severity": "critical",
+      "type": "missing-image",
+      "file": "button-mute-svg_I68226-5178-1-700.svg",
+      "expected": "20x20 (\"Button - Mute → SVG\")",
+      "fix": "Add <img src=\"...button-mute-svg_I68226-5178-1-700.svg\"> (or background-image) sized 20x20px"
+    },
+    {
+      "severity": "critical",
+      "type": "missing-image",
+      "file": "svg_I68226-5178-1-703.svg",
+      "expected": "20x20 (\"SVG\")",
+      "fix": "Add <img src=\"...svg_I68226-5178-1-703.svg\"> (or background-image) sized 20x20px"
+    },
+    {
+      "severity": "critical",
+      "type": "missing-image",
+      "file": "svg_I68226-5178-1-708.svg",
+      "expected": "20x20 (\"SVG\")",
+      "fix": "Add <img src=\"...svg_I68226-5178-1-708.svg\"> (or background-image) sized 20x20px"
+    },
+    {
+      "severity": "major",
+      "type": "image-size",
+      "file": "rectangle-4_I68226-5177-68226-4359-68226-4311.png",
+      "expected": "48x71px",
+      "actual": "167x246px",
+      "fix": "Resize to 48x71px (design value)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "rectangle-4_I68226-5177-68226-4359-68226-4311.png",
+      "expected": "x=225px @1366 artboard",
+      "actual": "x=155px",
+      "fix": "Shift horizontally to x≈225px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "magnify_I68226-5177-68226-4359-68226-4300.svg",
+      "expected": "x=314px @1366 artboard",
+      "actual": "x=363px",
+      "fix": "Shift horizontally to x≈314px (check column/alignment classes)"
+    },
+    {
+      "severity": "major",
+      "type": "image-size",
+      "file": "rectangle-4_I68226-5177-68226-4360-68226-4314.png",
+      "expected": "54x93px",
+      "actual": "156x269px",
+      "fix": "Resize to 54x93px (design value)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "rectangle-4_I68226-5177-68226-4360-68226-4314.png",
+      "expected": "x=799px @1366 artboard",
+      "actual": "x=739px",
+      "fix": "Shift horizontally to x≈799px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "button_I68226-5177-68226-4360-68226-4306.svg",
+      "expected": "x=877px @1366 artboard",
+      "actual": "x=919px",
+      "fix": "Shift horizontally to x≈877px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "What is EPCLUSA? EPCLUSA is a prescripti",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "Important Safety Information",
+      "expected": "15px",
+      "actual": "18.3px",
+      "fix": "Set font-size to 15px (use the matching token/heading class)"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "What is the most important information I",
+      "expected": "15px",
+      "actual": "18.3px",
+      "fix": "Set font-size to 15px (use the matching token/heading class)"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "What is the most important information I",
+      "expected": "#000000",
+      "actual": "rgb(34, 34, 34)",
+      "fix": "Set color to #000000 (or its token)"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "EPCLUSA can cause serious side effects, ",
+      "expected": "15px",
+      "actual": "18.3px",
+      "fix": "Set font-size to 15px (use the matching token/heading class)"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "EPCLUSA can cause serious side effects, ",
+      "expected": "#000000",
+      "actual": "rgb(34, 34, 34)",
+      "fix": "Set color to #000000 (or its token)"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "15px",
+      "actual": "18px",
+      "fix": "Set font-size to 15px (use the matching token/heading class)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "#000000",
+      "actual": "rgb(33, 37, 41)",
+      "fix": "Set color to #000000 (or its token)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "image_I68226-5174-1-631.png",
+      "expected": "x=275px @1366 artboard",
+      "actual": "x=613px",
+      "fix": "Shift horizontally to x≈275px (check column/alignment classes)"
+    }
+  ]
+}

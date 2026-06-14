@@ -1,0 +1,107 @@
+[
+  {
+    "sectionId": "68484:1066",
+    "sectionName": "Header/Indicator Selector Placed To The Right Of The Logo",
+    "eds": "header",
+    "modifiers": [],
+    "why": "Top navigation bar with logo"
+  },
+  {
+    "sectionId": "68484:1067",
+    "sectionName": "Promo/hero banner",
+    "eds": "hero-banner",
+    "modifiers": [],
+    "why": "Large hero image with title"
+  },
+  {
+    "sectionId": "68484:1070",
+    "sectionName": "Card Container/NA",
+    "eds": "cards",
+    "modifiers": [],
+    "why": "Three-card icon grid layout"
+  },
+  {
+    "sectionId": "68484:1071",
+    "sectionName": "Content Block 01/Banner With A Background Color And Image Clickable",
+    "eds": "content-block",
+    "modifiers": [],
+    "why": "Banner with background, image, text"
+  },
+  {
+    "sectionId": "68484:1072",
+    "sectionName": "Card Container/NA",
+    "eds": "cards",
+    "modifiers": [],
+    "why": "Multi-card grid with icons"
+  },
+  {
+    "sectionId": "68484:1073",
+    "sectionName": "Promo/Primary Banner",
+    "eds": "testimonial",
+    "modifiers": [],
+    "why": "Patient quote with photo"
+  },
+  {
+    "sectionId": "68484:1077",
+    "sectionName": "Accordion item 01/NA",
+    "eds": "accordion",
+    "modifiers": [],
+    "why": "Expandable read more story"
+  },
+  {
+    "sectionId": "68484:1082",
+    "sectionName": "Promo/Banner With Title And Image",
+    "eds": "content-block",
+    "modifiers": [],
+    "why": "Banner with title, image, button"
+  },
+  {
+    "sectionId": "68484:1078",
+    "sectionName": "Plain RTF/Text",
+    "eds": "accordion",
+    "modifiers": [],
+    "why": "Heading for FAQ accordion section"
+  },
+  {
+    "sectionId": "68484:1081",
+    "sectionName": "Accordion item 01/NA",
+    "eds": "accordion",
+    "modifiers": [],
+    "why": "FAQ expandable question row"
+  },
+  {
+    "sectionId": "68484:1079",
+    "sectionName": "Accordion item 02/NA",
+    "eds": "accordion",
+    "modifiers": [],
+    "why": "FAQ expandable question row"
+  },
+  {
+    "sectionId": "68484:1080",
+    "sectionName": "Accordion item 03/NA",
+    "eds": "accordion",
+    "modifiers": [],
+    "why": "FAQ expandable question row"
+  },
+  {
+    "sectionId": "68484:1074",
+    "sectionName": "Promo/Banner With Title And Image",
+    "eds": "content-block",
+    "modifiers": [],
+    "why": "Banner with image, title, button"
+  },
+  {
+    "sectionId": "68484:1075",
+    "sectionName": "Plain RTF/Text",
+    "eds": "isi",
+    "modifiers": [],
+    "why": "Important safety information text block"
+  },
+  {
+    "sectionId": "68484:1076",
+    "sectionName": "footer/footer with trademark information",
+    "eds": "footer",
+    "modifiers": [],
+    "why": "Bottom legal links and trademark"
+  }
+]

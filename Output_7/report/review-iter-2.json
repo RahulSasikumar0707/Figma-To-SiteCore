@@ -1,0 +1,139 @@
+{
+  "score": 86,
+  "pass": false,
+  "summary": "The page reproduces all 11 sections in correct order with EDS signature classes present and text largely faithful to the design. The most significant issue is the hero banner: the background image and all hero content/CTA fail to render, leaving only an empty gradient bar, which is the largest visual mismatch.",
+  "issues": [
+    {
+      "severity": "critical",
+      "area": "Hero Banner (68226:5182)",
+      "expected": "Full hero image with headline 'Put curing hepatitis C on your', TO-DAY LIST logo, 'Why EPCLUSA?' CTA button and patient image",
+      "actual": "Renders only an empty gradient pill/bar; hero image and all overlay content are missing (75-98% mismatch in top regions)",
+      "fix": "Fix .ep-hero-inner/.ep-hero-img so the hero image loads and the absolutely-positioned content displays over it"
+    },
+    {
+      "severity": "minor",
+      "area": "Header secondary nav color",
+      "expected": "Slate blue-gray bar (#50758A approx) matching primary teal theme",
+      "actual": "Renders dark charcoal/near-black bar in top strip",
+      "fix": "Verify .ep-secondary-nav background-color #50758A is applied and not overridden"
+    },
+    {
+      "severity": "major",
+      "area": "ISI / RTF text color (68226:5175, 5176)",
+      "expected": "Body headings color #000000",
+      "actual": "rgb(34,34,34) / rgb(33,37,41) for several ISI and RTF lines",
+      "fix": "Set color to #000000 for ep-isi-bold, ep-rtf-bold, and ISI headings"
+    },
+    {
+      "severity": "major",
+      "area": "Plain RTF long body (68226:5176)",
+      "expected": "Body font-size 15px, font-weight 700 for 'What is EPCLUSA?' and 'Hepatitis B' lines",
+      "actual": "font-size 18px and font-weight 400 in measured styles",
+      "fix": "Apply 15px / 700 weight per spec to the affected RTF paragraphs"
+    },
+    {
+      "severity": "minor",
+      "area": "Header icon alignment (68226:5185)",
+      "expected": "export icons at x≈763 and x≈903",
+      "actual": "x=729 and x=874",
+      "fix": "Adjust nav link spacing/gaps to shift icons right"
+    },
+    {
+      "severity": "minor",
+      "area": "Cards 02 icon alignment (68226:5177)",
+      "expected": "magnify icon x≈314, button x≈877",
+      "actual": "x=363 and x=919",
+      "fix": "Adjust card2 padding/layout to match icon positions"
+    },
+    {
+      "severity": "minor",
+      "area": "RTF/ISI link color",
+      "expected": "Underlined links in neutral/teal per design (black/teal)",
+      "actual": "fda.gov/medwatch and 'Please see Important Facts' links render in red (--gs-primary)",
+      "fix": "Set ep-rtf-ul link color to match design rather than primary red"
+    }
+  ],
+  "pixelScore": 89.8,
+  "layoutFailures": [
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I68226-5185-68226-5125-68226-5103.svg",
+      "expected": "x=763px @1366 artboard",
+      "actual": "x=729px",
+      "fix": "Shift horizontally to x≈763px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I68226-5185-68226-5125-68226-5107.svg",
+      "expected": "x=903px @1366 artboard",
+      "actual": "x=874px",
+      "fix": "Shift horizontally to x≈903px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "magnify_I68226-5177-68226-4359-68226-4300.svg",
+      "expected": "x=314px @1366 artboard",
+      "actual": "x=363px",
+      "fix": "Shift horizontally to x≈314px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "button_I68226-5177-68226-4360-68226-4306.svg",
+      "expected": "x=877px @1366 artboard",
+      "actual": "x=919px",
+      "fix": "Shift horizontally to x≈877px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "What is EPCLUSA? EPCLUSA is a prescripti",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "What is the most important information I",
+      "expected": "#000000",
+      "actual": "rgb(34, 34, 34)",
+      "fix": "Set color to #000000 (or its token)"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "EPCLUSA can cause serious side effects, ",
+      "expected": "#000000",
+      "actual": "rgb(34, 34, 34)",
+      "fix": "Set color to #000000 (or its token)"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "15px",
+      "actual": "18px",
+      "fix": "Set font-size to 15px (use the matching token/heading class)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "#000000",
+      "actual": "rgb(33, 37, 41)",
+      "fix": "Set color to #000000 (or its token)"
+    }
+  ]
+}

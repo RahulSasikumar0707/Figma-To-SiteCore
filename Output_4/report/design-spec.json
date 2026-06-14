@@ -1,0 +1,1685 @@
+{
+  "id": "1:551",
+  "name": "Gilead CA Landing Page",
+  "type": "FRAME",
+  "box": {
+    "x": 0,
+    "y": 0,
+    "w": 1366,
+    "h": 3186
+  },
+  "bg": {
+    "color": "#FFFFFF",
+    "token": "--gs-tertiary_10"
+  },
+  "children": [
+    {
+      "id": "1:573",
+      "name": "Section 01",
+      "type": "FRAME",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 768
+      },
+      "layout": {
+        "dir": "column",
+        "gap": 16,
+        "pad": [
+          12,
+          0,
+          12,
+          0
+        ],
+        "align": "MIN/CENTER"
+      },
+      "children": [
+        {
+          "id": "1:574",
+          "name": "Top Banner",
+          "type": "INSTANCE",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 1366,
+            "h": 768
+          },
+          "abs": true,
+          "constraints": "SCALE/SCALE",
+          "children": [
+            {
+              "id": "I1:574;49:1888",
+              "name": "Banner Image",
+              "type": "RECTANGLE",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "w": 1366,
+                "h": 768
+              },
+              "asset": "assets/images/banner-image_I1-574-49-1888.png"
+            },
+            {
+              "id": "I1:574;49:1884",
+              "name": "image 3",
+              "type": "RECTANGLE",
+              "box": {
+                "x": 113,
+                "y": 198,
+                "w": 282,
+                "h": 72
+              },
+              "asset": "assets/images/image-3_I1-574-49-1884.png"
+            },
+            {
+              "id": "I1:574;49:1885",
+              "name": "ACHIEVING BOLD AMBITIONS",
+              "type": "TEXT",
+              "box": {
+                "x": 113,
+                "y": 295,
+                "w": 266,
+                "h": 66
+              },
+              "text": "ACHIEVING BOLD AMBITIONS",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 33,
+                "weight": 400,
+                "lh": 33,
+                "color": "var(--gs-tertiary_10)"
+              }
+            },
+            {
+              "id": "I1:574;49:1886",
+              "name": "For more than 35 years, we have been tackling some of the world’s greatest public health challenges, revolutionizing HIV treatment and prevention and delivering a cure for hepatitis C. Now, we are working to discover and advance therapies that offer new hope to patients impacted by diseases across our therapeutic areas of Virology, Oncology and Inflammation.",
+              "type": "TEXT",
+              "box": {
+                "x": 113,
+                "y": 386,
+                "w": 546,
+                "h": 120
+              },
+              "text": "For more than 35 years, we have been tackling some of the world’s greatest public health challenges, revolutionizing HIV treatment and prevention and delivering a cure for hepatitis C. Now, we are working to discover and advance therapies that offer new hope to patients impacted by diseases across our therapeutic areas of Virology, Oncology and Inflammation.",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 20,
+                "weight": 400,
+                "lh": 20,
+                "color": "var(--gs-tertiary_10)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "1:575",
+          "name": "Header/Indicator Selector Placed To The Right Of The Logo",
+          "type": "COMPONENT",
+          "box": {
+            "x": 151.5,
+            "y": 12,
+            "w": 1063,
+            "h": 42
+          },
+          "children": [
+            {
+              "id": "1:576",
+              "name": "link list/unordered list",
+              "type": "INSTANCE",
+              "box": {
+                "x": 0,
+                "y": 12,
+                "w": 371,
+                "h": 18
+              },
+              "sizing": "HUG/HUG",
+              "layout": {
+                "dir": "row",
+                "gap": 20,
+                "pad": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "align": "MIN/CENTER"
+              },
+              "children": [
+                {
+                  "id": "I1:576;49:1673",
+                  "name": "Science",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 63,
+                    "h": 18
+                  },
+                  "sizing": "HUG/HUG",
+                  "text": "Science",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 18,
+                    "weight": 400,
+                    "lh": 18,
+                    "color": "var(--gs-tertiary_10)"
+                  }
+                },
+                {
+                  "id": "I1:576;49:1674",
+                  "name": "Responsibility",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 83,
+                    "y": 0,
+                    "w": 109,
+                    "h": 18
+                  },
+                  "sizing": "HUG/HUG",
+                  "text": "Responsibility",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 18,
+                    "weight": 400,
+                    "lh": 18,
+                    "color": "var(--gs-tertiary_10)"
+                  }
+                },
+                {
+                  "id": "I1:576;49:1675",
+                  "name": "Company",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 212,
+                    "y": 0,
+                    "w": 76,
+                    "h": 18
+                  },
+                  "sizing": "HUG/HUG",
+                  "text": "Company",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 18,
+                    "weight": 400,
+                    "lh": 18,
+                    "color": "var(--gs-tertiary_10)"
+                  }
+                },
+                {
+                  "id": "I1:576;49:1676",
+                  "name": "Careers",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 308,
+                    "y": 0,
+                    "w": 63,
+                    "h": 18
+                  },
+                  "sizing": "HUG/HUG",
+                  "text": "Careers",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 18,
+                    "weight": 400,
+                    "lh": 18,
+                    "color": "var(--gs-tertiary_10)"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "1:577",
+              "name": "Language",
+              "type": "INSTANCE",
+              "box": {
+                "x": 835,
+                "y": 0,
+                "w": 164,
+                "h": 42
+              },
+              "layout": {
+                "dir": "column",
+                "gap": 10,
+                "pad": [
+                  9,
+                  7,
+                  9,
+                  9
+                ],
+                "align": "MIN/MIN"
+              },
+              "border": {
+                "color": "#FFFFFF",
+                "token": "--gs-tertiary_10",
+                "width": 1
+              },
+              "children": [
+                {
+                  "id": "I1:577;49:1857",
+                  "name": "Frame 1010106762",
+                  "type": "FRAME",
+                  "box": {
+                    "x": 9,
+                    "y": 9,
+                    "w": 148,
+                    "h": 24
+                  },
+                  "sizing": "HUG/HUG",
+                  "layout": {
+                    "dir": "row",
+                    "gap": 3,
+                    "pad": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "align": "MIN/CENTER"
+                  },
+                  "children": [
+                    {
+                      "id": "I1:577;49:1850",
+                      "name": "web",
+                      "type": "FRAME",
+                      "box": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 24,
+                        "h": 24
+                      },
+                      "asset": "assets/icons/web_I1-577-49-1850.svg"
+                    },
+                    {
+                      "id": "I1:577;49:1664",
+                      "name": "Nav item",
+                      "type": "TEXT",
+                      "box": {
+                        "x": 27,
+                        "y": 3,
+                        "w": 94,
+                        "h": 18
+                      },
+                      "sizing": "HUG/HUG",
+                      "text": "English (EN)",
+                      "font": {
+                        "family": "Proxima Nova",
+                        "size": 18,
+                        "weight": 400,
+                        "lh": 18,
+                        "color": "var(--gs-tertiary_10)"
+                      }
+                    },
+                    {
+                      "id": "I1:577;49:1855",
+                      "name": "menu-down",
+                      "type": "FRAME",
+                      "box": {
+                        "x": 124,
+                        "y": 0,
+                        "w": 24,
+                        "h": 24
+                      },
+                      "asset": "assets/icons/menu-down_I1-577-49-1855.svg"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1:578",
+              "name": "Line 32",
+              "type": "INSTANCE",
+              "box": {
+                "x": 1024,
+                "y": 7,
+                "w": 0,
+                "h": 28
+              },
+              "asset": "assets/icons/line-32_1-578.svg"
+            },
+            {
+              "id": "1:579",
+              "name": "magnify",
+              "type": "INSTANCE",
+              "box": {
+                "x": 1039,
+                "y": 12,
+                "w": 24,
+                "h": 24
+              },
+              "asset": "assets/icons/magnify_1-579.svg"
+            }
+          ]
+        },
+        {
+          "id": "1:580",
+          "name": "Line 32",
+          "type": "COMPONENT",
+          "box": {
+            "x": 0,
+            "y": 70,
+            "w": 1366,
+            "h": 0
+          },
+          "children": [
+            {
+              "id": "1:581",
+              "name": "Line 32",
+              "type": "LINE",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "w": 1366,
+                "h": 0
+              },
+              "asset": "assets/vectors/line-32_1-581.svg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1:561",
+      "name": "Section 02",
+      "type": "FRAME",
+      "box": {
+        "x": 0,
+        "y": 868,
+        "w": 1366,
+        "h": 931
+      },
+      "sizing": "FIXED/HUG",
+      "layout": {
+        "dir": "column",
+        "gap": 100,
+        "pad": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "align": "MIN/CENTER"
+      },
+      "children": [
+        {
+          "id": "1:562",
+          "name": "content block 1/banner with background color",
+          "type": "COMPONENT",
+          "box": {
+            "x": 119,
+            "y": 0,
+            "w": 1128,
+            "h": 391
+          },
+          "children": [
+            {
+              "id": "1:563",
+              "name": "Rectangle 13",
+              "type": "RECTANGLE",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "w": 1128,
+                "h": 391
+              },
+              "bg": {
+                "color": "#F4F5F4"
+              }
+            },
+            {
+              "id": "1:564",
+              "name": "image 11",
+              "type": "RECTANGLE",
+              "box": {
+                "x": 580,
+                "y": 0,
+                "w": 548,
+                "h": 391
+              },
+              "asset": "assets/images/image-11_1-564.png"
+            },
+            {
+              "id": "1:565",
+              "name": "LHS Text",
+              "type": "FRAME",
+              "box": {
+                "x": 30,
+                "y": 39,
+                "w": 505,
+                "h": 313
+              },
+              "sizing": "FIXED/HUG",
+              "layout": {
+                "dir": "column",
+                "gap": 34,
+                "pad": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "align": "MIN/MIN"
+              },
+              "children": [
+                {
+                  "id": "1:566",
+                  "name": "Delivering Transformative Therapies and Advancing Health Equity ",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 505,
+                    "h": 147
+                  },
+                  "sizing": "FILL/HUG",
+                  "text": "Delivering Transformative Therapies and Advancing Health Equity ",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 40,
+                    "weight": 500,
+                    "lh": 48.7,
+                    "color": "var(--gs-tertiary_100)"
+                  },
+                  "runs": [
+                    {
+                      "text": "Delivering "
+                    },
+                    {
+                      "text": "Transformative",
+                      "weight": 700
+                    },
+                    {
+                      "text": " "
+                    },
+                    {
+                      "text": "Therapies",
+                      "weight": 700,
+                      "color": "#EC6423"
+                    },
+                    {
+                      "text": " and Advancing Health Equity "
+                    }
+                  ]
+                },
+                {
+                  "id": "1:567",
+                  "name": "Through innovation, we’re helping to build a healthier world for all people.",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 0,
+                    "y": 181,
+                    "w": 516,
+                    "h": 48
+                  },
+                  "sizing": "FIXED/HUG",
+                  "text": "Through innovation, we’re helping to build a healthier world for all people.",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 20,
+                    "weight": 500,
+                    "lh": 24.4,
+                    "color": "var(--gs-tertiary_100)"
+                  }
+                },
+                {
+                  "id": "1:568",
+                  "name": "Button",
+                  "type": "FRAME",
+                  "box": {
+                    "x": 0,
+                    "y": 263,
+                    "w": 328,
+                    "h": 50
+                  },
+                  "layout": {
+                    "dir": "row",
+                    "gap": 17,
+                    "pad": [
+                      11,
+                      17,
+                      12,
+                      22
+                    ],
+                    "align": "MIN/MAX"
+                  },
+                  "bg": {
+                    "color": "#C5203F"
+                  },
+                  "children": [
+                    {
+                      "id": "1:569",
+                      "name": "Learn More About Gilead",
+                      "type": "TEXT",
+                      "box": {
+                        "x": 22,
+                        "y": 11,
+                        "w": 246,
+                        "h": 27
+                      },
+                      "sizing": "HUG/HUG",
+                      "text": "Learn More About Gilead",
+                      "font": {
+                        "family": "Proxima Nova",
+                        "size": 22.153846740722656,
+                        "weight": 500,
+                        "lh": 27,
+                        "color": "#E7E8E5"
+                      }
+                    },
+                    {
+                      "id": "1:570",
+                      "name": "arrow-up-thin",
+                      "type": "FRAME",
+                      "box": {
+                        "x": 285,
+                        "y": 11.7,
+                        "w": 26.3,
+                        "h": 26.3
+                      },
+                      "asset": "assets/icons/arrow-up-thin_1-570.svg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1:572",
+          "name": "content block 2/banner with background color",
+          "type": "INSTANCE",
+          "box": {
+            "x": 0,
+            "y": 491,
+            "w": 1366,
+            "h": 440
+          },
+          "children": [
+            {
+              "id": "I1:572;35:292",
+              "name": "Rectangle 14",
+              "type": "RECTANGLE",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "w": 1366,
+                "h": 440
+              },
+              "bg": {
+                "color": "#D9D9D9"
+              }
+            },
+            {
+              "id": "I1:572;35:289",
+              "name": "image 13",
+              "type": "RECTANGLE",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "w": 1366,
+                "h": 440
+              },
+              "asset": "assets/images/image-13_I1-572-35-289.png"
+            },
+            {
+              "id": "I1:572;35:281",
+              "name": "LHS Text",
+              "type": "FRAME",
+              "box": {
+                "x": 781,
+                "y": 81,
+                "w": 553.4,
+                "h": 277.5
+              },
+              "sizing": "FIXED/HUG",
+              "layout": {
+                "dir": "column",
+                "gap": 18,
+                "pad": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "align": "MIN/MIN"
+              },
+              "children": [
+                {
+                  "id": "I1:572;35:282",
+                  "name": "Using Science to Improve the Lives of People and Communities",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 475.7,
+                    "h": 138.6
+                  },
+                  "text": "Using Science to Improve the Lives of People and Communities",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 36,
+                    "weight": 500,
+                    "lh": 43.8,
+                    "color": "var(--gs-tertiary_100)"
+                  }
+                },
+                {
+                  "id": "I1:572;35:283",
+                  "name": "We invest in world-class science to combat the world's most serious diseases.",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 0,
+                    "y": 156.6,
+                    "w": 553.4,
+                    "h": 50.4
+                  },
+                  "sizing": "FILL/FIXED",
+                  "text": "We invest in world-class science to combat the world's most serious diseases.",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 20,
+                    "weight": 500,
+                    "lh": 24.4,
+                    "color": "var(--gs-tertiary_100)"
+                  }
+                },
+                {
+                  "id": "I1:572;35:284",
+                  "name": "Button 1",
+                  "type": "FRAME",
+                  "box": {
+                    "x": 0,
+                    "y": 225,
+                    "w": 256.2,
+                    "h": 52.5
+                  },
+                  "layout": {
+                    "dir": "row",
+                    "gap": 15,
+                    "pad": [
+                      12,
+                      18,
+                      12,
+                      30
+                    ],
+                    "align": "MIN/MAX"
+                  },
+                  "bg": {
+                    "color": "#C5203F"
+                  },
+                  "children": [
+                    {
+                      "id": "I1:572;35:285",
+                      "name": "Explore Science",
+                      "type": "TEXT",
+                      "box": {
+                        "x": 30,
+                        "y": 12.2,
+                        "w": 165.9,
+                        "h": 28.4
+                      },
+                      "text": "Explore Science",
+                      "font": {
+                        "family": "Proxima Nova",
+                        "size": 22.153846740722656,
+                        "weight": 500,
+                        "lh": 27,
+                        "color": "#E7E8E5"
+                      }
+                    },
+                    {
+                      "id": "I1:572;35:286",
+                      "name": "arrow-up-thin",
+                      "type": "FRAME",
+                      "box": {
+                        "x": 210.9,
+                        "y": 12.9,
+                        "w": 27.6,
+                        "h": 27.6
+                      },
+                      "asset": "assets/icons/arrow-up-thin_I1-572-35-286.svg"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1:553",
+      "name": "content block 3/banner with background color inverse",
+      "type": "COMPONENT",
+      "box": {
+        "x": 0,
+        "y": 1899,
+        "w": 1366,
+        "h": 776
+      },
+      "bgAsset": "assets/images/content-block-3-banner-with-background-color-inverse_1-553.png",
+      "layout": {
+        "dir": "column",
+        "gap": 10,
+        "pad": [
+          481,
+          259,
+          67,
+          258
+        ],
+        "align": "MIN/MIN"
+      },
+      "bg": {
+        "image": true,
+        "scaleMode": "STRETCH"
+      },
+      "children": [
+        {
+          "id": "1:554",
+          "name": "Frame 1010106765",
+          "type": "FRAME",
+          "box": {
+            "x": 258,
+            "y": 481,
+            "w": 849,
+            "h": 228
+          },
+          "sizing": "FIXED/HUG",
+          "layout": {
+            "dir": "column",
+            "gap": 21,
+            "pad": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "align": "MIN/CENTER"
+          },
+          "children": [
+            {
+              "id": "1:555",
+              "name": "An Inclusive Workplace Where We All Can Make an Impact",
+              "type": "TEXT",
+              "box": {
+                "x": 165,
+                "y": 0,
+                "w": 519,
+                "h": 88
+              },
+              "sizing": "FIXED/HUG",
+              "text": "An Inclusive Workplace Where We All Can Make an Impact",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 36,
+                "weight": 500,
+                "lh": 43.8,
+                "align": "CENTER",
+                "color": "var(--gs-tertiary_10)"
+              }
+            },
+            {
+              "id": "1:556",
+              "name": "Gilead employees work to advance scientific innovation, help ensure our medicines reach those who need it and make a difference in the communities where we live and work.",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 109,
+                "w": 849,
+                "h": 48
+              },
+              "sizing": "FILL/HUG",
+              "text": "Gilead employees work to advance scientific innovation, help ensure our medicines reach those who need it and make a difference in the communities where we live and work.",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 20,
+                "weight": 500,
+                "lh": 24.4,
+                "align": "CENTER",
+                "color": "var(--gs-tertiary_10)"
+              }
+            },
+            {
+              "id": "1:557",
+              "name": "Button ",
+              "type": "FRAME",
+              "box": {
+                "x": 250,
+                "y": 178,
+                "w": 349,
+                "h": 50
+              },
+              "layout": {
+                "dir": "row",
+                "gap": 17,
+                "pad": [
+                  11,
+                  19,
+                  12,
+                  32
+                ],
+                "align": "MIN/MAX"
+              },
+              "bg": {
+                "color": "#C5203F"
+              },
+              "children": [
+                {
+                  "id": "1:558",
+                  "name": "Explore Careers at Gilead",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 32,
+                    "y": 11,
+                    "w": 250,
+                    "h": 27
+                  },
+                  "sizing": "HUG/HUG",
+                  "text": "Explore Careers at Gilead",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 22.153846740722656,
+                    "weight": 500,
+                    "lh": 27,
+                    "color": "var(--gs-tertiary_10)"
+                  }
+                },
+                {
+                  "id": "1:559",
+                  "name": "arrow-up-thin",
+                  "type": "FRAME",
+                  "box": {
+                    "x": 299,
+                    "y": 11.7,
+                    "w": 30.5,
+                    "h": 26.3
+                  },
+                  "asset": "assets/icons/arrow-up-thin_1-559.svg"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1:552",
+      "name": "footer/footer with three columns",
+      "type": "INSTANCE",
+      "box": {
+        "x": 0,
+        "y": 2675,
+        "w": 1366,
+        "h": 511
+      },
+      "layout": {
+        "dir": "row",
+        "gap": 109,
+        "pad": [
+          73,
+          94,
+          20,
+          122
+        ],
+        "align": "MIN/MIN",
+        "wrap": true
+      },
+      "bg": {
+        "color": "#E2EAF4"
+      },
+      "children": [
+        {
+          "id": "I1:552;37:448",
+          "name": "Gilead Block",
+          "type": "INSTANCE",
+          "box": {
+            "x": 122,
+            "y": 73,
+            "w": 241,
+            "h": 298
+          },
+          "children": [
+            {
+              "id": "I1:552;37:448;37:443",
+              "name": "image_01/custom image",
+              "type": "INSTANCE",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "w": 184,
+                "h": 51
+              },
+              "constraints": "SCALE/SCALE",
+              "children": [
+                {
+                  "id": "I1:552;37:448;37:443;163:709",
+                  "name": "Image",
+                  "type": "RECTANGLE",
+                  "box": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 184,
+                    "h": 51
+                  },
+                  "asset": "assets/images/image_I1-552-37-448-37-443-163-709.png"
+                }
+              ]
+            },
+            {
+              "id": "I1:552;37:448;37:398",
+              "name": "This is our global website, intended for visitors seeking information on Gilead’s worldwide business. Some content on this site is not intended for people outside the United States. Visit our Global Operations page for links to our international corporate websites.",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 77,
+                "w": 241,
+                "h": 175
+              },
+              "text": "This is our global website, intended for visitors seeking information on Gilead’s worldwide business. Some content on this site is not intended for people outside the United States. Visit our Global Operations page for links to our international corporate websites.",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 600,
+                "lh": 25,
+                "color": "var(--gs-tertiary_100)"
+              },
+              "runs": [
+                {
+                  "text": "This is our global website, intended for visitors seeking information on Gilead’s worldwide business. Some content on this site is not intended for people outside the United States. Visit our ",
+                  "weight": 400
+                },
+                {
+                  "text": "Global Operations",
+                  "weight": 500,
+                  "deco": "UNDERLINE",
+                  "color": "#0D6EFD"
+                },
+                {
+                  "text": " page for links to our international corporate websites.",
+                  "weight": 400
+                }
+              ]
+            },
+            {
+              "id": "I1:552;37:448;37:399",
+              "name": "link list 4/unordered list",
+              "type": "FRAME",
+              "box": {
+                "x": 0,
+                "y": 274,
+                "w": 176,
+                "h": 24
+              },
+              "asset": "assets/vectors/link-list-4-unordered-list_I1-552-37-448-37-399.svg"
+            }
+          ]
+        },
+        {
+          "id": "I1:552;37:450",
+          "name": "link list 1/unordered list",
+          "type": "INSTANCE",
+          "box": {
+            "x": 472,
+            "y": 73,
+            "w": 113,
+            "h": 258
+          },
+          "children": [
+            {
+              "id": "I1:552;37:450;37:419",
+              "name": "Quick Links",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "w": 76,
+                "h": 25
+              },
+              "constraints": "LEFT_RIGHT/TOP",
+              "text": "Quick Links",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 700,
+                "lh": 25,
+                "case": "SMALL_CAPS_FORCED",
+                "color": "#203662"
+              }
+            },
+            {
+              "id": "I1:552;37:450;37:420",
+              "name": "Pipeline",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 116,
+                "w": 51,
+                "h": 25
+              },
+              "text": "Pipeline",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 600,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              }
+            },
+            {
+              "id": "I1:552;37:450;37:421",
+              "name": "News",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 194,
+                "w": 36,
+                "h": 25
+              },
+              "text": "News",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 600,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              }
+            },
+            {
+              "id": "I1:552;37:450;37:422",
+              "name": "Stories@Gilead",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 233,
+                "w": 95,
+                "h": 25
+              },
+              "text": "Stories@Gilead",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 600,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              }
+            },
+            {
+              "id": "I1:552;37:450;37:423",
+              "name": "Frame 1010106769",
+              "type": "FRAME",
+              "box": {
+                "x": 0,
+                "y": 38,
+                "w": 73,
+                "h": 25
+              },
+              "children": [
+                {
+                  "id": "I1:552;37:450;37:424",
+                  "name": "Investors",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 57,
+                    "h": 25
+                  },
+                  "text": "Investors",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 14,
+                    "weight": 600,
+                    "lh": 25,
+                    "case": "TITLE",
+                    "color": "#404040"
+                  }
+                },
+                {
+                  "id": "I1:552;37:450;37:425",
+                  "name": "export",
+                  "type": "FRAME",
+                  "box": {
+                    "x": 61,
+                    "y": 6.5,
+                    "w": 12,
+                    "h": 12
+                  },
+                  "asset": "assets/icons/export_I1-552-37-450-37-425.svg"
+                }
+              ]
+            },
+            {
+              "id": "I1:552;37:450;37:427",
+              "name": "Frame 1010106770",
+              "type": "FRAME",
+              "box": {
+                "x": 0,
+                "y": 77,
+                "w": 85,
+                "h": 25
+              },
+              "children": [
+                {
+                  "id": "I1:552;37:450;37:428",
+                  "name": "Find a Trial",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 71,
+                    "h": 25
+                  },
+                  "text": "Find a Trial",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 14,
+                    "weight": 600,
+                    "lh": 25,
+                    "case": "TITLE",
+                    "color": "#404040"
+                  }
+                },
+                {
+                  "id": "I1:552;37:450;37:429",
+                  "name": "export",
+                  "type": "FRAME",
+                  "box": {
+                    "x": 73,
+                    "y": 6.5,
+                    "w": 12,
+                    "h": 12
+                  },
+                  "asset": "assets/icons/export_I1-552-37-450-37-429.svg"
+                }
+              ]
+            },
+            {
+              "id": "I1:552;37:450;37:431",
+              "name": "Frame 1010106771",
+              "type": "FRAME",
+              "box": {
+                "x": 0,
+                "y": 155,
+                "w": 113,
+                "h": 25
+              },
+              "children": [
+                {
+                  "id": "I1:552;37:450;37:432",
+                  "name": "Search for Jobs",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 98,
+                    "h": 25
+                  },
+                  "text": "Search for Jobs",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 14,
+                    "weight": 600,
+                    "lh": 25,
+                    "case": "TITLE",
+                    "color": "#404040"
+                  },
+                  "runs": [
+                    {
+                      "text": "Search "
+                    },
+                    {
+                      "text": "for"
+                    },
+                    {
+                      "text": " Jobs"
+                    }
+                  ]
+                },
+                {
+                  "id": "I1:552;37:450;37:433",
+                  "name": "export",
+                  "type": "FRAME",
+                  "box": {
+                    "x": 101,
+                    "y": 6.5,
+                    "w": 12,
+                    "h": 12
+                  },
+                  "asset": "assets/icons/export_I1-552-37-450-37-433.svg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "I1:552;37:449",
+          "name": "link list 2/unordered list",
+          "type": "INSTANCE",
+          "box": {
+            "x": 694,
+            "y": 73,
+            "w": 155,
+            "h": 180
+          },
+          "children": [
+            {
+              "id": "I1:552;37:449;37:411",
+              "name": "Get in Touch",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "w": 85,
+                "h": 25
+              },
+              "constraints": "SCALE/SCALE",
+              "text": "Get in Touch",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 700,
+                "lh": 25,
+                "case": "SMALL_CAPS_FORCED",
+                "color": "#203662"
+              }
+            },
+            {
+              "id": "I1:552;37:449;37:412",
+              "name": "Contact Us",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 38,
+                "w": 70,
+                "h": 25
+              },
+              "constraints": "SCALE/SCALE",
+              "text": "Contact Us",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 600,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              }
+            },
+            {
+              "id": "I1:552;37:449;37:413",
+              "name": "Report an Adverse Event",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 77,
+                "w": 155,
+                "h": 25
+              },
+              "constraints": "SCALE/SCALE",
+              "text": "Report an Adverse Event",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 600,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              },
+              "runs": [
+                {
+                  "text": "Report "
+                },
+                {
+                  "text": "an"
+                },
+                {
+                  "text": " Adverse Event"
+                }
+              ]
+            },
+            {
+              "id": "I1:552;37:449;37:414",
+              "name": "Partnership Request",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 155,
+                "w": 127,
+                "h": 25
+              },
+              "constraints": "SCALE/SCALE",
+              "text": "Partnership Request",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 600,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              }
+            },
+            {
+              "id": "I1:552;37:449;37:415",
+              "name": "Frame 1010106772",
+              "type": "FRAME",
+              "box": {
+                "x": 0,
+                "y": 116,
+                "w": 142,
+                "h": 25
+              },
+              "constraints": "SCALE/SCALE",
+              "children": [
+                {
+                  "id": "I1:552;37:449;37:416",
+                  "name": "medical Information",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 125,
+                    "h": 25
+                  },
+                  "text": "medical Information",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 14,
+                    "weight": 600,
+                    "lh": 25,
+                    "case": "TITLE",
+                    "color": "#404040"
+                  }
+                },
+                {
+                  "id": "I1:552;37:449;37:417",
+                  "name": "export",
+                  "type": "FRAME",
+                  "box": {
+                    "x": 130,
+                    "y": 6.5,
+                    "w": 12,
+                    "h": 12
+                  },
+                  "asset": "assets/icons/export_I1-552-37-449-37-417.svg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "I1:552;37:447",
+          "name": "link list 3/unordered list",
+          "type": "INSTANCE",
+          "box": {
+            "x": 958,
+            "y": 73,
+            "w": 232,
+            "h": 258
+          },
+          "children": [
+            {
+              "id": "I1:552;37:447;37:381",
+              "name": "Legal",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "w": 38,
+                "h": 25
+              },
+              "constraints": "SCALE/SCALE",
+              "text": "Legal",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 700,
+                "lh": 25,
+                "case": "SMALL_CAPS_FORCED",
+                "color": "#203662"
+              }
+            },
+            {
+              "id": "I1:552;37:447;37:382",
+              "name": "Modern Slavery Act Statement",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 38,
+                "w": 191,
+                "h": 25
+              },
+              "constraints": "SCALE/SCALE",
+              "text": "Modern Slavery Act Statement",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 600,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              }
+            },
+            {
+              "id": "I1:552;37:447;37:383",
+              "name": "Public Policy Engagement",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 77,
+                "w": 163,
+                "h": 25
+              },
+              "constraints": "SCALE/SCALE",
+              "text": "Public Policy Engagement",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 600,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              }
+            },
+            {
+              "id": "I1:552;37:447;37:384",
+              "name": "Social Media Guidelines",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 116,
+                "w": 150,
+                "h": 25
+              },
+              "constraints": "SCALE/SCALE",
+              "text": "Social Media Guidelines",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 600,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              }
+            },
+            {
+              "id": "I1:552;37:447;37:385",
+              "name": "Consumer Health Data Privacy Policy",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 155,
+                "w": 232,
+                "h": 25
+              },
+              "constraints": "SCALE/SCALE",
+              "text": "Consumer Health Data Privacy Policy",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 600,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              }
+            },
+            {
+              "id": "I1:552;37:447;37:386",
+              "name": "Terms of Use",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 194,
+                "w": 85,
+                "h": 25
+              },
+              "constraints": "SCALE/SCALE",
+              "text": "Terms of Use",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 600,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              }
+            },
+            {
+              "id": "I1:552;37:447;37:387",
+              "name": "Cookie Statement",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 233,
+                "w": 112,
+                "h": 25
+              },
+              "constraints": "SCALE/SCALE",
+              "text": "Cookie Statement",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 600,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I1:552;37:446",
+          "name": "Unity Links",
+          "type": "INSTANCE",
+          "box": {
+            "x": 122,
+            "y": 452,
+            "w": 1150,
+            "h": 39
+          },
+          "children": [
+            {
+              "id": "I1:552;37:446;37:374",
+              "name": "Line 32",
+              "type": "LINE",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "w": 1150,
+                "h": 0
+              },
+              "asset": "assets/vectors/line-32_I1-552-37-446-37-374.svg"
+            },
+            {
+              "id": "I1:552;37:446;37:375",
+              "name": "© 1996-2026 Gilead Sciences, Inc. All rights reserved.",
+              "type": "TEXT",
+              "box": {
+                "x": 0,
+                "y": 13,
+                "w": 338,
+                "h": 25
+              },
+              "text": "© 1996-2026 Gilead Sciences, Inc. All rights reserved.",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 400,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              }
+            },
+            {
+              "id": "I1:552;37:446;37:376",
+              "name": "Frame 1010106773",
+              "type": "FRAME",
+              "box": {
+                "x": 371,
+                "y": 14,
+                "w": 136,
+                "h": 25
+              },
+              "children": [
+                {
+                  "id": "I1:552;37:446;37:377",
+                  "name": "web",
+                  "type": "FRAME",
+                  "box": {
+                    "x": 0,
+                    "y": 3.5,
+                    "w": 18,
+                    "h": 18
+                  },
+                  "asset": "assets/icons/web_I1-552-37-446-37-377.svg"
+                },
+                {
+                  "id": "I1:552;37:446;37:379",
+                  "name": "Global Operations",
+                  "type": "TEXT",
+                  "box": {
+                    "x": 24,
+                    "y": 0,
+                    "w": 112,
+                    "h": 25
+                  },
+                  "text": "Global Operations",
+                  "font": {
+                    "family": "Proxima Nova",
+                    "size": 14,
+                    "weight": 400,
+                    "lh": 25,
+                    "case": "TITLE",
+                    "color": "#404040"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "I1:552;37:446;37:380",
+              "name": "Sitemap",
+              "type": "TEXT",
+              "box": {
+                "x": 523,
+                "y": 13,
+                "w": 51,
+                "h": 25
+              },
+              "text": "Sitemap",
+              "font": {
+                "family": "Proxima Nova",
+                "size": 14,
+                "weight": 400,
+                "lh": 25,
+                "case": "TITLE",
+                "color": "#404040"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

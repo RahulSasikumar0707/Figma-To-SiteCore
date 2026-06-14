@@ -1,0 +1,82 @@
+{
+  "pixelHistory": [
+    91.9,
+    92,
+    92.1
+  ],
+  "finalPixelScore": 92.1,
+  "finalLayoutFailures": [
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "image-41_I68484-1066-68467-7021-68467-7012-68467-7008.png",
+      "expected": "x=279px @1366 artboard",
+      "actual": "x=140px",
+      "fix": "Shift horizontally to x≈279px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "image-47_I68484-1073-24-1140-24-1137.png",
+      "expected": "x=712px @1366 artboard",
+      "actual": "x=778px",
+      "fix": "Shift horizontally to x≈712px (check column/alignment classes)"
+    },
+    {
+      "severity": "major",
+      "type": "image-size",
+      "file": "image-48_I68484-1077-68484-714.png",
+      "expected": "25x43px",
+      "actual": "0x0px",
+      "fix": "Resize to 25x43px (design value)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "image-48_I68484-1077-68484-714.png",
+      "expected": "x=284px @1366 artboard",
+      "actual": "x=0px",
+      "fix": "Shift horizontally to x≈284px (check column/alignment classes)"
+    },
+    {
+      "severity": "major",
+      "type": "image-size",
+      "file": "image-49_I68484-1077-68484-900.png",
+      "expected": "31x35px",
+      "actual": "0x0px",
+      "fix": "Resize to 31x35px (design value)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "image-49_I68484-1077-68484-900.png",
+      "expected": "x=285px @1366 artboard",
+      "actual": "x=0px",
+      "fix": "Shift horizontally to x≈285px (check column/alignment classes)"
+    },
+    {
+      "severity": "major",
+      "type": "image-size",
+      "file": "image-50_I68484-1077-68484-905.png",
+      "expected": "20x34px",
+      "actual": "0x0px",
+      "fix": "Resize to 20x34px (design value)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "image-50_I68484-1077-68484-905.png",
+      "expected": "x=286px @1366 artboard",
+      "actual": "x=0px",
+      "fix": "Shift horizontally to x≈286px (check column/alignment classes)"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "APPROVED USE AND IMPORTANT SAFETY INFORM",
+      "expected": "18px",
+      "actual": "16px",
+      "fix": "Set font-size to 18px (use the matching token/heading class)"
+    }
+  ]
+}

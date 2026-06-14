@@ -1,0 +1,67 @@
+{
+  "score": 62,
+  "pass": false,
+  "summary": "Both sections are present in order with correct text and EDS hero-banner signature classes, but the second banner has significant visual mismatches: the 'twice-yearly PrEP is here' line renders white instead of black, the CTA arrow points down/right instead of up-right and is misplaced, and the title/CTA positioning diverges noticeably from the design. Layout offsets push content lower than the design across multiple strips.",
+  "issues": [
+    {
+      "severity": "major",
+      "area": "68222:3951 banner-title-2",
+      "expected": "'The first-ever twice-yearly PrEP is here' line color #000000 (per measurement)",
+      "actual": "color set to var(--gs-tertiary_10) = #FFFFFF (white)",
+      "fix": "Set .bt2-line2 color to #000000"
+    },
+    {
+      "severity": "major",
+      "area": "assets/icons/arrow-up-thin",
+      "expected": "Arrow icon at x≈288px, pointing up-right (arrow-up-thin)",
+      "actual": "Arrow at x=463px, rotated 90deg making it point down",
+      "fix": "Remove the rotate(90deg) so the arrow points up-right and correct horizontal placement to x≈288px"
+    },
+    {
+      "severity": "minor",
+      "area": "68222:3913 banner-title-1",
+      "expected": "Title sized so 'Dosing information for treatment with TRODELVY' wraps after 'for' as in design",
+      "actual": "Title wraps after 'with', text appears slightly larger/positioned differently",
+      "fix": "Match font-size and max-width so wrapping matches the design"
+    },
+    {
+      "severity": "minor",
+      "area": "styles.css typography tokens",
+      "expected": "Use design token font sizes (e.g. h-scale rem values)",
+      "actual": "Hard-coded px sizes (25.18px, 46.49px, 15.5px etc.)",
+      "fix": "Map to nearest design tokens where applicable for consistency"
+    },
+    {
+      "severity": "minor",
+      "area": "banner-cta",
+      "expected": "CTA background coral/red per design",
+      "actual": "#CB4C44 raw hex used (acceptable as no token), but verify hue matches design coral",
+      "fix": "Confirm coral matches design; otherwise no token exists so hex is fine"
+    },
+    {
+      "severity": "minor",
+      "area": "Overall layout vertical offset",
+      "expected": "Content vertical positions match design strips",
+      "actual": "Content offset lower in strips 2-5 vs design",
+      "fix": "Reduce top offsets / image heights to align content rows with design"
+    }
+  ],
+  "layoutFailures": [
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "arrow-up-thin_I68327-3843-68327-3840.svg",
+      "expected": "x=288px @1366 artboard",
+      "actual": "x=463px",
+      "fix": "Shift horizontally to x≈288px (check column/alignment classes)"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "The first-ever twice-yearly PrEP is here",
+      "expected": "#000000",
+      "actual": "rgb(255, 255, 255)",
+      "fix": "Set color to #000000 (or its token)"
+    }
+  ]
+}

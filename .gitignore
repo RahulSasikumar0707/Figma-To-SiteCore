@@ -1,4 +1,4 @@
 .env
 node_modules/
-Output_*/
 *.log
+eds-native.css

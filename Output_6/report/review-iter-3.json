@@ -1,0 +1,132 @@
+{
+  "score": 90,
+  "pass": false,
+  "summary": "The page is a strong, near-pixel-perfect reproduction of the design with all 11 sections present, in correct order, EDS signature classes applied, and accurate text/asset references. Remaining issues are minor sizing/weight deviations (hero arrow size, card title font-size, ISI bold-line color/weight) consistent with the 93.3% pixel-match.",
+  "issues": [
+    {
+      "severity": "major",
+      "area": "Hero banner / arrow-up-thin",
+      "expected": "29x29px arrow icon",
+      "actual": "Rendered at ~41x41px (rotate transform inflates visual size)",
+      "fix": "Constrain icon to 29x29px and verify rotation does not scale it"
+    },
+    {
+      "severity": "major",
+      "area": "Cards (titles)",
+      "expected": "24px card title font-size",
+      "actual": "22px (.ep-card-title set to 22px)",
+      "fix": "Set .ep-info-card .ep-card-title font-size to 24px"
+    },
+    {
+      "severity": "major",
+      "area": "ISI tray (Hepatitis B line)",
+      "expected": "font-size 15px, weight 700, color #000000",
+      "actual": "List item lead-in renders at different size/weight/color (computed 18px/400/rgb(33,37,41) for some ISI text)",
+      "fix": "Force ISI body text to 15px, weight 700, #000000 to match spec"
+    },
+    {
+      "severity": "minor",
+      "area": "Long RTF (What is EPCLUSA heading)",
+      "expected": "font-weight 700 for the heading line",
+      "actual": "Computed weight 400 in some measurements",
+      "fix": "Ensure .ep-l-h weight 700 wins over Bootstrap defaults"
+    },
+    {
+      "severity": "minor",
+      "area": "Header secondary nav",
+      "expected": "Design uses muted blue-gray bar (#50758A approximation)",
+      "actual": "Matches closely but relies on !important overrides; acceptable",
+      "fix": "No change needed; verify token usage where available"
+    },
+    {
+      "severity": "minor",
+      "area": "Cards2 ZIP/Go",
+      "expected": "Go button and ZIP field match design sizing precisely",
+      "actual": "Close but Go button width/contrast slightly differs",
+      "fix": "Fine-tune .ep-zip-go padding/contrast to match design"
+    }
+  ],
+  "pixelScore": 93.3,
+  "layoutFailures": [
+    {
+      "severity": "major",
+      "type": "image-size",
+      "file": "arrow-up-thin_I68226-5182-68226-4252-68226-4227.svg",
+      "expected": "29x29px",
+      "actual": "41x41px",
+      "fix": "Resize to 29x29px (design value)"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "Questions about Hep C treatment?",
+      "expected": "24px",
+      "actual": "22px",
+      "fix": "Set font-size to 24px (use the matching token/heading class)"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "EPCLUSA can treat Hep C",
+      "expected": "24px",
+      "actual": "22px",
+      "fix": "Set font-size to 24px (use the matching token/heading class)"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "One pill, once a day, one step closer to",
+      "expected": "24px",
+      "actual": "22px",
+      "fix": "Set font-size to 24px (use the matching token/heading class)"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "Hep C may lead to serious liver damage.",
+      "expected": "24px",
+      "actual": "22px",
+      "fix": "Set font-size to 24px (use the matching token/heading class)"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "Have Medicaid?",
+      "expected": "24px",
+      "actual": "22px",
+      "fix": "Set font-size to 24px (use the matching token/heading class)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "What is EPCLUSA? EPCLUSA is a prescripti",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "15px",
+      "actual": "18px",
+      "fix": "Set font-size to 15px (use the matching token/heading class)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "#000000",
+      "actual": "rgb(33, 37, 41)",
+      "fix": "Set color to #000000 (or its token)"
+    }
+  ]
+}

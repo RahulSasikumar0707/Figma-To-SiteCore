@@ -1,0 +1,123 @@
+{
+  "pixelHistory": [
+    92,
+    76.4,
+    82.2
+  ],
+  "finalPixelScore": 92,
+  "finalLayoutFailures": [
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "web_I1-577-49-1850.svg",
+      "expected": "x=996px @1366 artboard",
+      "actual": "x=1124px",
+      "fix": "Shift horizontally to x≈996px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "menu-down_I1-577-49-1855.svg",
+      "expected": "x=1120px @1366 artboard",
+      "actual": "x=1255px",
+      "fix": "Shift horizontally to x≈1120px (check column/alignment classes)"
+    },
+    {
+      "severity": "critical",
+      "type": "missing-image",
+      "file": "line-32_1-578.svg",
+      "expected": "0x28 (\"Line 32\")",
+      "fix": "Add <img src=\"...line-32_1-578.svg\"> (or background-image) sized 0x28px"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "magnify_1-579.svg",
+      "expected": "x=1191px @1366 artboard",
+      "actual": "x=1318px",
+      "fix": "Shift horizontally to x≈1191px (check column/alignment classes)"
+    },
+    {
+      "severity": "critical",
+      "type": "missing-image",
+      "file": "line-32_1-581.svg",
+      "expected": "1366x0 (\"Line 32\")",
+      "fix": "Add <img src=\"...line-32_1-581.svg\"> (or background-image) sized 1366x0px"
+    },
+    {
+      "severity": "major",
+      "type": "image-size",
+      "file": "content-block-3-banner-with-background-color-inverse_1-553.png",
+      "expected": "1366x776px",
+      "actual": "1366x1661px",
+      "fix": "Resize to 1366x776px (design value)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "This is our global website, intended for",
+      "expected": "600",
+      "actual": "400",
+      "fix": "Set font-weight to 600"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I1-552-37-450-37-425.svg",
+      "expected": "x=533px @1366 artboard",
+      "actual": "x=477px",
+      "fix": "Shift horizontally to x≈533px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I1-552-37-450-37-429.svg",
+      "expected": "x=545px @1366 artboard",
+      "actual": "x=488px",
+      "fix": "Shift horizontally to x≈545px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I1-552-37-450-37-433.svg",
+      "expected": "x=573px @1366 artboard",
+      "actual": "x=520px",
+      "fix": "Shift horizontally to x≈573px (check column/alignment classes)"
+    },
+    {
+      "severity": "critical",
+      "type": "missing-text",
+      "text": "medical Information",
+      "fix": "Add this text content exactly as written"
+    },
+    {
+      "severity": "critical",
+      "type": "missing-text",
+      "text": "Terms of Use",
+      "fix": "Add this text content exactly as written"
+    },
+    {
+      "severity": "critical",
+      "type": "missing-image",
+      "file": "line-32_I1-552-37-446-37-374.svg",
+      "expected": "1150x0 (\"Line 32\")",
+      "fix": "Add <img src=\"...line-32_I1-552-37-446-37-374.svg\"> (or background-image) sized 1150x0px"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "Global Operations",
+      "expected": "400",
+      "actual": "500",
+      "fix": "Set font-weight to 400"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "Global Operations",
+      "expected": "#404040",
+      "actual": "rgb(13, 110, 253)",
+      "fix": "Set color to #404040 (or its token)"
+    }
+  ]
+}

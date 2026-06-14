@@ -1,0 +1,155 @@
+{
+  "score": 88,
+  "pass": false,
+  "summary": "The page faithfully reproduces all 11 design sections in correct order with the appropriate EDS signature classes (eds-header, eds-announcement-banner, eds-hero-banner, eds-card, eds-video, eds-isi, eds-footer) and accurate text content. The main visual defect is the hero banner image being collapsed to ~60px height instead of 461px, plus several minor icon-positioning and ISI text styling failures.",
+  "issues": [
+    {
+      "severity": "major",
+      "area": "Hero banner (68226:5182)",
+      "expected": "Hero image rendered at 1070x461px with headline, TO-DAY LIST logo, Why EPCLUSA? CTA and description overlaid",
+      "actual": "Hero image collapses to ~1070x60px; the headline, logo, CTA, and description text are not visible in the render",
+      "fix": "Remove the aspect-ratio/overflow rules forcing collapse; ensure .ep-hero-inner sizes to image height (461px @1366) and overlay content is positioned/visible"
+    },
+    {
+      "severity": "major",
+      "area": "Plain RTF long block (68226:5176)",
+      "expected": "Hepatitis B virus reactivation list item at 15px font-size",
+      "actual": "Rendered at 18px (computed-style failure)",
+      "fix": "Set font-size to 15px for the bold list item per token/heading class"
+    },
+    {
+      "severity": "major",
+      "area": "ISI / Plain RTF text color (68226:5175/5176)",
+      "expected": "Body color #000000",
+      "actual": "rgb(33,37,41) inherited from Bootstrap on some text",
+      "fix": "Force color:#000000 on the affected ISI/RTF text nodes"
+    },
+    {
+      "severity": "minor",
+      "area": "Header export icons (68226:5185)",
+      "expected": "Icons at x=763/903/1125px @1366",
+      "actual": "Rendered at x=665/832/1087px",
+      "fix": "Increase top-nav link gaps/alignment to shift icons right to spec"
+    },
+    {
+      "severity": "minor",
+      "area": "Cards container 02 (68226:5177)",
+      "expected": "magnify icon x=314, image x=225, button x=877, bottle x=799",
+      "actual": "magnify x=352, image x=193, button x=907, bottle x=768",
+      "fix": "Adjust card image column widths and paddings to match spec x-positions"
+    },
+    {
+      "severity": "minor",
+      "area": "Plain RTF (68226:5176)",
+      "expected": "'What is EPCLUSA?' intro paragraph font-weight 700",
+      "actual": "font-weight 400 on first body paragraph",
+      "fix": "Set font-weight:700 for the intro body paragraph as measured"
+    },
+    {
+      "severity": "minor",
+      "area": "Footer logo (68226:5174)",
+      "expected": "Gilead logo positioned left within content max-width",
+      "actual": "Logo offset via padding-left:255px which may misalign at different widths",
+      "fix": "Verify logo alignment matches design x-position consistently"
+    }
+  ],
+  "pixelScore": 91.5,
+  "layoutFailures": [
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I68226-5185-68226-5125-68226-5103.svg",
+      "expected": "x=763px @1366 artboard",
+      "actual": "x=665px",
+      "fix": "Shift horizontally to x≈763px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I68226-5185-68226-5125-68226-5107.svg",
+      "expected": "x=903px @1366 artboard",
+      "actual": "x=832px",
+      "fix": "Shift horizontally to x≈903px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I68226-5185-68226-5125-68226-5111.svg",
+      "expected": "x=1125px @1366 artboard",
+      "actual": "x=1087px",
+      "fix": "Shift horizontally to x≈1125px (check column/alignment classes)"
+    },
+    {
+      "severity": "major",
+      "type": "image-size",
+      "file": "image-39_I68226-5182-68226-4251-68226-4231.png",
+      "expected": "1070x461px",
+      "actual": "1070x60px",
+      "fix": "Resize to 1070x461px (design value)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "rectangle-4_I68226-5177-68226-4359-68226-4311.png",
+      "expected": "x=225px @1366 artboard",
+      "actual": "x=193px",
+      "fix": "Shift horizontally to x≈225px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "magnify_I68226-5177-68226-4359-68226-4300.svg",
+      "expected": "x=314px @1366 artboard",
+      "actual": "x=352px",
+      "fix": "Shift horizontally to x≈314px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "rectangle-4_I68226-5177-68226-4360-68226-4314.png",
+      "expected": "x=799px @1366 artboard",
+      "actual": "x=768px",
+      "fix": "Shift horizontally to x≈799px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "button_I68226-5177-68226-4360-68226-4306.svg",
+      "expected": "x=877px @1366 artboard",
+      "actual": "x=907px",
+      "fix": "Shift horizontally to x≈877px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "What is EPCLUSA? EPCLUSA is a prescripti",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    },
+    {
+      "severity": "major",
+      "type": "font-size",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "15px",
+      "actual": "18px",
+      "fix": "Set font-size to 15px (use the matching token/heading class)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "#000000",
+      "actual": "rgb(33, 37, 41)",
+      "fix": "Set color to #000000 (or its token)"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+[
+  {
+    "nodeId": "I68210:2699;68210:2689",
+    "name": "Image",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "1e6770646dc671af55e3a08a66f0f5135427a2f1",
+    "w": 111,
+    "h": 31,
+    "file": "assets/images/image_I68210-2699-68210-2689.png"
+  },
+  {
+    "nodeId": "I68211:2773;68211:2760",
+    "name": "image_03/custom image",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "bfed99896a8c01551f79f8e9dc6b2d5a041ec89a",
+    "w": 107,
+    "h": 110,
+    "file": "assets/images/image-03-custom-image_I68211-2773-68211-2760.png"
+  },
+  {
+    "nodeId": "I68211:2773;68211:2761;68211:2749",
+    "name": "Mask Group",
+    "kind": "icon",
+    "format": "svg",
+    "w": 20,
+    "h": 20,
+    "file": "assets/icons/mask-group_I68211-2773-68211-2761-68211-2749.svg"
+  },
+  {
+    "nodeId": "I68212:3000;68212:2995",
+    "name": "RTE → Picture → group-of-men-walking-smiling.png",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "579b609a2bcb4573ba2fd772abef192ab75f6d91",
+    "w": 382,
+    "h": 275,
+    "file": "assets/images/rte-picture-group-of-men-walking-smiling-png_I68212-3000-68212-2995.png"
+  },
+  {
+    "nodeId": "I68212:3077;68212:3054;68212:3031",
+    "name": "check-icon",
+    "kind": "icon",
+    "format": "svg",
+    "w": 48,
+    "h": 48,
+    "file": "assets/icons/check-icon_I68212-3077-68212-3054-68212-3031.svg"
+  },
+  {
+    "nodeId": "I68212:3077;68212:3055;68212:3043",
+    "name": "x-icon",
+    "kind": "icon",
+    "format": "svg",
+    "w": 50,
+    "h": 50,
+    "file": "assets/icons/x-icon_I68212-3077-68212-3055-68212-3043.svg"
+  },
+  {
+    "nodeId": "I68212:3118;68212:3115",
+    "name": "image 33",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "fdb5d768231516189de93896d55bb59fd01d7ec9",
+    "w": 324,
+    "h": 210,
+    "file": "assets/images/image-33_I68212-3118-68212-3115.png"
+  },
+  {
+    "nodeId": "68212:2932",
+    "name": "lamont-everett-discussing-prep-thumbnail.png",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "7fced1fe6001d96e6018906cee78f5c73c3ed5a0",
+    "w": 396,
+    "h": 181,
+    "file": "assets/images/lamont-everett-discussing-prep-thumbnail-png_68212-2932.png"
+  },
+  {
+    "nodeId": "68212:2933",
+    "name": "Play Icon",
+    "kind": "vector",
+    "format": "svg",
+    "w": 71,
+    "h": 71,
+    "file": "assets/vectors/play-icon_68212-2933.svg"
+  },
+  {
+    "nodeId": "68212:2944",
+    "name": "Mask Group",
+    "kind": "icon",
+    "format": "svg",
+    "w": 20,
+    "h": 20,
+    "file": "assets/icons/mask-group_68212-2944.svg"
+  },
+  {
+    "nodeId": "68212:2956",
+    "name": "sergio-and-kevin-discussing-prep-thumbnail.png",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "6b87c2a16d74a2bd05d97669d1c150142aa44105",
+    "w": 396,
+    "h": 181,
+    "file": "assets/images/sergio-and-kevin-discussing-prep-thumbnail-png_68212-2956.png"
+  },
+  {
+    "nodeId": "68212:2957",
+    "name": "Play Icon",
+    "kind": "vector",
+    "format": "svg",
+    "w": 71,
+    "h": 71,
+    "file": "assets/vectors/play-icon_68212-2957.svg"
+  },
+  {
+    "nodeId": "68212:2968",
+    "name": "Mask Group",
+    "kind": "icon",
+    "format": "svg",
+    "w": 20,
+    "h": 20,
+    "file": "assets/icons/mask-group_68212-2968.svg"
+  },
+  {
+    "nodeId": "I68212:3329;68212:3155",
+    "name": "descovyprep-logo-2x.svg fill",
+    "kind": "vector",
+    "format": "svg",
+    "w": 118,
+    "h": 49,
+    "file": "assets/vectors/descovyprep-logo-2x-svg-fill_I68212-3329-68212-3155.svg"
+  }
+]

@@ -1,0 +1,117 @@
+{
+  "score": 90,
+  "pass": false,
+  "summary": "The page reproduces all 10 sections in correct order with accurate text fidelity, EDS signature classes present, and correct asset references, matching the 93.2% pixel score closely. Main deductions are for the hero image being shifted right (x=913 vs 763), the hero title font-weight 600 vs 800, ISI body text color rendered black instead of #327C95, and minor video-card/thumbnail x-position offsets.",
+  "issues": [
+    {
+      "severity": "major",
+      "area": "Hero banner (68212:3118)",
+      "expected": "image-33 at x≈763px @1366 artboard",
+      "actual": "Image rendered at x=913px (pushed too far right via flex-end)",
+      "fix": "Adjust hero column widths/justification so the image sits at x≈763px"
+    },
+    {
+      "severity": "major",
+      "area": "ISI section (68184:1080) headings/body",
+      "expected": "Body intro text color #327C95 and font-weight 600",
+      "actual": "Rendered rgb(0,0,0) at weight 400 for some intro paragraphs",
+      "fix": "Apply color #327C95 and font-weight 600 to the DESCOVY intro body text where the design shows teal"
+    },
+    {
+      "severity": "minor",
+      "area": "Hero banner title",
+      "expected": "font-weight 800 for 'What Is PrEP?'",
+      "actual": "font-weight 600",
+      "fix": "Set .hero-title font-weight to 800"
+    },
+    {
+      "severity": "minor",
+      "area": "Section 02 video cards (68212:2988)",
+      "expected": "thumbnail x≈279, play-icon x≈441, mask-group x≈387",
+      "actual": "thumbnail x=311, play-icon x=474, mask-group x=416 (shifted right ~32px)",
+      "fix": "Align video thumbnails flush-left within the content rail to remove ~32px offset"
+    },
+    {
+      "severity": "minor",
+      "area": "Hero banner background",
+      "expected": "Hero panel background extends to artboard edges with content centered at ~279px rail",
+      "actual": "Title sits slightly left of design x; spacing differs in render strip 1",
+      "fix": "Match content-inner rail x-position to ~279px for the hero text"
+    }
+  ],
+  "pixelScore": 93.2,
+  "layoutFailures": [
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "What Is PrEP?",
+      "expected": "800",
+      "actual": "600",
+      "fix": "Set font-weight to 800"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "image-33_I68212-3118-68212-3115.png",
+      "expected": "x=763px @1366 artboard",
+      "actual": "x=913px",
+      "fix": "Shift horizontally to x≈763px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "lamont-everett-discussing-prep-thumbnail-png_68212-2932.png",
+      "expected": "x=279px @1366 artboard",
+      "actual": "x=311px",
+      "fix": "Shift horizontally to x≈279px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "play-icon_68212-2933.svg",
+      "expected": "x=441px @1366 artboard",
+      "actual": "x=474px",
+      "fix": "Shift horizontally to x≈441px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "mask-group_68212-2944.svg",
+      "expected": "x=387px @1366 artboard",
+      "actual": "x=416px",
+      "fix": "Shift horizontally to x≈387px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "What is DESCOVY for PrEP? DESCOVY for Pr",
+      "expected": "600",
+      "actual": "400",
+      "fix": "Set font-weight to 600"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "What is DESCOVY for PrEP? DESCOVY for Pr",
+      "expected": "#327C95",
+      "actual": "rgb(0, 0, 0)",
+      "fix": "Set color to #327C95 (or its token)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "Important Safety Information What is the",
+      "expected": "600",
+      "actual": "400",
+      "fix": "Set font-weight to 600"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "Important Safety Information What is the",
+      "expected": "#327C95",
+      "actual": "rgb(0, 0, 0)",
+      "fix": "Set color to #327C95 (or its token)"
+    }
+  ]
+}

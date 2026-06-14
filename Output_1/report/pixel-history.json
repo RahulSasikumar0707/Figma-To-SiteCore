@@ -1,0 +1,98 @@
+{
+  "pixelHistory": [
+    91.7,
+    92,
+    92.2
+  ],
+  "finalPixelScore": 92.2,
+  "finalLayoutFailures": [
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "rectangle-4_I68226-5185-68226-5124-68226-5120.png",
+      "expected": "x=155px @1366 artboard",
+      "actual": "x=16px",
+      "fix": "Shift horizontally to x≈155px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I68226-5185-68226-5125-68226-5103.svg",
+      "expected": "x=763px @1366 artboard",
+      "actual": "x=858px",
+      "fix": "Shift horizontally to x≈763px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I68226-5185-68226-5125-68226-5107.svg",
+      "expected": "x=903px @1366 artboard",
+      "actual": "x=1001px",
+      "fix": "Shift horizontally to x≈903px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "export_I68226-5185-68226-5125-68226-5111.svg",
+      "expected": "x=1125px @1366 artboard",
+      "actual": "x=1227px",
+      "fix": "Shift horizontally to x≈1125px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "button-mute-svg_I68226-5178-1-700.svg",
+      "expected": "x=1093px @1366 artboard",
+      "actual": "x=1019px",
+      "fix": "Shift horizontally to x≈1093px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "svg_I68226-5178-1-703.svg",
+      "expected": "x=1121px @1366 artboard",
+      "actual": "x=1047px",
+      "fix": "Shift horizontally to x≈1121px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "svg_I68226-5178-1-708.svg",
+      "expected": "x=1149px @1366 artboard",
+      "actual": "x=1075px",
+      "fix": "Shift horizontally to x≈1149px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "magnify_I68226-5177-68226-4359-68226-4300.svg",
+      "expected": "x=314px @1366 artboard",
+      "actual": "x=367px",
+      "fix": "Shift horizontally to x≈314px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "button_I68226-5177-68226-4360-68226-4306.svg",
+      "expected": "x=877px @1366 artboard",
+      "actual": "x=936px",
+      "fix": "Shift horizontally to x≈877px (check column/alignment classes)"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "What is EPCLUSA? EPCLUSA is a prescripti",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    },
+    {
+      "severity": "minor",
+      "type": "font-weight",
+      "text": "Hepatitis B virus reactivation: Before s",
+      "expected": "700",
+      "actual": "400",
+      "fix": "Set font-weight to 700"
+    }
+  ]
+}

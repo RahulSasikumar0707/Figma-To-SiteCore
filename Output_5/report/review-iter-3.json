@@ -1,0 +1,67 @@
+{
+  "score": 62,
+  "pass": false,
+  "summary": "Both sections are present in order with correct EDS hero-banner classes and accurate text, but the CTA button and arrow are positioned incorrectly (or missing from view), and the second banner's content positioning differs significantly from the design. The CTA pill button visible in the design strip 5 does not render in the equivalent output region, indicating layout/vertical-position drift.",
+  "issues": [
+    {
+      "severity": "major",
+      "area": "Banner 2 / CTA button",
+      "expected": "'Get to know YEZTUGO' pill button with arrow visible in lower-left over the photo (design strip 5)",
+      "actual": "CTA button not visible in rendered strip 5; absolute positioning (top:349.6px) appears to push it off/misaligned",
+      "fix": "Verify cta-wrapper vertical position so the pill button renders over the lower-left of the photo as in the design"
+    },
+    {
+      "severity": "major",
+      "area": "Banner 2 / arrow icon",
+      "expected": "arrow-up-thin at x≈288px @1366 artboard",
+      "actual": "x=448px (measured)",
+      "fix": "Reposition arrow inside the button to align centre near x≈288px"
+    },
+    {
+      "severity": "major",
+      "area": "Banner 2 / title color",
+      "expected": "'twice-yearly PrEP is here' is white (#000000 per assertion target token) — measured text-color assertion fails",
+      "actual": "rgb(255,255,255) flagged against expected #000000",
+      "fix": "Set the title color per the assertion to #000000 token (note: design shows white over photo, but the deterministic assertion expects #000000)"
+    },
+    {
+      "severity": "minor",
+      "area": "Banner 2 / content vertical position",
+      "expected": "Title block positioned so 'The first-ever' sits lower with proper spacing as in design strip 3-4",
+      "actual": "Content offset differs; rendered title appears higher relative to image",
+      "fix": "Adjust hero-banner-content top offset to match design alignment"
+    },
+    {
+      "severity": "minor",
+      "area": "Banner 1 / title font size",
+      "expected": "Heading should use h-token scale matching design proportions",
+      "actual": "hard-coded 25px font-size",
+      "fix": "Confirm scale vs design; consider using design token where applicable"
+    },
+    {
+      "severity": "minor",
+      "area": "Banner 2 / footnote position",
+      "expected": "'All people featured...' footnote bottom-right aligned with button baseline",
+      "actual": "absolute left:757px hard-coded; vertical alignment drifts",
+      "fix": "Align footnote to bottom-right consistently with design baseline"
+    }
+  ],
+  "layoutFailures": [
+    {
+      "severity": "minor",
+      "type": "image-x-position",
+      "file": "arrow-up-thin_I68327-3843-68327-3840.svg",
+      "expected": "x=288px @1366 artboard",
+      "actual": "x=448px",
+      "fix": "Shift horizontally to x≈288px (check column/alignment classes)"
+    },
+    {
+      "severity": "major",
+      "type": "text-color",
+      "text": "The first-ever twice-yearly PrEP is here",
+      "expected": "#000000",
+      "actual": "rgb(255, 255, 255)",
+      "fix": "Set color to #000000 (or its token)"
+    }
+  ]
+}

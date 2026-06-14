@@ -1,0 +1,34 @@
+[
+  {
+    "sectionId": "1:573",
+    "sectionName": "Section 01",
+    "eds": "hero-banner",
+    "modifiers": [],
+    "why": "Top hero with nav and headline"
+  },
+  {
+    "sectionId": "1:561",
+    "sectionName": "Section 02",
+    "eds": "content-block",
+    "modifiers": [],
+    "why": "Image-text blocks with CTA buttons"
+  },
+  {
+    "sectionId": "1:553",
+    "sectionName": "content block 3/banner with background color inverse",
+    "eds": "content-block",
+    "modifiers": [
+      "inverse"
+    ],
+    "why": "Background image banner with CTA"
+  },
+  {
+    "sectionId": "1:552",
+    "sectionName": "footer/footer with three columns",
+    "eds": "footer",
+    "modifiers": [
+      "three-columns"
+    ],
+    "why": "Bottom links legal footer columns"
+  }
+]

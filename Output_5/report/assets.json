@@ -1,0 +1,31 @@
+[
+  {
+    "nodeId": "68222:3939",
+    "name": "image 18",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "60d45e9bdc7ffd652763245bea6d886704351983",
+    "w": 1323,
+    "h": 459,
+    "file": "assets/images/image-18_68222-3939.png"
+  },
+  {
+    "nodeId": "I68327:3843;68327:3840",
+    "name": "arrow-up-thin",
+    "kind": "icon",
+    "format": "svg",
+    "w": 28,
+    "h": 28,
+    "file": "assets/icons/arrow-up-thin_I68327-3843-68327-3840.svg"
+  },
+  {
+    "nodeId": "68222:3914",
+    "name": "image 20",
+    "kind": "image",
+    "format": "png",
+    "imageRef": "10c42e954f56cde154e59221cb5010332fd7d55a",
+    "w": 1322,
+    "h": 232,
+    "file": "assets/images/image-20_68222-3914.png"
+  }
+]
